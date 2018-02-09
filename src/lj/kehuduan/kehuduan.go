@@ -27,7 +27,6 @@ func sender(conn net.Conn) {
 	datarec := &sendword{}
 	err = json.Unmarshal([]byte(datasendj), &datarec)
 
-
 	fmt.Print(datasends)
 	fmt.Print(string(datasendj),len(datasendj))
 	fmt.Print(datarec)
