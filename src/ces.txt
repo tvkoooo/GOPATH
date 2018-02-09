@@ -1,4 +1,0 @@
-$(LIB_HOME)/build/protobuf/proj_windows/bin/Debug
-$(LIB_HOME)/build/hiredis/proj_windows/bin/Debug
-
-smniaomao
