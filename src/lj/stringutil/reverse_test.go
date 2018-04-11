@@ -1,7 +1,9 @@
+//test reverse
 package stringutil
 
 import "testing"
 
+//func TestReverse
 func TestReverse(t *testing.T) {
 	cases := []struct {
 		in, want string

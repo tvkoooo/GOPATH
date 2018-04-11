@@ -1,3 +1,5 @@
+/*use the test
+see this laji*/
 package main
 
 import (
@@ -5,6 +7,7 @@ import (
 	"sync"
 	_"time"
 )
+//this the main
 func main(){
 	var j int = 5
 	var waitGroup sync.WaitGroup //我们应该充分利用waitGroup 来控制go 的执行生命周期
@@ -71,4 +74,8 @@ func main(){
 	//本次匿名函数和上面的区别在于没有后面的(),因此每次只有在调用bbb()才执行所有里面的功能
 	bbb()
 	bbb()
+
+	var str string
+	fmt.Scanln(&str)
+	fmt.Printf("INPUT :%s\n", str)
 }
