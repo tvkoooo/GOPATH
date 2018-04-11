@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="934e39e4-ef7a-4330-84df-72d3baf049df" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lj/fuwuqi/fuwuqi.go" afterPath="$PROJECT_DIR$/lj/fuwuqi/fuwuqi.go" />
-      <change beforePath="$PROJECT_DIR$/lj/hello/hello.go" afterPath="$PROJECT_DIR$/lj/hello/hello.go" />
-      <change beforePath="$PROJECT_DIR$/lj/kehuduan/kehuduan.go" afterPath="$PROJECT_DIR$/lj/kehuduan/kehuduan.go" />
-      <change beforePath="$PROJECT_DIR$/lj/kehuduan/mess.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lj/wangguan/wangguan.go" afterPath="$PROJECT_DIR$/lj/wangguan/wangguan.go" />
-    </list>
+    <list default="true" id="934e39e4-ef7a-4330-84df-72d3baf049df" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/lj/hello/hello.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#14#48#0" expanded="true" />
               </folding>
@@ -73,7 +66,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="875" />
     <option name="y" value="6" />
     <option name="width" value="1060" />
@@ -285,7 +278,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="875" y="6" width="1060" height="979" extended-state="1" />
+    <frame x="875" y="6" width="1060" height="979" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17911877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -640,7 +633,7 @@
     <entry file="file://$PROJECT_DIR$/lj/hello/hello.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#14#48#0" expanded="true" />
           </folding>
