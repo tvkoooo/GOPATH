@@ -4,7 +4,8 @@ import (
 	"net"
 	"log"
 	"os"
-	"encoding/json"
+	//"encoding/json"
+	"lj/messagehead"
 )
 type sendword struct {
 	Pid       uint64
@@ -38,17 +39,50 @@ func handleConnection(conn net.Conn) {
 	for {
 
 		n, err := conn.Read(buffer)
-
 		if err != nil {
 			Log(conn.RemoteAddr().String(), " connection error: ", err)
 			return
 		}
-		datarec := &sendword{}
-		err = json.Unmarshal([]byte(buffer[0:n]), &datarec)
+		fmt.Print(n)
+		fmt.Println(buffer[:n])
+		g_data,ndata :=messagehead.Get_data(buffer,uint32(n))
+		g_str_data := string(g_data[:ndata])
+		fmt.Println(g_data[:ndata])
+		fmt.Println(ndata)
+		fmt.Println(g_str_data)
+		//datarec := &sendword{}
+		//err = json.Unmarshal([]byte(buffer[0:n]), &datarec)
+		//if err != nil {
+		//	Log(conn.RemoteAddr().String(), " connection error: ", err)
+		//}
+		//Log(conn.RemoteAddr().String(), "receive data string:\n",n ,datarec,string(buffer[:n]))
+
+		//返回包裹
+		server := "127.0.0.1:6090"
+		tcpAddr, err := net.ResolveTCPAddr("tcp4", server)
 		if err != nil {
-			Log(conn.RemoteAddr().String(), " connection error: ", err)
+			fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+			os.Exit(1)
 		}
-		Log(conn.RemoteAddr().String(), "receive data string:\n",n ,datarec,string(buffer[:n]))
+		fconn, err := net.DialTCP("tcp", nil, tcpAddr)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+			os.Exit(1)
+		}
+		fmt.Println("connect success")
+
+		f_send := "ni ma bi ya!"
+		fsendbyte := []byte(f_send)
+		flen_send := uint32(len(fsendbyte))
+		fbuffer_send := buffer[:n]
+		new_data,new_length :=messagehead.Change_data(fbuffer_send,fsendbyte,flen_send)
+		fmt.Println(new_data)
+		fmt.Println(new_length)
+		f_say,f_say_l := messagehead.Get_data(new_data,new_length)
+		fmt.Println(f_say)
+		fmt.Println(f_say_l)
+		fconn.Write([]byte(fbuffer_send))
+		fmt.Println("send over")
 
 	}
 
