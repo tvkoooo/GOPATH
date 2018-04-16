@@ -11,7 +11,7 @@ import (
 	"lj/xcbblinktest/usercome"
 )
 //use the default data for example to send
-func Sendbody(sid uint32,uid uint32,s_sender string,uid_onmic uint32)(outbyte []byte){
+func Sendbody(uid uint32,sid uint32,s_sender string,uid_onmic uint32)(outbyte []byte){
 	var mysend usercome.PEnterChannelRQ
 	var uri uint32 = (253 << 8) | 2
 	mysend.Cmd = "PEnterChannel"

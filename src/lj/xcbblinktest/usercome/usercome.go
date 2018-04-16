@@ -25,11 +25,11 @@ type PEnterChannel struct {
 
 //PEnterChannel RQ DATA
 type PEnterChannelRQ struct {
-	Cmd string
-	Sid uint32
-	Uid uint32
-	Sender string
-	Uid_onmic uint32
+	Cmd string `json:"cmd"`
+	Sid uint32 `json:"sid"`
+	Uid uint32 `json:"uid"`
+	Sender string `json:"sender"`
+	Uid_onmic uint32 `json:"uid_onmic"`
 }
 
 //PEnterChannel RS DATA
@@ -68,13 +68,13 @@ func ADDsenderbody(uri uint32 ,rq PEnterChannelRQ) (outbyte []byte) {
 	sendstream := make([]byte, 0)
 	jsonrq,_ := json.Marshal(rq)
 	//length := uint32(unsafe.Sizeof(rq))+13+4
-	length := uint32(len(jsonrq)+13+4+4)  //（包头13） + （PIType 4） + （cmd长度 4）
+	length := uint32(len(jsonrq)+13+4+4)  //json长度 + （包头13） + （PIType 4） + （cmd长度 4）
 	outbyte = datastream.AddUint32(length, sendstream)
 	outbyte = Addpeakhead(uri,outbyte)
 
 
 	var datasend PEnterChannel
-	datasend.PIType = 2
+	datasend.PIType = 6
 	datasend.Cmd = string(jsonrq)
 	outbyte = datastream.AddUint32(datasend.PIType, outbyte)
 	outbyte = datastream.AddString32(datasend.Cmd,outbyte)
