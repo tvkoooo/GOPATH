@@ -26,7 +26,7 @@ func Recebody(inbyte []byte)(rs userleave.PRealLeaveChannelRS){
 }
 
 //tcp send
-func sender(conn net.Conn,uid uint32,sid uint32) {
+func Sender(conn net.Conn,uid uint32,sid uint32) {
 	senddata := make([]byte , 0)
 	senddata = Sendbody(uid,sid)
 	conn.Write([]byte(senddata))
@@ -34,7 +34,7 @@ func sender(conn net.Conn,uid uint32,sid uint32) {
 }
 
 //tcp rec
-func recev(conn net.Conn)(rs userleave.PRealLeaveChannelRS) {
+func Recev(conn net.Conn)(rs userleave.PRealLeaveChannelRS) {
 	recevdata := make([]uint8, 4096)
 	for {
 		count, err := conn.Read(recevdata)
@@ -59,9 +59,9 @@ func recev(conn net.Conn)(rs userleave.PRealLeaveChannelRS) {
 func PRealLeaveChannel(uid uint32,sid uint32,ch *chan int) {
 
 	conn := tcplink.Tcplink()
-	sender(conn,uid,sid)
+	Sender(conn,uid,sid)
 	//time.Sleep(1E9)
-	recev(conn)
+	Recev(conn)
 	time.Sleep(1E9)
 	*ch<-1
 }

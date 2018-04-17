@@ -1,24 +1,25 @@
 //This package deals with the user leaving the studio
-//PRealLeaveChannel  use the test
+//PRealJoinChannel  use the test
 package usercome_sampel
 
 import (
+	"lj/xcbblinktest/usercome"
 	"net"
 	"fmt"
 	"os"
 	"lj/xcbblinktest/tcplink"
 	"time"
-	"lj/xcbblinktest/usercome"
 )
 //use the default data for example to send
-func Sendbody(uid uint32,sid uint32,s_sender string,uid_onmic uint32)(outbyte []byte){
-	var mysend usercome.PEnterChannelRQ
-	var uri uint32 = (253 << 8) | 2
-	mysend.Cmd = "PEnterChannel"
-	mysend.Sid = sid
+func Sendbody(uid uint32,sid uint32,ssid uint32, version uint32,sha1pass string,sspass string)(outbyte []byte){
+	var mysend usercome.PRealJoinChannelRQ
+	var uri uint32 = (32 << 8) | 2
 	mysend.Uid = uid
-	mysend.Sender = s_sender
-	mysend.Uid_onmic = uid_onmic
+	mysend.Sid = sid
+	mysend.Ssid = ssid
+	mysend.Version = version
+	mysend.Sha1Pass = sha1pass
+	mysend.SsPass = sspass
 	outbyte = usercome.ADDsenderbody(uri,mysend)
 	return outbyte
 }
@@ -28,15 +29,15 @@ func Recebody(inbyte []byte)(){
 }
 
 //tcp send
-func sender(conn net.Conn,uid uint32,sid uint32,s_sender string,uid_onmic uint32) {
+func Sender(conn net.Conn,uid uint32,sid uint32,ssid uint32, version uint32,sha1pass string,sspass string) {
 	senddata := make([]byte , 0)
-	senddata = Sendbody(uid,sid,s_sender,uid_onmic)
+	senddata = Sendbody(uid,sid,ssid,version,sha1pass,sspass)
 	conn.Write([]byte(senddata))
-	fmt.Println(uid," send over",conn.LocalAddr(),"timenow:",time.Now().Format("2006-01-02 15:04:05"),"\r\n")
+	//fmt.Println(uid," send over","timenow:",time.Now().Format("2006-01-02 15:04:05"),"\r\n")
 }
 
 //tcp rec
-func recev(conn net.Conn)() {
+func Recev(conn net.Conn)() {
 	recevdata := make([]uint8, 4096)
 	for {
 		count, err := conn.Read(recevdata)
@@ -47,20 +48,18 @@ func recev(conn net.Conn)() {
 		if count != 0 {
 			//fmt.Println("rec Binary stream", recevdata[:count])
 			Recebody(recevdata[:count])
-			//fmt.Println("rec string ", string(recevdata[:count]))
 		}
 	}
-	//conn.Close()
 	//fmt.Println("connect close success LocalAddr:",conn.LocalAddr(),"RemoteAddr",conn.RemoteAddr(),"timenow:",time.Now().Format("2006-01-02 15:04:05"),"\r\n")
 
 }
 //user test
-func PEnterChannel(uid uint32,sid uint32,s_sender string,uid_onmic uint32,ch *chan int) {
+func PRealJoinChannel(uid uint32,sid uint32,ssid uint32, version uint32,sha1pass string,sspass string,ch *chan int) {
 
 	conn := tcplink.Tcplink()
-	sender(conn,uid,sid,s_sender,uid_onmic)
+	Sender(conn,uid,sid,ssid,version,sha1pass,sspass)
 	//time.Sleep(1E9)
-	recev(conn)
+	Recev(conn)
 	time.Sleep(1E9)
 	*ch<-1
 }

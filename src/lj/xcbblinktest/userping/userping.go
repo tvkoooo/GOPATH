@@ -1,10 +1,11 @@
-//This package deals with the user leaving the studio
-//PRealJoinChannel
-package usercome
+//This package deals with the user ping the studio
+//PPlus (12 << 8) | 4
+package userping
 
 import (
 	"fmt"
 	"lj/xcbblinktest/datastream"
+	"unsafe"
 	"encoding/json"
 )
 
@@ -16,23 +17,23 @@ type Peakhead struct {
 	Tag     uint8
 }
 
-//PRealJoinChannel RQ DATA  (32 << 8) | 2
-type PRealJoinChannelRQ struct {
+//PPlus RQ DATA
+type PPlusRQ struct {
 	Uid uint32
-	Sha1Pass string
 	Sid uint32
-	Ssid uint32
-	SsPass string
-	Version uint32
+	Stampc uint32
+	Stamps uint32
 }
-//PRealJoinChannelRS RQ DATA
-type PRealJoinChannelRS struct {
+
+//PPlus RQ DATA
+type PPlusRS struct {
 	Code uint32
 	Desc string
 	Sid  uint32
 	Uid  uint32
 }
-//PRealJoinChannel RQ add peak uri head
+
+//PPlus RQ add peak uri head
 func Addpeakhead(uri uint32 ,inbyte []byte) (outbyte []byte) {
 	var ph Peakhead
 	ph.Uri = uri
@@ -44,31 +45,25 @@ func Addpeakhead(uri uint32 ,inbyte []byte) (outbyte []byte) {
 	outbyte = datastream.AddUint16(ph.Sid, outbyte)
 	outbyte = datastream.AddUint16(ph.Rescode, outbyte)
 	outbyte = datastream.AddUint8(ph.Tag, outbyte)
-
 	return outbyte
 }
 
-
-
-//PRealJoinChannel RQ add user body struct to datastream
-func ADDsenderbody(uri uint32 ,rq PRealJoinChannelRQ) (outbyte []byte) {
+//PPlus RQ add user body struct to datastream
+func ADDsenderbody(uri uint32 ,rq PPlusRQ,) (outbyte []byte) {
 	sendstream := make([]byte, 0)
-	length := uint32(13+4+2+4+4+2+4)
+	length := uint32(unsafe.Sizeof(rq))+13
 	outbyte = datastream.AddUint32(length, sendstream)
 	outbyte = Addpeakhead(uri,outbyte)
 	outbyte = datastream.AddUint32(rq.Uid, outbyte)
-	outbyte = datastream.AddString16(rq.Sha1Pass, outbyte)
 	outbyte = datastream.AddUint32(rq.Sid, outbyte)
-	outbyte = datastream.AddUint32(rq.Ssid, outbyte)
-	outbyte = datastream.AddString16(rq.SsPass, outbyte)
-	outbyte = datastream.AddUint32(rq.Version, outbyte)
-
+	outbyte = datastream.AddUint32(rq.Stampc, outbyte)
+	outbyte = datastream.AddUint32(rq.Stamps, outbyte)
 	jsonrq,_ := json.Marshal(rq)
 	fmt.Println("Send body \n length:", length,"uri:",uri,"rq = ", string(jsonrq))
 	fmt.Println(outbyte)
 	return outbyte
 }
-//PRealJoinChannel get user body struct from datastream
+//PPlusRS get user body struct from datastream
 func Getreceivebody(inbyte []byte) () {
 	fmt.Println("Receive body \n :",inbyte )
 }
