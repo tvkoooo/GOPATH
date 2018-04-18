@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="934e39e4-ef7a-4330-84df-72d3baf049df" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/lj/xcbblinktest/usercome.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/lj/xcbblinktest/usercome.a" />
-      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/lj/xcbblinktest/usercome/usercome_sampel.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/lj/xcbblinktest/usercome/usercome_sampel.a" />
-      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/lj/xcbblinktest/userleave/userleave_sampel.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/lj/xcbblinktest/userleave/userleave_sampel.a" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/usercome/usercome.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/usercome/usercome.go" />
-      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/usercome/usercome_sampel/usercome_sampel.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/usercome/usercome_sampel/usercome_sampel.go" />
-      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/userleave/userleave_sampel/userleave_sampel.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/userleave/userleave_sampel/userleave_sampel.go" />
-      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/xcbblinktest.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/xcbblinktest.go" />
-    </list>
+    <list default="true" id="934e39e4-ef7a-4330-84df-72d3baf049df" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,36 +14,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="xcbblinktest.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lj/xcbblinktest/xcbblinktest.go">
+      <file leaf-file-name="mysqldriver.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lj/mysqldriver/mysqldriver.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="285">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
-                <element signature="e#14#80#0" expanded="true" />
+                <element signature="e#14#83#0" expanded="true" />
+                <marker date="1524021838785" expanded="true" signature="383:411" ph="select id,na... mysq" />
+                <marker date="1524021838785" expanded="true" signature="596:619" ph="select * fro... mysq" />
+                <marker date="1524021838785" expanded="true" signature="1228:1269" ph="select id,na... mysq" />
+                <marker date="1524021838785" expanded="true" signature="1355:1402" ph="insert into test.mysq... " />
+                <marker date="1524021838785" expanded="true" signature="1709:1749" ph="update test.mysq... " />
+                <marker date="1524021838785" expanded="true" signature="1855:1889" ph="delete from test.mysq... " />
+                <marker date="1524021838785" expanded="true" signature="1999:2040" ph="select id,na... mysq" />
+                <marker date="1524021838785" expanded="true" signature="2186:2226" ph="insert into test.mysq... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lj/xcbblinktest/user/user.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-              <folding>
-                <element signature="e#78#257#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usercome.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lj/xcbblinktest/usercome/usercome.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1216">
-              <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -120,6 +97,8 @@
         <option value="$PROJECT_DIR$/lj/xcbblinktest/usertalk/usertalk_sampel/usertalk_sampel.go" />
         <option value="$PROJECT_DIR$/lj/xcbblinktest/xcbblinktest.go" />
         <option value="$PROJECT_DIR$/lj/xcbblinktest/user/user.go" />
+        <option value="$PROJECT_DIR$/lj/redisgo/redisgo.go" />
+        <option value="$PROJECT_DIR$/lj/mysqldriver/mysqldriver.go" />
       </list>
     </option>
   </component>
@@ -129,10 +108,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-2" />
-    <option name="y" value="21" />
-    <option name="width" value="1103" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="357" />
+    <option name="y" value="13" />
+    <option name="width" value="1311" />
     <option name="height" value="979" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -193,14 +172,7 @@
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lj" type="462c0819:PsiDirectoryNode" />
-              <item name="xcbblinktest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lj" type="462c0819:PsiDirectoryNode" />
-              <item name="xcbblinktest" type="462c0819:PsiDirectoryNode" />
-              <item name="usercome" type="462c0819:PsiDirectoryNode" />
+              <item name="mysqldriver" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -230,21 +202,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build xcbblinktest.go">
-    <configuration name="go build user.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+  <component name="RunManager" selected="Go Build.go build mysqldriver.go">
+    <configuration name="go build mysqldriver.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="src" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/lj/xcbblinktest/user/user.go" />
+      <filePath value="$PROJECT_DIR$/lj/mysqldriver/mysqldriver.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go build userping_sampel.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+    <configuration name="go build redisgo.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="src" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/lj/xcbblinktest/userping/userping_sampel/userping_sampel.go" />
+      <filePath value="$PROJECT_DIR$/lj/redisgo/redisgo.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="go build usertalk.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
@@ -277,18 +249,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Go Build.go build xcbblinktest.go" />
-      <item index="1" class="java.lang.String" itemvalue="Go Build.go build userping_sampel.go" />
-      <item index="2" class="java.lang.String" itemvalue="Go Build.go build user.go" />
-      <item index="3" class="java.lang.String" itemvalue="Go Build.go build usertalk_sampel.go" />
-      <item index="4" class="java.lang.String" itemvalue="Go Build.go build usertalk.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Build.go build usertalk_sampel.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Build.go build usertalk.go" />
+      <item index="3" class="java.lang.String" itemvalue="Go Build.go build redisgo.go" />
+      <item index="4" class="java.lang.String" itemvalue="Go Build.go build mysqldriver.go" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Build.go build xcbblinktest.go" />
-        <item index="1" class="java.lang.String" itemvalue="Go Build.go build usertalk_sampel.go" />
-        <item index="2" class="java.lang.String" itemvalue="Go Build.go build usertalk.go" />
-        <item index="3" class="java.lang.String" itemvalue="Go Build.go build user.go" />
-        <item index="4" class="java.lang.String" itemvalue="Go Build.go build userping_sampel.go" />
+        <item index="0" class="java.lang.String" itemvalue="Go Build.go build mysqldriver.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Build.go build redisgo.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Build.go build xcbblinktest.go" />
+        <item index="3" class="java.lang.String" itemvalue="Go Build.go build usertalk_sampel.go" />
+        <item index="4" class="java.lang.String" itemvalue="Go Build.go build usertalk.go" />
       </list>
     </recent_temporary>
   </component>
@@ -301,10 +273,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="21" width="1103" height="979" extended-state="1" />
+    <frame x="357" y="13" width="1311" height="979" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24287029" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.203861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.50208336" order="0" side_tool="false" content_ui="tabs" x="1115" y="724" width="353" height="233" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -372,30 +344,21 @@
           <line>12</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/lj/mysqldriver/mysqldriver.go</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="66" />
+      <option name="time" value="81" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lj/xcbblinktest/packhead/packhead.go" />
-    <entry file="file://D:/tools/Go/src/errors/example_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tools/Go/src/image/format.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/tools/Go/src/image/ycbcr_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -535,6 +498,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -545,24 +509,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/tools/Go/src/runtime/panic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="532" column="0" lean-forward="false" selection-start-line="532" selection-start-column="0" selection-end-line="532" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tools/Go/src/runtime/asm_amd64.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="508" column="0" lean-forward="false" selection-start-line="508" selection-start-column="0" selection-end-line="508" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/tools/Go/src/runtime/proc.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -712,11 +663,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lj/xcbblinktest/usercome/usercome.go">
+    <entry file="file://$PROJECT_DIR$/lj/xcbblinktest/xcbblinktest.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="388">
+          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding>
+            <element signature="e#14#80#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -725,17 +678,67 @@
         <state relative-caret-position="388">
           <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
           <folding>
-            <element signature="e#78#257#0" expanded="true" />
+            <element signature="e#78#257#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lj/xcbblinktest/xcbblinktest.go">
+    <entry file="file://$PROJECT_DIR$/lj/xcbblinktest/usercome/usercome.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="1216">
+          <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lj/redisgo/redisgo.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="124" column="19" lean-forward="true" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
           <folding>
-            <element signature="e#14#80#0" expanded="true" />
+            <element signature="e#14#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/tools/Go/src/runtime/asm_amd64.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="508" column="0" lean-forward="false" selection-start-line="508" selection-start-column="0" selection-end-line="508" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/tools/Go/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="532" column="0" lean-forward="false" selection-start-line="532" selection-start-column="0" selection-end-line="532" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/tools/Go/src/database/sql/sql.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="2067" column="0" lean-forward="false" selection-start-line="2067" selection-start-column="0" selection-end-line="2067" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lj/mysqldriver/mysqldriver.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#83#0" expanded="true" />
+            <marker date="1524021838785" expanded="true" signature="383:411" ph="select id,na... mysq" />
+            <marker date="1524021838785" expanded="true" signature="596:619" ph="select * fro... mysq" />
+            <marker date="1524021838785" expanded="true" signature="1228:1269" ph="select id,na... mysq" />
+            <marker date="1524021838785" expanded="true" signature="1355:1402" ph="insert into test.mysq... " />
+            <marker date="1524021838785" expanded="true" signature="1709:1749" ph="update test.mysq... " />
+            <marker date="1524021838785" expanded="true" signature="1855:1889" ph="delete from test.mysq... " />
+            <marker date="1524021838785" expanded="true" signature="1999:2040" ph="select id,na... mysq" />
+            <marker date="1524021838785" expanded="true" signature="2186:2226" ph="insert into test.mysq... " />
           </folding>
         </state>
       </provider>
