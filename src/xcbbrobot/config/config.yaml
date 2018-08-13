@@ -1,0 +1,22 @@
+#本配置文件路径
+#"./xcbbrobot/config/config.yaml"
+
+#日志等级描述
+#    L_OFF   : 0
+#    L_FATAL : 1
+#    L_ERROR : 2
+#    L_WARN  : 3
+#    L_INFO  : 4
+#    L_DEBUG : 5
+
+#输出日志等级
+Loglevel: 5
+
+#输出日志路径
+Logfile: "./xcbbrobot/log/"
+
+#机器人列表文件路径
+Robotlist: "./xcbbrobot/robotvector/robot.list"
+
+#服务器tcp 地址端口
+Server: "59.110.125.134:30301"

@@ -70,5 +70,11 @@ func ADDsenderbody(uri uint32 ,rq PRealJoinChannelRQ) (outbyte []byte) {
 }
 //PRealJoinChannel get user body struct from datastream
 func Getreceivebody(inbyte []byte) () {
-	fmt.Println("Receive body \n :",inbyte )
+	var length uint32
+	var rechead Peakhead
+	var outbyte []byte
+	length , outbyte = datastream.GetUint32(inbyte)
+	rechead.Uri , outbyte = datastream.GetUint32(outbyte)
+	fmt.Println("Receive body  length :",length ,"Receive body  Uri :",rechead.Uri )
+	//fmt.Println("Receive body \n :",inbyte )
 }

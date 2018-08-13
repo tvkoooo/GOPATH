@@ -9,7 +9,7 @@ import (
 // Tcplink
 func Tcplink()(conn net.Conn){
 	//server := "127.0.0.1:9090"
-	server := "60.205.151.85:444"
+	server := "59.110.125.134:30301"
 	tcpAddr, err := net.ResolveTCPAddr("tcp4", server)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())

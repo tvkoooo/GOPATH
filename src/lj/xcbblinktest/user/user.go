@@ -6,8 +6,11 @@ import (
 	"lj/xcbblinktest/usercome/usercome_sampel"
 	"lj/xcbblinktest/tcplink"
 	"time"
+//	"lj/xcbblinktest/userping/userping_sampel"
+//	"lj/xcbblinktest/userleave/userleave_sampel"
 	"lj/xcbblinktest/userping/userping_sampel"
-	"lj/xcbblinktest/userleave/userleave_sampel"
+	"fmt"
+	"xcbbrobot/common/message"
 )
 type Userrobot struct {
 	Ssid uint32
@@ -17,6 +20,7 @@ type Userrobot struct {
 	Stampc uint32
 	Stamps uint32
 }
+
 func userinit()(userinf Userrobot){
 	userinf.Ssid = 1
 	userinf.Version = 1
@@ -31,15 +35,36 @@ func Userctrl(ch *chan int,uid uint32,sid uint32)(){
 	var userif Userrobot
 	userif = userinit()
 	conn := tcplink.Tcplink()
+	fmt.Println(uid,"进入",sid,"房间")
 	usercome_sampel.Sender(conn,uid ,sid ,userif.Ssid , userif.Version,userif.Sha1pass ,userif.Sspass )
-	go usercome_sampel.Recev(conn)
 
+	go usercome_sampel.Recev(conn)
 	for i:=0;i<2;i++{
+		time.Sleep(6*1E9)
+		userif.Stampc = uint32(time.Now().Unix())
+		userif.Stamps = uint32(time.Now().UnixNano() % 1E9)
+		fmt.Println(uid,"发送第 ",i+1," 次 ping")
 		userping_sampel.Sender(conn,uid,sid ,userif.Stampc,userif.Stamps)
-		time.Sleep(5*1E9)
 	}
-	userleave_sampel.Sender(conn ,uid,sid)
+	//userleave_sampel.Sender(conn ,uid,sid)
 	time.Sleep(3*1E9)
+
+	//发送机器人离场
+	sendLeave :=message.SendPRealLeaveChannelRQ(uid , sid)
+	_ , err := conn.Write(sendLeave)
+	fmt.Println("send message sendLeave:", sendLeave)
+	if nil != err{
+		fmt.Println("机器人离场失败")
+	}
+
+	time.Sleep(6*1E9)
+	userif.Stampc = uint32(time.Now().Unix())
+	userif.Stamps = uint32(time.Now().UnixNano() % 1E9)
+	fmt.Println(uid,"发送第 ",0000," 次 ping")
+	userping_sampel.Sender(conn,uid,sid ,userif.Stampc,userif.Stamps)
+	time.Sleep(6*1E9)
+
+	fmt.Println(uid,"退出",sid,"房间")
 	conn.Close()
 	*ch<-1
 }

@@ -1,0 +1,54 @@
+文中操作yaml使用的是github上第三方开源gopkg.in/yaml.v2 
+具体如何使用？ 
+第一步：下载
+
+go get gopkg.in/yaml.v2
+1
+第二步：新建一个yaml文件，比如conf.yaml
+
+host: localhost:3306
+user: root
+pwd: 123456
+dbname: test
+
+
+这里需要注意，以user: root为例，冒号后面有空格
+
+第三步：新建go文件，比如main.go
+
+package main
+
+import (
+    "io/ioutil"
+    "gopkg.in/yaml.v2"
+    "fmt"
+)
+
+func main() {
+   var c conf
+   conf:=c.getConf()
+   fmt.Println(conf.Host)
+}
+
+//profile variables
+type conf struct {
+    Host string `yaml:"host"`
+    User string `yaml:"user"`
+    Pwd string `yaml:"pwd"`
+    Dbname string `yaml:"dbname"`
+}
+func (c *conf) getConf() *conf {
+    yamlFile, err := ioutil.ReadFile("conf.yaml")
+    if err != nil {
+        fmt.Println(err.Error())
+    }
+    err = yaml.Unmarshal(yamlFile, c)
+    if err != nil {
+        fmt.Println(err.Error())
+    }
+    return c
+}
+
+
+运行main.go，就可以打印出配置文件中user的值root
+备注：在go的type conf struct 里面，前面的是go 成员变量，对应后面一定要加`yaml:"host"`，来对应yaml的字段，防止解析出错

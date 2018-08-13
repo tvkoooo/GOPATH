@@ -33,7 +33,7 @@ func Sender(conn net.Conn,uid uint32,sid uint32,ssid uint32, version uint32,sha1
 	senddata := make([]byte , 0)
 	senddata = Sendbody(uid,sid,ssid,version,sha1pass,sspass)
 	conn.Write([]byte(senddata))
-	//fmt.Println(uid," send over","timenow:",time.Now().Format("2006-01-02 15:04:05"),"\r\n")
+	fmt.Println(uid," send over","timenow:",time.Now().Format("2006-01-02 15:04:05"),"\r\n")
 }
 
 //tcp rec
@@ -46,11 +46,11 @@ func Recev(conn net.Conn)() {
 			break
 		}
 		if count != 0 {
-			//fmt.Println("rec Binary stream", recevdata[:count])
+			fmt.Println("rec Binary stream", recevdata[:count])
 			Recebody(recevdata[:count])
 		}
 	}
-	//fmt.Println("connect close success LocalAddr:",conn.LocalAddr(),"RemoteAddr",conn.RemoteAddr(),"timenow:",time.Now().Format("2006-01-02 15:04:05"),"\r\n")
+	fmt.Println("connect close success LocalAddr:",conn.LocalAddr(),"RemoteAddr",conn.RemoteAddr(),"timenow:",time.Now().Format("2006-01-02 15:04:05"),"\r\n")
 
 }
 //user test
@@ -58,7 +58,7 @@ func PRealJoinChannel(uid uint32,sid uint32,ssid uint32, version uint32,sha1pass
 
 	conn := tcplink.Tcplink()
 	Sender(conn,uid,sid,ssid,version,sha1pass,sspass)
-	//time.Sleep(1E9)
+	time.Sleep(1E9)
 	Recev(conn)
 	time.Sleep(1E9)
 	*ch<-1
