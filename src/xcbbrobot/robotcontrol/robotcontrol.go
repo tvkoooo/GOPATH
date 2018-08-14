@@ -70,8 +70,6 @@ func (m *RobotControl)RoomAddRobot(sid uint32 )() {
 	//把该机器人的生命交给房间 sid 下面对应机器人 robotId
 	(*(m.appRoom.mapAppRoom[sid])).mapRobotRoom[robotId] = &mr
 	fmt.Println(sid,"机器人数量:",m.RoomRobotLen(sid))
-	fmt.Println(sid,"机器人:")
-	m.PrintRoomRobot(sid)
 }
 //房间 减少一个机器人
 func (m *RobotControl)RoomSubRobot(sid uint32)()  {
@@ -79,8 +77,8 @@ func (m *RobotControl)RoomSubRobot(sid uint32)()  {
 	if m.RoomRobotLen(sid)>0{
 		for k, v := range (m.appRoom.mapAppRoom[sid]).mapRobotRoom{
 			//机器人停止工作
-			go v.RobotRest()
-			//房间移除机器人
+			v.RobotRest()
+			//房间移除机器人，只是删除了房间map对应sid的机器人寻找指针，此时这个指针在 RobotRest 里面还要继续处理
 			delete((m.appRoom.mapAppRoom[sid]).mapRobotRoom , k)
 			//空闲机器人增加    移除的机器人
 			m.appRobot.AddRobot(k)
@@ -89,8 +87,6 @@ func (m *RobotControl)RoomSubRobot(sid uint32)()  {
 		}
 	}
 	fmt.Println(sid,"机器人数量:",m.RoomRobotLen(sid))
-	fmt.Println(sid,"机器人:")
-	m.PrintRoomRobot(sid)
 }
 //输出房间机器人（数量太大请禁用，只用于小量测试）
 func (m *RobotControl)PrintRoomRobot(sid uint32)(){

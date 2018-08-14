@@ -56,4 +56,16 @@ func main()  {
 	fmt.Println("dat:",dat )
 	dat.DataAppend(adddat2)
 	fmt.Println("dat:",dat )
+
+
+	var in88,in99 int8
+	//var uin88,uin99 uint8
+	in88 = -3
+
+	var slot1 datagroove.DataBuff
+	slot1.BufferInit()
+	slot1.DataSlotWriteInt8(0,in88)
+	in99 = slot1.DataSlotReadInt8(0)
+	fmt.Println("in88",in88,"in99",in99)
+
 }

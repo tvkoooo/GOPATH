@@ -6,6 +6,7 @@ import (
 	"encoding/binary"
 )
 
+
 //Add a uint8 to the data stream
 func AddUint8(myuint8 uint8,inbyte []byte )(outbyte []byte) {
 	bytes := make([]byte,1)

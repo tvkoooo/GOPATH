@@ -7,6 +7,7 @@ import (
 	"xcbbrobot/common/tcplink"
 	"fmt"
 	"net"
+	"xcbbrobot/common/maths"
 )
 
 const (
@@ -62,14 +63,27 @@ func (p *RobotLife)ljoin()  {
 	p.stateThread = <-p.threadContext
 }
 
+func (p *RobotLife)recData()  {
+	recData := make([]byte, 1024)
+	for ;p.stateThread == STATEMOTION ;  {
+		lengg , err :=p.conn.Read(recData)
+		if err != nil {
+			fmt.Println(p.uid ," recData lengg: ",lengg)
+		}
+	}
+}
+
 func (p *RobotLife)loop()  {
 	//连接tcp
 	conn := tcplink.Tcplink(config.Conf.Server)
 	p.conn = conn
 
 	//不处理接收数据
-	recData := make([]byte, 1024)
-	go conn.Read(recData)
+
+	go p.recData()
+	//延时0.5s-1s 以内
+	time.Sleep(time.Duration(1E7 * maths.BetweenRand(50,100)))
+
 	//发送机器人入场socket
 	sendJoin :=message.SendPRealJoinChannel(p.uid , p.sid)
 	_ , err := conn.Write(sendJoin)
@@ -92,6 +106,8 @@ func (p *RobotLife)loop()  {
 		}
 		time.Sleep(1E9)
 	}
+	//延时0.5s-1s 以内 发送机器人离场
+	time.Sleep(time.Duration(1E7 * maths.BetweenRand(50,100)))
 	//发送机器人离场
 	sendLeave :=message.SendPRealLeaveChannelRQ(p.uid , p.sid)
 	_ , err = conn.Write(sendLeave)
@@ -99,7 +115,8 @@ func (p *RobotLife)loop()  {
 	if nil != err{
 		fmt.Println(p.uid," 机器人离场失败")
 	}
-	fmt.Println("conn 关闭")
+	time.Sleep(2E9)
+	fmt.Println(p.uid , " conn 关闭")
 	conn.Close()
 	//流程结束
 	p.threadContext<-p.stateThread

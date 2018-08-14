@@ -10,9 +10,19 @@ import (
 	"fmt"
 	"xcbbrobot/robotcontrol"
 	"xcbbrobot/common/maths"
+	"os"
+	"path/filepath"
+	"log"
 )
 
 func main()  {
+
+	dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(dir)
+
 	//初始化配置
 	config.Initconf()
 

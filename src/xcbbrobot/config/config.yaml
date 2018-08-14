@@ -19,4 +19,4 @@ Logfile: "./xcbbrobot/log/"
 Robotlist: "./xcbbrobot/robotvector/robot.list"
 
 #服务器tcp 地址端口
-Server: "59.110.125.134:30301"
+Server: "59.110.125.134:30302"
