@@ -4,6 +4,7 @@ import (
 	"xcbbrobot/common/datastream"
 	"errors"
 	"fmt"
+	"xcbbrobot/common/datagroove"
 )
 
 //PRegisteredPI RQ DATA  (101 << 8) | 23
@@ -25,6 +26,33 @@ type PRobotServerCmd struct {
 	param1  uint32
 	param2  uint32
 }
+
+func SlotSendPRegisteredPI(d *datagroove.DataBuff ,uid uint32 , sid uint32)() {
+	var ph Packhead
+	ph.Uri = (101 << 8) | 23
+	ph.Sid = 0
+	ph.Rescode = 200
+	ph.Tag = 1
+
+	var robotcon PRegisteredPI
+	robotcon.Id = 0
+	robotcon.PIType = 64
+	robotcon.PIPass = ""
+
+	ph.Length = uint32(13+8+2+len(robotcon.PIPass))
+
+	WritePeakHead(d , &ph)
+	WritePRegisteredPI(d, &robotcon)
+	d.LenData += int(ph.Length)
+}
+
+
+func WritePRegisteredPI(d *datagroove.DataBuff ,rq *PRegisteredPI ) () {
+	d.DataSlotWriteUint32(d.LenRemove+d.LenData+13,rq.Id)
+	d.DataSlotWriteUint32(d.LenRemove+d.LenData+17,rq.PIType)
+	d.DataSlotWriteString16(d.LenRemove+d.LenData+21,rq.PIPass)
+}
+
 
 
 func SendPRegisteredPI()(mess []byte){

@@ -20,6 +20,7 @@ type PEnterRQJson struct {
 	Socket_id string `json:"socket_id"`
 }
 
+
 func SendPEnterChannel(robotId uint32 ,uid uint32 , sid uint32 )( mess []byte){
 	var ph Packhead
 	ph.Uri = (1 << 8) | 23

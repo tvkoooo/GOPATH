@@ -3,6 +3,8 @@ package message
 import (
 	"xcbbrobot/common/datastream"
 	"errors"
+	"xcbbrobot/common/datagroove"
+	"time"
 )
 
 //PRealJoinChannel RQ DATA  (32 << 8) | 2
@@ -22,6 +24,37 @@ type PRealJoinChannelRS struct {
 	Sid  uint32
 	Uid  uint32
 }
+
+func SlotSendPRealJoinChannel(d *datagroove.DataBuff ,uid uint32 , sid uint32)() {
+	var ph Packhead
+	ph.Uri = (32 << 8) | 2
+	ph.Sid = 0
+	ph.Rescode = 200
+	ph.Tag = 1
+
+	var robotcome PRealJoinChannelRQ
+	robotcome.Uid = uid
+	robotcome.Sha1Pass = ""
+	robotcome.Sid = sid
+	robotcome.Ssid = 1
+	robotcome.SsPass = ""
+	robotcome.Version = 1
+
+	ph.Length = uint32(13+16+2+2+len(robotcome.Sha1Pass)+len(robotcome.SsPass))
+
+	WritePeakHead(d , &ph)
+	WritePRealJoinChannel(d, &robotcome)
+	d.LenData += int(ph.Length)
+}
+func WritePRealJoinChannel(d *datagroove.DataBuff ,rq *PRealJoinChannelRQ ) () {
+	d.DataSlotWriteUint32(d.LenRemove+d.LenData+13,rq.Uid)
+	d.DataSlotWriteString16(d.LenRemove+d.LenData+17,rq.Sha1Pass)
+	d.DataSlotWriteUint32(d.LenRemove+d.LenData+19,rq.Sid)
+	d.DataSlotWriteUint32(d.LenRemove+d.LenData+23,rq.Ssid)
+	d.DataSlotWriteString16(d.LenRemove+d.LenData+27,rq.SsPass)
+	d.DataSlotWriteUint32(d.LenRemove+d.LenData+29,rq.Version)
+}
+
 
 func SendPRealJoinChannel(uid uint32 , sid uint32 )( mess []byte){
 	var ph Packhead
