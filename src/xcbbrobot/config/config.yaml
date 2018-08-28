@@ -13,10 +13,10 @@
 Loglevel: 5
 
 #输出日志路径
-Logfile: "./xcbbrobot/log/"
+Logfile: "../src/xcbbrobot/log/"
 
 #机器人列表文件路径
-Robotlist: "./xcbbrobot/robotvector/robot.list"
+Robotlist: "../src/xcbbrobot/robotvector/robot.list"
 
 #服务器tcp 地址端口
 Server: "59.110.125.134:30302"

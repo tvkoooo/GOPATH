@@ -7,35 +7,43 @@ import (
 	"io"
 	"xcbbrobot/common/typechange"
 	"fmt"
+	//"sync"
+
 )
 
-type AppRobot struct {
+type MapAppRobot struct {
 	mapRobotBool map[uint32]bool
+	//lockMapAppRobot *sync.RWMutex
 }
 
 
-func (p *AppRobot)RobotFreeInit(num int){
+func (p *MapAppRobot)RobotFreeInit(num int){
 	p.mapRobotBool = make(map[uint32]bool , num)
+	//p.lockMapAppRobot = new(sync.RWMutex)
 }
 
-func (p *AppRobot)PrintRobotMap()(){
+func (p *MapAppRobot)PrintRobotMap()(){
+	//p.lockMapAppRobot.RLock()
 	for k, v := range p.mapRobotBool{
 		fmt.Println("k:", k, "   v:", v)
 	}
+	//p.lockMapAppRobot.RUnlock()
 }
 
-func (p *AppRobot)Len()(int ){
+func (p *MapAppRobot)Len()(int ){
 	return  len(p.mapRobotBool)
 }
 
-func handleLoadRobot(line string ,m *map[uint32]bool) {
+func (p *MapAppRobot)handleLoadRobot(line string) {
 	var robotId int
 	typechange.String2Int(&line, &robotId)
 	if 0!=robotId {
-		(*m) [uint32(robotId)] = true
+		//p.lockMapAppRobot.Lock()
+		p.mapRobotBool [uint32(robotId)] = true
+		//p.lockMapAppRobot.Unlock()
 	}
 }
-func (p *AppRobot)readLine(fileName string, handler func(string,*map[uint32]bool)) error {
+func (p *MapAppRobot)readLine(fileName string, handler func(string)) error {
 	f, err := os.Open(fileName)
 	if err != nil {
 		return err
@@ -44,7 +52,7 @@ func (p *AppRobot)readLine(fileName string, handler func(string,*map[uint32]bool
 	for {
 		line, err := buf.ReadString('\n')
 		line = strings.TrimSpace(line)
-		handler(line ,&(p.mapRobotBool))
+		handler(line)
 		if err != nil {
 			if err == io.EOF {
 				return nil
@@ -54,21 +62,27 @@ func (p *AppRobot)readLine(fileName string, handler func(string,*map[uint32]bool
 	}
 	return nil
 }
-func (p *AppRobot)LoadRobot(robotList string )  {
-	p.readLine(robotList ,handleLoadRobot)
+func (p *MapAppRobot)LoadRobot(robotList string )  {
+	p.readLine(robotList ,p.handleLoadRobot)
 }
 
-func (p *AppRobot)AddRobot(robotId uint32)  {
+func (p *MapAppRobot)AddRobot(robotId uint32)  {
+	//p.lockMapAppRobot.Lock()
 	(p.mapRobotBool)[uint32(robotId)] = true
+	//p.lockMapAppRobot.Unlock()
 }
 
-func (p *AppRobot)DelRobot(robotId uint32)  {
+func (p *MapAppRobot)DelRobot(robotId uint32)  {
+	//p.lockMapAppRobot.Lock()
 	delete(p.mapRobotBool, robotId)
+	//p.lockMapAppRobot.Unlock()
 }
-func (p *AppRobot)CleanRobot()  {
+func (p *MapAppRobot)CleanRobot()  {
+	//p.lockMapAppRobot.Lock()
 	p.mapRobotBool = make(map[uint32]bool)
+	//p.lockMapAppRobot.Unlock()
 }
-func (p *AppRobot)PopRobot()(robotId uint32)  {
+func (p *MapAppRobot)PopRobot()(robotId uint32)  {
 	robotId = 0
 	if 0!=len(p.mapRobotBool) {
 		for k, _ := range p.mapRobotBool {

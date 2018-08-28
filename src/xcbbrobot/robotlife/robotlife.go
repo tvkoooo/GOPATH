@@ -68,18 +68,16 @@ func (p *RobotLife)recData()  {
 	for ;p.stateThread == STATEMOTION ;  {
 		lengg , err :=p.conn.Read(recData)
 		if err != nil {
-			fmt.Println(p.uid ," recData lengg: ",lengg)
+			fmt.Println(p.uid ," recData lengg: ",lengg,"err",err)
 		}
 	}
 }
 
 func (p *RobotLife)loop()  {
 	//连接tcp
-	conn := tcplink.Tcplink(config.Conf.Server)
+	conn := tcplink.Tcplink(config.Conf.ObjectNet)
 	p.conn = conn
-
 	//不处理接收数据
-
 	go p.recData()
 	//延时0.5s-1s 以内
 	time.Sleep(time.Duration(1E7 * maths.BetweenRand(50,100)))
@@ -99,7 +97,7 @@ func (p *RobotLife)loop()  {
 		if 0 == sendTime % 10  {
 			sendPing := message.SendPPlusRQ(p.uid , p.sid)
 			_ , err := conn.Write(sendPing)
-			//fmt.Println(p.uid,"send sendPing ",p.sid," message:", sendPing)
+			fmt.Println(p.uid,"send sendPing ",p.sid," message:", sendPing)
 			if nil != err{
 				fmt.Println(p.uid," 发送心跳失败")
 			}

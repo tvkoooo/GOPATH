@@ -15,11 +15,41 @@ type PPlusRQ struct {
 	Stamps uint32
 }
 
-func SlotSendPPlus(d *datagroove.DataBuff ,uid uint32 , sid uint32)() {
-	var ph Packhead
+
+/////////////------------------------//////////////////////////////////////
+func (b *PPlusRQ )WriteMessageWriteMessage( d *datagroove.DataBuff ) () {
+	var ph PackHead
 	ph.Uri = (12 << 8) | 4
 	ph.Sid = 0
-	ph.Rescode = 200
+	ph.ResCode = 200
+	ph.Tag = 1
+
+	ph.Length = uint32(13+16)
+
+	ph.WritePackHead(d)
+	d.DataSlotWriteUint32(d.LenRemove + d.LenData + 13 , b.Uid)
+	d.DataSlotWriteUint32(d.LenRemove + d.LenData + 17 , b.Sid)
+	d.DataSlotWriteUint32(d.LenRemove + d.LenData + 21 , b.Stampc)
+	d.DataSlotWriteUint32(d.LenRemove + d.LenData + 25 , b.Stamps)
+	d.LenData += int(ph.Length)
+}
+//只用于测试，是否可以还原数据
+func (b *PPlusRQ )ReadPackBody(d *datagroove.DataBuff , length int) () {
+	b.Uid = d.DataSlotReadUint32(d.LenRemove+ 13)
+	b.Sid = d.DataSlotReadUint32(d.LenRemove+ 17)
+	b.Stampc = d.DataSlotReadUint32(d.LenRemove+ 21)
+	b.Stamps = d.DataSlotReadUint32(d.LenRemove+ 25)
+	d.LenRemove += length
+	d.LenData -= length
+}
+/////////////------------------------//////////////////////////////////////
+
+
+func SlotSendPPlus(d *datagroove.DataBuff ,uid uint32 , sid uint32)() {
+	var ph PackHead
+	ph.Uri = (12 << 8) | 4
+	ph.Sid = 0
+	ph.ResCode = 200
 	ph.Tag = 1
 
 	var robotping PPlusRQ
@@ -44,10 +74,10 @@ func WritePPlus(d *datagroove.DataBuff ,rq *PPlusRQ ) () {
 
 
 func SendPPlusRQ(uid uint32 , sid uint32 )( mess []byte){
-	var ph Packhead
+	var ph PackHead
 	ph.Uri = (12 << 8) | 4
 	ph.Sid = 0
-	ph.Rescode = 200
+	ph.ResCode = 200
 	ph.Tag = 1
 
 	var robotping PPlusRQ

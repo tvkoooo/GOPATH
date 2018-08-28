@@ -6,9 +6,11 @@ import (
 	"os"
 )
 
+//默认 最后一次初始化的 日志系统，便于跨函数（无参数）使用
 var GlobalLog *LogFileName
 
-// Log data structure
+
+// Log data struct
 type LogFileName struct {
 	openFile *os.File
 	logLevel int
@@ -28,10 +30,11 @@ const (
 	L_INFO  = 4
 	L_DEBUG = 5
 )
-
-func LogFileInit()  {
+//初始化一个日志系统，如果使用者不接收函数输出，可以使用默认最后一次初始化的 GlobalLog，并且后续禁用再次初始化，否则使用默认初始化（ GlobalLog ）会变化
+func LogFileNew() (*LogFileName) {
 	var l LogFileName
 	GlobalLog = &l
+	return &l
 }
 
 // Setting the log level

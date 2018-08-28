@@ -12,12 +12,14 @@ func Tcplink(server string)(conn net.Conn){
 	//server := "59.110.125.134:30302"
 	tcpAddr, err := net.ResolveTCPAddr("tcp4", server)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+		//【FAIL】
+		fmt.Println("TCP Fatal error:", err.Error())
 		os.Exit(1)
 	}
 	conn, err = net.DialTCP("tcp", nil, tcpAddr)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+		//【FAIL】
+		fmt.Println("TCP Fatal error", err.Error())
 		os.Exit(1)
 	}
 	//fmt.Println("connect success:",server)
@@ -30,7 +32,7 @@ func Tcplisten(server string)(conn net.Conn){
 	//server := "localhost:9090"
 	netListen, err := net.Listen("tcp", server)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+		fmt.Println( "Fatal error: ", err.Error())
 		os.Exit(1)
 	}
 	defer netListen.Close()
@@ -45,3 +47,6 @@ func Tcplisten(server string)(conn net.Conn){
 		return conn
 	}
 }
+
+
+

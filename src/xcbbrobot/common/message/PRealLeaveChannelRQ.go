@@ -12,11 +12,49 @@ type PRealLeaveChannelRQ struct {
 	Sid uint32
 }
 
-func SlotSendPRealLeaveChannelRQ(d *datagroove.DataBuff ,uid uint32 , sid uint32)() {
-	var ph Packhead
+/////////////------------------------//////////////////////////////////////
+func (b *PRealLeaveChannelRQ )WriteMessageWriteMessage( d *datagroove.DataBuff ) () {
+	var ph PackHead
 	ph.Uri = (360 << 8) | 2
 	ph.Sid = 0
-	ph.Rescode = 200
+	ph.ResCode = 200
+	ph.Tag = 1
+
+	ph.Length = uint32(13+8)
+
+	ph.WritePackHead(d)
+
+	d.DataSlotWriteUint32(d.LenRemove + d.LenData + 13 , b.Uid)
+	d.DataSlotWriteUint32(d.LenRemove + d.LenData + 17 , b.Sid)
+
+	d.LenData += int(ph.Length)
+}
+//只用于测试，是否可以还原数据
+func (b *PRealLeaveChannelRQ )ReadPackBody(d *datagroove.DataBuff , length int) () {
+	b.Uid = d.DataSlotReadUint32(d.LenRemove+ 13)
+	b.Sid = d.DataSlotReadUint32(d.LenRemove+ 17)
+	d.LenRemove += length
+	d.LenData -= length
+}
+/////////////------------------------//////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+func SlotSendPRealLeaveChannelRQ(d *datagroove.DataBuff ,uid uint32 , sid uint32)() {
+	var ph PackHead
+	ph.Uri = (360 << 8) | 2
+	ph.Sid = 0
+	ph.ResCode = 200
 	ph.Tag = 1
 
 	var robotLeave PRealLeaveChannelRQ
@@ -37,10 +75,10 @@ func WritePRealLeaveChannelRQ(d *datagroove.DataBuff ,rq *PRealLeaveChannelRQ ) 
 
 
 func SendPRealLeaveChannelRQ(uid uint32 , sid uint32 )( mess []byte){
-	var ph Packhead
+	var ph PackHead
 	ph.Uri = (360 << 8) | 2
 	ph.Sid = 0
-	ph.Rescode = 200
+	ph.ResCode = 200
 	ph.Tag = 1
 
 	var robotLeave PRealLeaveChannelRQ

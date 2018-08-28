@@ -2,36 +2,27 @@ package main
 
 import (
 	"time"
-	"xcbbrobot/robotlive"
+
+	"fmt"
 )
 
 func main()  {
-	var(
-		r1 robotlive.RobotSeed
-		r2 robotlive.RobotSeed
-		r3 robotlive.RobotSeed
-	)
+	for i:=0;i<20;i++  {
+		go printnew(i)
+	}
+	time.Sleep(60E9)
+}
 
-
-	go r1.RobotWork()
-	go r2.RobotWork()
-	go r3.RobotWork()
-
-	go func(p *robotlive.RobotSeed) {
-		time.Sleep(9E9)
-		p.RobotRest()
-	}(&r1)
-
-	go func(p *robotlive.RobotSeed) {
-		time.Sleep(4E9)
-		p.RobotRest()
-	}(&r2)
-
-	go func(p *robotlive.RobotSeed) {
-		time.Sleep(7E9)
-		p.RobotRest()
-	}(&r3)
-
-	time.Sleep(10E9)
+func printnew(a int)  {
+	i := 0
+	for  {
+		fmt.Println("线程", a, "第",i ,"次打印")
+		i++
+		time.Sleep(1E9)
+		if i>30 {
+			fmt.Println("线程", a, "结束")
+			break
+		}
+	}
 }
 

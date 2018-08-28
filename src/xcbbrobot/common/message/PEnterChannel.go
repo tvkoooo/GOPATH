@@ -22,10 +22,10 @@ type PEnterRQJson struct {
 
 
 func SendPEnterChannel(robotId uint32 ,uid uint32 , sid uint32 )( mess []byte){
-	var ph Packhead
+	var ph PackHead
 	ph.Uri = (1 << 8) | 23
 	ph.Sid = 0
-	ph.Rescode = 200
+	ph.ResCode = 200
 	ph.Tag = 1
 
 	var robotEnterChanlJson PEnterRQJson
