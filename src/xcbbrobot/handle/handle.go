@@ -27,24 +27,17 @@ func Decode_PRobotServerCmd(d *datagroove.DataBuff, i interface{}, length int) {
 
 		// 随机时间(0.5s-1s 增加一个) 共 3个机器人
 		go func() {
-			for iii := 0; iii < 30; iii++ {
+			for iii := 0; iii < 200; iii++ {
 				time.Sleep(time.Duration(1E6 * maths.BetweenRand(50, 100)))
 				go a.RoomAddRobot(b.Sid)
 
 			}
 		}()
 	case 1:
-		fmt.Println("房间: ", b.Sid, " STOP")
 		//把房间里面的机器人全部移除
 		numSidRobot := a.MapRoomRobotLen(b.Sid)
-		for iii := 0; iii < numSidRobot; iii++ {
-			go a.RoomSubRobot(b.Sid)
-		}
-		//给个1延时操作，等待机器人全部移除后关闭房间
-		go func() {
-			time.Sleep(1E9)
-			a.RoomDel(b.Sid)
-		}()
+		fmt.Println( b.Sid,"房间机器人数: ", numSidRobot, " 关闭房间:",b.Sid)
+		a.RoomDel(b.Sid)
 	case 2:
 		fmt.Println("目前没有用")
 	case 3:

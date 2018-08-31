@@ -7,40 +7,35 @@ import (
 	"io"
 	"xcbbrobot/common/typechange"
 	"fmt"
-	//"sync"
-
+	"sync"
 )
 
 type MapAppRobot struct {
-	mapRobotBool map[uint32]bool
-	//lockMapAppRobot *sync.RWMutex
+	m map[uint32]bool
+	l *sync.RWMutex
 }
 
 
 func (p *MapAppRobot)RobotFreeInit(num int){
-	p.mapRobotBool = make(map[uint32]bool , num)
-	//p.lockMapAppRobot = new(sync.RWMutex)
+	p.m = make(map[uint32]bool , num)
+	p.l = new(sync.RWMutex)
 }
 
 func (p *MapAppRobot)PrintRobotMap()(){
-	//p.lockMapAppRobot.RLock()
-	for k, v := range p.mapRobotBool{
-		fmt.Println("k:", k, "   v:", v)
-	}
-	//p.lockMapAppRobot.RUnlock()
+	fmt.Println("PrintRobotMap:",p.m)
 }
 
 func (p *MapAppRobot)Len()(int ){
-	return  len(p.mapRobotBool)
+	return  len(p.m)
 }
 
 func (p *MapAppRobot)handleLoadRobot(line string) {
 	var robotId int
 	typechange.String2Int(&line, &robotId)
 	if 0!=robotId {
-		//p.lockMapAppRobot.Lock()
-		p.mapRobotBool [uint32(robotId)] = true
-		//p.lockMapAppRobot.Unlock()
+		p.l.Lock()
+		p.m [uint32(robotId)] = true
+		p.l.Unlock()
 	}
 }
 func (p *MapAppRobot)readLine(fileName string, handler func(string)) error {
@@ -67,25 +62,25 @@ func (p *MapAppRobot)LoadRobot(robotList string )  {
 }
 
 func (p *MapAppRobot)AddRobot(robotId uint32)  {
-	//p.lockMapAppRobot.Lock()
-	(p.mapRobotBool)[uint32(robotId)] = true
-	//p.lockMapAppRobot.Unlock()
+	p.l.Lock()
+	(p.m)[uint32(robotId)] = true
+	p.l.Unlock()
 }
 
 func (p *MapAppRobot)DelRobot(robotId uint32)  {
-	//p.lockMapAppRobot.Lock()
-	delete(p.mapRobotBool, robotId)
-	//p.lockMapAppRobot.Unlock()
+	p.l.Lock()
+	delete(p.m, robotId)
+	p.l.Unlock()
 }
 func (p *MapAppRobot)CleanRobot()  {
-	//p.lockMapAppRobot.Lock()
-	p.mapRobotBool = make(map[uint32]bool)
-	//p.lockMapAppRobot.Unlock()
+	p.l.Lock()
+	p.m = make(map[uint32]bool)
+	p.l.Unlock()
 }
 func (p *MapAppRobot)PopRobot()(robotId uint32)  {
 	robotId = 0
-	if 0!=len(p.mapRobotBool) {
-		for k, _ := range p.mapRobotBool {
+	if 0!=len(p.m) {
+		for k, _ := range p.m {
 			robotId = k
 			p.DelRobot(k)
 			break

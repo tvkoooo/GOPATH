@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	server := "59.110.125.134:30301"
+	server := "59.110.125.134:30302"
 	tcpAddr, err := net.ResolveTCPAddr("tcp4", server)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
@@ -63,11 +63,11 @@ func main() {
 	}()
 
 	recevdata := make([]uint8, 4096)
-	fmt.Println("rece start 1")
+
 	for {
-		fmt.Println("rece start")
+
 		count, err := conn.Read(recevdata[0:256])
-		fmt.Println("rece over")
+
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 			break

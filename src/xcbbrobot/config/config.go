@@ -47,7 +47,7 @@ func (a *AppConfig)GetParameter()  {
 		a.Instance = 0
 		a.LogFilePath = "../src/xcbbrobot/log/"
 		a.LogLevel = 4
-		a.ObjectNet = "59.110.125.134:30301"
+		a.ObjectNet = "59.110.125.134:30302"
 	}else {
 		a.Instance = typechange.String2IntRe(args[1])
 		a.LogFilePath = args[2]

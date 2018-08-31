@@ -24,7 +24,7 @@ const SEND_NOTHING = -2
 
 type AppProgram struct {
 	RobCtrl  robotcontrol.RobotControl
-	mapUriFunc  message.MapUriFuncDecode
+	MapUriFunc  message.MapUriFuncDecode
 	Conn     net.Conn
 	SendBuff datagroove.DataBuff
 	RecBuff  datagroove.DataBuff
@@ -44,11 +44,11 @@ func (a *AppProgram) AppInit()(){
 	logfile.GlobalLog.SetLoglevel(config.Conf.LogLevel)
 
 	//【程序init】初始化消息 uri 解包函数(注册消息解包函数)
-	a.mapUriFunc.UriDecodeHandlerInit()
+	a.MapUriFunc.UriDecodeHandlerInit()
 
 	//添加uri = (131 << 8) | 2 的解包函数
 	//p.M[(131 << 8) | 2] = Decode_PRobotServerCmd
-	a.mapUriFunc.ZhuCe((131 << 8) | 2 , handle.Decode_PRobotServerCmd)
+	a.MapUriFunc.ZhuCe((131 << 8) | 2 , handle.Decode_PRobotServerCmd)
 
 	//机器人初始化
 	a.RobCtrl.RobotControlInit()
@@ -219,9 +219,9 @@ func (a *AppProgram) DecodeMessage() (){
 		//检测数据槽，如果数据槽有足够消息包数据就解包，否则退出
 		if length > 0 {
 			uri := a.GetUri()
-			a.mapUriFunc.L.RLock()
-			getMapV , ok := a.mapUriFunc.M[uri]
-			a.mapUriFunc.L.RUnlock()
+			a.MapUriFunc.L.RLock()
+			getMapV , ok := a.MapUriFunc.M[uri]
+			a.MapUriFunc.L.RUnlock()
 			if ok {
 				//打印消息包头
 				var ph message.PackHead

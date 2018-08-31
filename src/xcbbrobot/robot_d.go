@@ -20,6 +20,8 @@ func main() {
 	//系统做 定时 检测，如果数据槽还有残留数据，需要连接发送
 	go aP.SystemSendMessage(SYSTEM_TIME_5S)
 
+	go aP.RobCtrl.AppRobotOnline.SendPing()
+
 	//循环数据槽解包,错误已经在接收消息包进行了处理
 	for{
 

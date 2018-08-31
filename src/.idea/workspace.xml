@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="934e39e4-ef7a-4330-84df-72d3baf049df" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/xcbbrobot/handle.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/xcbbrobot/handle.a" />
+      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/xcbbrobot/robotapp.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/xcbbrobot/robotapp.a" />
+      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/xcbbrobot/robotcontrol.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/xcbbrobot/robotcontrol.a" />
+      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/xcbbrobot/robotvector.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/xcbbrobot/robotvector.a" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/lj/xcbbrobot/xcbbrobot.go" afterPath="$PROJECT_DIR$/lj/xcbbrobot/xcbbrobot.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/datagroove/datagroove.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/datagroove/datagroove.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/datagroove/datagroovetest/datagroovetest.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/datagroove/datagroovetest/datagroovetest.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/datastream/datastream.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/datastream/datastream.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/PEnterChannel.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/PEnterChannel.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/PPlusRQ.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/PPlusRQ.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/PRealJoinChannelRQ.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/PRealJoinChannelRQ.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/PRealLeaveChannelRQ.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/PRealLeaveChannelRQ.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/packhead.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/packhead.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/robotConnect.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/robotConnect.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/tcplink/tcplink.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/tcplink/tcplink.go" />
       <change beforePath="$PROJECT_DIR$/xcbbrobot/config/config.go" afterPath="$PROJECT_DIR$/xcbbrobot/config/config.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/config/config.yaml" afterPath="$PROJECT_DIR$/xcbbrobot/config/config.yaml" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/config/configstruct.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/config/yamlconfig.yaml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/logfile/logfile.go" afterPath="$PROJECT_DIR$/xcbbrobot/logfile/logfile.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/main.go" afterPath="$PROJECT_DIR$/xcbbrobot/main.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/handle/handle.go" afterPath="$PROJECT_DIR$/xcbbrobot/handle/handle.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/robot_d.go" afterPath="$PROJECT_DIR$/xcbbrobot/robot_d.go" />
       <change beforePath="$PROJECT_DIR$/xcbbrobot/robotapp/robotapp.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotapp/robotapp.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/robotapp/robotapptest/robotapptest.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotapp/robotapptest/robotapptest.go" />
       <change beforePath="$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go" />
-      <change beforePath="$PROJECT_DIR$/xcbbrobot/robotlife/robotlife.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotlife/robotlife.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/robotvector/robot.list" afterPath="$PROJECT_DIR$/xcbbrobot/robotvector/robot.list" />
       <change beforePath="$PROJECT_DIR$/xcbbrobot/robotvector/robotvector.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotvector/robotvector.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,14 +40,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="robotapp.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xcbbrobot/robotapp/robotapp.go">
+      <file leaf-file-name="robotvector.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xcbbrobot/robotvector/robotvector.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="215" column="21" lean-forward="false" selection-start-line="215" selection-start-column="21" selection-end-line="215" selection-end-column="21" />
+            <state relative-caret-position="380">
+              <caret line="74" column="36" lean-forward="true" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
               <folding>
-                <element signature="e#18#235#0" expanded="true" />
+                <element signature="e#21#109#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robotonline.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xcbbrobot/robotonline/robotonline.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="57" column="67" lean-forward="true" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
+              <folding>
+                <element signature="e#21#163#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tcplink.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xcbbrobot/common/tcplink/tcplink.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,80 +77,22 @@
       <file leaf-file-name="robotcontrol.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+            <state relative-caret-position="361">
+              <caret line="88" column="37" lean-forward="false" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="37" />
               <folding>
-                <element signature="e#22#117#0" expanded="true" />
+                <element signature="e#22#132#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="robotlife.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/xcbbrobot/robotlife/robotlife.go">
+      <file leaf-file-name="robotapp.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xcbbrobot/robotapp/robotapp.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="93" column="17" lean-forward="true" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="robotvector.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xcbbrobot/robotvector/robotvector.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-685">
-              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="532">
+              <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
               <folding>
-                <element signature="e#21#112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xcbbrobot/common/message/message.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="e#17#85#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="robot_d.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xcbbrobot/robot_d.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-              <folding>
-                <element signature="e#14#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xcbbrobot/config/config.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-              <folding>
-                <element signature="e#16#103#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="xcbbrobot.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lj/xcbbrobot/xcbbrobot.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1159">
-              <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
-              <folding>
-                <element signature="e#14#82#0" expanded="true" />
+                <element signature="e#18#235#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,8 +101,8 @@
       <file leaf-file-name="handle.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xcbbrobot/handle/handle.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="30" column="44" lean-forward="false" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+            <state relative-caret-position="696">
+              <caret line="39" column="15" lean-forward="true" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
               <folding>
                 <element signature="e#16#152#0" expanded="true" />
               </folding>
@@ -155,13 +110,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="robotConnect.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xcbbrobot/common/message/robotConnect.go">
+      <file leaf-file-name="config.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xcbbrobot/config/config.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3060">
-              <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+            <state relative-caret-position="361">
+              <caret line="49" column="43" lean-forward="false" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot_d.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xcbbrobot/robot_d.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xcbbrobot/config/config.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xcbbrobot.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lj/xcbbrobot/xcbbrobot.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
               <folding>
-                <element signature="e#17#106#0" expanded="true" />
+                <element signature="e#14#82#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,6 +181,8 @@
       <find>AppRobot</find>
       <find>MapUriDecode</find>
       <find>lockMapAppRoom</find>
+      <find>rc</find>
+      <find>appRobotOnline</find>
     </findStrings>
     <replaceStrings>
       <replace>L_DEBUG</replace>
@@ -212,6 +199,8 @@
       <replace>MapAppRobot</replace>
       <replace>MapUriFuncDecode</replace>
       <replace>l</replace>
+      <replace>p</replace>
+      <replace>AppRobotOnline</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\GOPATH\src\lj</dir>
@@ -224,7 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/xcbbrobot/config/configtest/configtest.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/robotlive/robotlivetest/robotlivetest.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/common/typechange.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/robotvector/robotdorm.go" />
@@ -264,17 +252,18 @@
         <option value="$PROJECT_DIR$/xcbbrobot/logfile/logfile.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/common/message/packhead.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/common/tcplink/tcplink.go" />
-        <option value="$PROJECT_DIR$/xcbbrobot/robot_d.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/callback/callback.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/common/message/robotConnect.go" />
-        <option value="$PROJECT_DIR$/xcbbrobot/common/message/message.go" />
-        <option value="$PROJECT_DIR$/lj/xcbbrobot/xcbbrobot.go" />
-        <option value="$PROJECT_DIR$/xcbbrobot/robotapp/robotapp.go" />
-        <option value="$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go" />
-        <option value="$PROJECT_DIR$/xcbbrobot/robotvector/robotvector.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/robotlife/robotlife.go" />
+        <option value="$PROJECT_DIR$/xcbbrobot/robotvector/robotvector.go" />
+        <option value="$PROJECT_DIR$/xcbbrobot/common/message/message.go" />
+        <option value="$PROJECT_DIR$/xcbbrobot/robot_d.go" />
+        <option value="$PROJECT_DIR$/xcbbrobot/robotapp/robotapp.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/handle/handle.go" />
+        <option value="$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go" />
+        <option value="$PROJECT_DIR$/lj/xcbbrobot/xcbbrobot.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/config/config.go" />
+        <option value="$PROJECT_DIR$/xcbbrobot/robotonline/robotonline.go" />
       </list>
     </option>
   </component>
@@ -284,7 +273,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1311" />
@@ -465,6 +454,12 @@
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="xcbbrobot" type="462c0819:PsiDirectoryNode" />
+              <item name="robotonline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="xcbbrobot" type="462c0819:PsiDirectoryNode" />
               <item name="robotvector" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -511,28 +506,12 @@
       <filePath value="$PROJECT_DIR$/xcbbrobot/config/config.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go build handle.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
-      <module name="src" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/xcbbrobot/handle/handle.go" />
-      <directory value="$PROJECT_DIR$/" />
-    </configuration>
     <configuration name="go build robot_d.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="src" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/xcbbrobot/robot_d.go" />
-      <directory value="$PROJECT_DIR$/" />
-    </configuration>
-    <configuration name="go build robotapp.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
-      <module name="src" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/xcbbrobot/robotapp/robotapp.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="go build robotcontrol.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
@@ -543,24 +522,40 @@
       <filePath value="$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
+    <configuration name="go build robotonline.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="src" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/xcbbrobot/robotonline/robotonline.go" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="go build xcbbrobot.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="src" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/lj/xcbbrobot/xcbbrobot.go" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
     <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
       <node-interpreter value="project" />
       <envs />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Go Build.go build robot_d.go" />
-      <item index="1" class="java.lang.String" itemvalue="Go Build.go build robotapp.go" />
-      <item index="2" class="java.lang.String" itemvalue="Go Build.go build handle.go" />
-      <item index="3" class="java.lang.String" itemvalue="Go Build.go build robotcontrol.go" />
-      <item index="4" class="java.lang.String" itemvalue="Go Build.go build config.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Build.go build robotcontrol.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Build.go build config.go" />
+      <item index="3" class="java.lang.String" itemvalue="Go Build.go build xcbbrobot.go" />
+      <item index="4" class="java.lang.String" itemvalue="Go Build.go build robotonline.go" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Go Build.go build robot_d.go" />
-        <item index="1" class="java.lang.String" itemvalue="Go Build.go build config.go" />
-        <item index="2" class="java.lang.String" itemvalue="Go Build.go build robotcontrol.go" />
-        <item index="3" class="java.lang.String" itemvalue="Go Build.go build handle.go" />
-        <item index="4" class="java.lang.String" itemvalue="Go Build.go build robotapp.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Build.go build robotonline.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Build.go build xcbbrobot.go" />
+        <item index="3" class="java.lang.String" itemvalue="Go Build.go build config.go" />
+        <item index="4" class="java.lang.String" itemvalue="Go Build.go build robotcontrol.go" />
       </list>
     </recent_temporary>
   </component>
@@ -573,7 +568,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1035" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -582,7 +577,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28664497" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28555918" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -738,44 +733,20 @@
           <option name="timeStamp" value="198" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go</url>
-          <line>73</line>
+          <url>file://$PROJECT_DIR$/xcbbrobot/handle/handle.go</url>
+          <line>2</line>
           <properties />
-          <option name="timeStamp" value="217" />
+          <option name="timeStamp" value="219" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="219" />
+      <option name="time" value="220" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/tools/Go/src/net/mockserver_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="271" column="17" lean-forward="false" selection-start-line="271" selection-start-column="17" selection-end-line="271" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/config/parameter.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/config/configstruct.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/tools/Go/src/syscall/zerrors_windows.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -946,16 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/common/message/PPlusRQ.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-          <folding>
-            <element signature="e#17#107#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xcbbrobot/common/message/PEnterChannel.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -1010,14 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/config/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xcbbrobot/common/message/packhead.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -1036,14 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/tools/Go/src/net/net.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="115" column="4" lean-forward="false" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xcbbrobot/callback/callback.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -1057,67 +1002,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="18" />
           <folding>
-            <element signature="e#20#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/common/tcplink/tcplink.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#17#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/common/callback/callback.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#18#36#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lj/xcbbrobot/xcbbrobot.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
-          <folding>
-            <element signature="e#14#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/common/message/message.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#17#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/handle/handle.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="30" column="44" lean-forward="false" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-          <folding>
-            <element signature="e#16#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/config/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding>
-            <element signature="e#16#103#0" expanded="true" />
+            <element signature="e#20#115#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1138,6 +1023,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/common/message/robotConnect.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-894">
+          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding>
+            <element signature="e#17#106#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/common/message/message.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+          <folding>
+            <element signature="e#17#85#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://D:/tools/Go/src/runtime/panic.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1146,61 +1051,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/robot_d.go">
+    <entry file="file://D:/tools/Go/src/runtime/hashmap.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="202">
+          <caret line="767" column="0" lean-forward="false" selection-start-line="767" selection-start-column="0" selection-end-line="767" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/tools/Go/src/runtime/time.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/common/callback/callback.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/robotlife/robotlife.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="93" selection-end-column="17" />
           <folding>
-            <element signature="e#14#46#0" expanded="true" />
+            <element signature="e#19#153#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/common/message/PPlusRQ.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/robotvector/robotvector.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="74" column="36" lean-forward="true" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
+          <folding>
+            <element signature="e#21#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/config/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="88" column="37" lean-forward="false" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="37" />
+          <folding>
+            <element signature="e#22#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xcbbrobot/robotapp/robotapp.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="215" column="21" lean-forward="false" selection-start-line="215" selection-start-column="21" selection-end-line="215" selection-end-column="21" />
+        <state relative-caret-position="532">
+          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
           <folding>
             <element signature="e#18#235#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/common/message/robotConnect.go">
+    <entry file="file://D:/tools/Go/src/net/net.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3060">
-          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        <state relative-caret-position="551">
+          <caret line="185" column="32" lean-forward="false" selection-start-line="185" selection-start-column="18" selection-end-line="185" selection-end-column="32" />
           <folding>
-            <element signature="e#17#106#0" expanded="true" />
+            <element signature="e#3035#3114#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/robotvector/robotvector.go">
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/handle/handle.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-685">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="696">
+          <caret line="39" column="15" lean-forward="true" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
           <folding>
-            <element signature="e#21#112#0" expanded="true" />
+            <element signature="e#16#152#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go">
+    <entry file="file://$PROJECT_DIR$/lj/xcbbrobot/xcbbrobot.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
-          <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+          <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
           <folding>
-            <element signature="e#22#117#0" expanded="true" />
+            <element signature="e#14#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/robotlife/robotlife.go">
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/config/config.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="93" column="17" lean-forward="true" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
+        <state relative-caret-position="361">
+          <caret line="49" column="43" lean-forward="false" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/common/tcplink/tcplink.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/robot_d.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xcbbrobot/robotonline/robotonline.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="57" column="67" lean-forward="true" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
+          <folding>
+            <element signature="e#21#163#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
