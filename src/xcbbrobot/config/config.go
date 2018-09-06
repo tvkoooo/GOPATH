@@ -16,7 +16,7 @@ type XcbbRobotConfig struct {
 }
 
 type AppConfig struct {
-	Instance int
+	Instance string
 	LogFilePath string
 	LogLevel int
 	ObjectNet string
@@ -43,13 +43,13 @@ func (a *AppConfig)GetParameter()  {
 	args := os.Args //获取用户输入的所有参数
 	if args == nil || len(args) <5{
 		fmt.Println("参数不够，举个例子：")
-		fmt.Println("robot_d 0 \"../src/xcbbrobot/log/\" 4 \"59.110.125.134:30302\"")
-		a.Instance = 0
+		fmt.Println("xcbbrobot 0 \"../src/xcbbrobot/log/\" 4 \"59.110.125.134:30302\"")
+		a.Instance = "0"
 		a.LogFilePath = "../src/xcbbrobot/log/"
 		a.LogLevel = 4
 		a.ObjectNet = "59.110.125.134:30302"
 	}else {
-		a.Instance = typechange.String2IntRe(args[1])
+		a.Instance = args[1]
 		a.LogFilePath = args[2]
 		a.LogLevel = typechange.String2IntRe(args[3])
 		a.ObjectNet = args[4]

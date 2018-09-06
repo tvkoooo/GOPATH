@@ -6,8 +6,8 @@ import (
 	"strings"
 	"io"
 	"xcbbrobot/common/typechange"
-	"fmt"
 	"sync"
+	"xcbbrobot/logfile"
 )
 
 type MapAppRobot struct {
@@ -16,13 +16,13 @@ type MapAppRobot struct {
 }
 
 
-func (p *MapAppRobot)RobotFreeInit(num int){
-	p.m = make(map[uint32]bool , num)
+func (p *MapAppRobot)RobotFreeInit(){
+	p.m = make(map[uint32]bool)
 	p.l = new(sync.RWMutex)
 }
 
 func (p *MapAppRobot)PrintRobotMap()(){
-	fmt.Println("PrintRobotMap:",p.m)
+	logfile.GlobalLog.Infoln("PrintRobotMap::MapAppRobot:",p.m)
 }
 
 func (p *MapAppRobot)Len()(int ){

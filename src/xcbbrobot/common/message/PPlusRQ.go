@@ -6,7 +6,7 @@ import (
 	"time"
 	"xcbbrobot/common/datagroove"
 )
-
+/////////////------------------------//////////////////////////////////////
 //PPlus RQ DATA  (12 << 8) | 4
 type PPlusRQ struct {
 	Uid uint32
@@ -14,10 +14,20 @@ type PPlusRQ struct {
 	Stampc uint32
 	Stamps uint32
 }
+/////////////------------------------//////////////////////////////////////
+//拼装 PPlus 消息
+func WritePPlusBuff(d *datagroove.DataBuff ,robotId uint32 ,sid uint32)(){
+	var p PPlusRQ
+	p.Uid = robotId
+	p.Sid = sid
+	p.Stampc = uint32(time.Now().Unix())
+	p.Stamps = uint32(time.Now().UnixNano() % 1E9)
+	p.WriteMessage(d)
+}
 
 
 /////////////------------------------//////////////////////////////////////
-func (b *PPlusRQ )WriteMessageWriteMessage( d *datagroove.DataBuff ) () {
+func (b *PPlusRQ )WriteMessage( d *datagroove.DataBuff ) () {
 	var ph PackHead
 	ph.Uri = (12 << 8) | 4
 	ph.Sid = 0

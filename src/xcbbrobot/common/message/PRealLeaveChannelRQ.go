@@ -11,9 +11,16 @@ type PRealLeaveChannelRQ struct {
 	Uid uint32
 	Sid uint32
 }
-
 /////////////------------------------//////////////////////////////////////
-func (b *PRealLeaveChannelRQ )WriteMessageWriteMessage( d *datagroove.DataBuff ) () {
+//拼装 PRealJoinChannel 消息
+func WritePRealLeaveChannelBuff(d *datagroove.DataBuff ,robotId uint32 ,sid uint32)(){
+	var p PRealLeaveChannelRQ
+	p.Uid = robotId
+	p.Sid = sid
+	p.WriteMessage(d)
+}
+/////////////------------------------//////////////////////////////////////
+func (b *PRealLeaveChannelRQ )WriteMessage( d *datagroove.DataBuff ) () {
 	var ph PackHead
 	ph.Uri = (360 << 8) | 2
 	ph.Sid = 0
@@ -38,18 +45,6 @@ func (b *PRealLeaveChannelRQ )ReadPackBody(d *datagroove.DataBuff , length int) 
 }
 /////////////------------------------//////////////////////////////////////
 
-
-
-
-
-
-
-
-
-
-
-
-
 func SlotSendPRealLeaveChannelRQ(d *datagroove.DataBuff ,uid uint32 , sid uint32)() {
 	var ph PackHead
 	ph.Uri = (360 << 8) | 2
@@ -72,8 +67,6 @@ func WritePRealLeaveChannelRQ(d *datagroove.DataBuff ,rq *PRealLeaveChannelRQ ) 
 	d.DataSlotWriteUint32(d.LenRemove+d.LenData+17,rq.Sid)
 
 }
-
-
 func SendPRealLeaveChannelRQ(uid uint32 , sid uint32 )( mess []byte){
 	var ph PackHead
 	ph.Uri = (360 << 8) | 2
@@ -89,8 +82,6 @@ func SendPRealLeaveChannelRQ(uid uint32 , sid uint32 )( mess []byte){
 	mess = AddPeakHead(ph ,body)
 	return mess
 }
-
-
 func EncodePRealLeaveChannelRQ(rq PRealLeaveChannelRQ ) (outbyte []byte) {
 	body := make([]byte,0)
 	outbyte = datastream.AddUint32(rq.Uid ,body )

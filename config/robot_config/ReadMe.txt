@@ -1,0 +1,3 @@
+shard_robot_csv_file
+中将需要转换的文件设置好分片,执行
+lua shard.lua

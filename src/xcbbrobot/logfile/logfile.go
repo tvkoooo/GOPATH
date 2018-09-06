@@ -33,6 +33,8 @@ const (
 //初始化一个日志系统，如果使用者不接收函数输出，可以使用默认最后一次初始化的 GlobalLog，并且后续禁用再次初始化，否则使用默认初始化（ GlobalLog ）会变化
 func LogFileNew() (*LogFileName) {
 	var l LogFileName
+	//给个默认日志等级
+	l.logLevel = L_DEBUG
 	GlobalLog = &l
 	return &l
 }
@@ -52,6 +54,7 @@ func (l *LogFileName)LogFileOpen(patch string) ( err error) {
 	l.openFile, err = os.OpenFile(patch, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0)
 	if err != nil {
 		fmt.Println("日志文件操作失败", err)
+		os.Exit(1)
 		return  err
 	}
 	l.debug = log.New(l.openFile, "[DEBUG]", log.Ldate|log.Ltime)
@@ -59,7 +62,6 @@ func (l *LogFileName)LogFileOpen(patch string) ( err error) {
 	l.warn = log.New(l.openFile, "[WARN]", log.Ldate|log.Ltime|log.Llongfile)
 	l.error = log.New(l.openFile, "[ERROR]", log.Ldate|log.Ltime|log.Llongfile)
 	l.fatal = log.New(l.openFile, "[FATAL]", log.Ldate|log.Ltime|log.Llongfile)
-	l.logLevel = L_DEBUG
 
 	return  err
 }
@@ -72,13 +74,13 @@ func (l *LogFileName)LogFileClosed() {
 //DEBUG log like Println
 func (l *LogFileName)Debugln( a ...interface{}) {
 	if l.logLevel >= L_DEBUG {
-		l.debug.Println(a)
+		l.debug.Output(2, fmt.Sprintln(a...))
 	}
 }
 //DEBUG log like Printf
 func (l *LogFileName)Debugf( format string, v ...interface{}) {
 	if l.logLevel >= L_DEBUG {
-		l.debug.Printf(format, v)
+		l.debug.Output(2, fmt.Sprintf(format, v...))
 	}
 }
 
@@ -86,13 +88,13 @@ func (l *LogFileName)Debugf( format string, v ...interface{}) {
 //INFO log like Println
 func (l *LogFileName)Infoln( a ...interface{}) {
 	if l.logLevel >= L_INFO {
-		l.info.Println(a)
+		l.info.Output(2, fmt.Sprintln(a...))
 	}
 }
 //INFO log like like Printf
 func (l *LogFileName)Infof( format string, v ...interface{}) {
 	if l.logLevel >= L_INFO {
-		l.info.Printf(format, v)
+		l.info.Output(2, fmt.Sprintf(format, v...))
 	}
 }
 
@@ -100,39 +102,39 @@ func (l *LogFileName)Infof( format string, v ...interface{}) {
 //WARN log like Println
 func (l *LogFileName)Warnln( a ...interface{}) {
 	if l.logLevel >= L_WARN {
-		l.warn.Println(a)
+		l.warn.Output(2, fmt.Sprintln(a...))
 	}
 }
 //WARN log like like Printf
 func (l *LogFileName)Warnf( format string, v ...interface{}) {
 	if l.logLevel >= L_WARN {
-		l.info.Printf(format, v)
+		l.info.Output(2, fmt.Sprintf(format, v...))
 	}
 }
 
 //ERROR log like Println
 func (l *LogFileName)Errorln( a ...interface{}) {
 	if l.logLevel >= L_ERROR {
-		l.error.Println(a)
+		l.error.Output(2, fmt.Sprintln(a...))
 	}
 }
 //ERROR log like like Printf
 func (l *LogFileName)Errof( format string, v ...interface{}) {
 	if l.logLevel >= L_ERROR {
-		l.info.Printf(format, v)
+		l.info.Output(2, fmt.Sprintf(format, v...))
 	}
 }
 
 //FATAL log like Println
 func (l *LogFileName)Fatalln( a ...interface{}) {
 	if l.logLevel >= L_FATAL {
-		l.fatal.Println(a)
+		l.fatal.Output(2, fmt.Sprintln(a...))
 	}
 }
 //FATAL log like like Printf
 func (l *LogFileName)Fatalf( format string, v ...interface{}) {
 	if l.logLevel >= L_FATAL {
-		l.info.Printf(format, v)
+		l.info.Output(2, fmt.Sprintf(format, v...))
 	}
 }
 

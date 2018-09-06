@@ -23,9 +23,21 @@ type PRealJoinChannelRS struct {
 	Sid  uint32
 	Uid  uint32
 }
-
 /////////////------------------------//////////////////////////////////////
-func (b *PRealJoinChannelRQ )WriteMessageWriteMessage( d *datagroove.DataBuff ) () {
+//拼装 PRealJoinChannel 消息
+func WritePRealJoinChannelBuff(d *datagroove.DataBuff ,robotId uint32 ,sid uint32)(){
+	var p PRealJoinChannelRQ
+	p.Uid = robotId
+	p.Sha1Pass = ""
+	p.Sid = sid
+	p.Ssid = 1
+	p.SsPass = ""
+	p.Version = 1
+	p.WriteMessage(d)
+
+}
+/////////////------------------------//////////////////////////////////////
+func (b *PRealJoinChannelRQ )WriteMessage( d *datagroove.DataBuff ) () {
 	var ph PackHead
 	ph.Uri = (32 << 8) | 2
 	ph.Sid = 0

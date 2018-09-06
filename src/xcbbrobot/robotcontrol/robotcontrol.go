@@ -27,8 +27,8 @@ type RobotControl struct {
 }
 //机器人控制初始化
 func (p *RobotControl)RobotControlInit()() {
-	p.appRobot.RobotFreeInit(128*128)
-	p.AppRobotOnline.RobotFreeInit(128*128)
+	p.appRobot.RobotFreeInit()
+	p.AppRobotOnline.RobotFreeInit()
 	p.appRobot.LoadRobot(config.Conf.Yaml.Robotlist)
 	p.appRoom.M = make(map[uint32]*MapRoomRobot,128)
 	p.appRoom.L = new(sync.RWMutex)

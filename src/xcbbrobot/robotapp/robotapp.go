@@ -9,9 +9,8 @@ import (
 	"xcbbrobot/logfile"
 	"xcbbrobot/common/tcplink"
 	"xcbbrobot/common/message"
-	"fmt"
-	"xcbbrobot/robotcontrol"
 	"xcbbrobot/handle"
+	"xcbbrobot/robotctrl"
 )
 
 //发送接收缓冲数据槽 最大容量，超出将断开连接，销毁数据
@@ -23,7 +22,7 @@ const SEND_NOTHING = -2
 
 
 type AppProgram struct {
-	RobCtrl  robotcontrol.RobotControl
+	RobCtrl  robotctrl.RobotCtrl
 	MapUriFunc  message.MapUriFuncDecode
 	Conn     net.Conn
 	SendBuff datagroove.DataBuff
@@ -33,15 +32,6 @@ type AppProgram struct {
 
 
 func (a *AppProgram) AppInit()(){
-	//【程序init】初始化配置
-	config.AppConfigNew()
-	config.Conf.AppConfigInit()
-
-	//【程序init】初始化日志
-	logfile.LogFileNew()
-	logfile.GlobalLog.LogFileOpen(config.Conf.LogFilePath + "robot_d_" + time.Now().Format("20060102") + ".log")
-	defer logfile.GlobalLog.LogFileClosed()
-	logfile.GlobalLog.SetLoglevel(config.Conf.LogLevel)
 
 	//【程序init】初始化消息 uri 解包函数(注册消息解包函数)
 	a.MapUriFunc.UriDecodeHandlerInit()
@@ -51,34 +41,42 @@ func (a *AppProgram) AppInit()(){
 	a.MapUriFunc.ZhuCe((131 << 8) | 2 , handle.Decode_PRobotServerCmd)
 
 	//机器人初始化
-	a.RobCtrl.RobotControlInit()
+	a.RobCtrl.RobotCtrlInit()
+
 
 	//初始化连接次数 为0
 	a.NumConnect = 0
 }
 
-func (a *AppProgram) AppRobotConn()()  {
-	//【程序init】tcp （客户端模式） 初始化
-	a.Conn = tcplink.Tcplink(config.Conf.ObjectNet)
-	fmt.Println("a.Conn",a.Conn)
+func (a *AppProgram) AppRobotConn()( bool)  {
+	for {
+		//【程序init】tcp （客户端模式） 初始化
+		a.Conn = tcplink.Tcplink(config.Conf.ObjectNet)
+		if a.Conn != nil {
+			break
+		}
+		time.Sleep(1E8)
+	}
+
 	//【程序init】初始化Net 发送和接收数据槽
 	a.SendBuff.BufferInit()
 	a.RecBuff.BufferInit()
 	//【信息拼装与发送】 注册机器人程序 message 进入发送缓冲器
 	message.WritePRegisteredPI(&a.SendBuff)
 
-
-	//利用线程 延时 0.5s 后发送机器人注册 请求 SendMessage
-	go func() {
-		time.Sleep(5E8)
-		senNum , err := a.SendMessage()
-		if err != nil  {
-			fmt.Println("机器人注册房间服务器失败 err :" ,err)
-		}else {
+	senNum , err := a.SendMessage()
+	if err != nil  {
+		logfile.GlobalLog.Fatalln("机器人注册房间服务器失败 err :" ,err)
+		return false
+	}else {
+		if senNum >0 {
+			logfile.GlobalLog.Infoln("注册次数:",a.NumConnect,"连接conn:",&a.Conn," AppRobotConn success. LocalAddr: " ,a.Conn.LocalAddr(),"LocalAddr: " ,a.Conn.RemoteAddr(),"发送数据:",senNum)
 			a.NumConnect ++
-			fmt.Println("注册次数:",a.NumConnect," AppRobotConn success. LocalAddr: " ,a.Conn.LocalAddr(),"LocalAddr: " ,a.Conn.RemoteAddr(),"发送数据:",senNum)
+			return true
+		}else {
+			return false
 		}
-	}()
+	}
 }
 
 //备注：本函数返回是发送数据和正常socket不一样，无数据发送返回 SEND_NOTHING=-2   关闭连接返回0 正常发送返回发送数据
@@ -93,8 +91,16 @@ func (a *AppProgram) SendMessage() (numSendAll int, err error) {
 	numSendAll = 0
 	for {
 		//【INFO】
-		fmt.Println("SendMessage conn:",a.Conn,"send message:",a.SendBuff.SGroove[a.SendBuff.LenRemove : a.SendBuff.LenRemove+a.SendBuff.LenData])
-		numSend, err = (a.Conn).Write(a.SendBuff.SGroove[a.SendBuff.LenRemove : a.SendBuff.LenRemove+a.SendBuff.LenData])
+		//fmt.Println("SendMessage conn:",a.Conn,"send message:",a.SendBuff.SGroove[a.SendBuff.LenRemove : a.SendBuff.LenRemove+a.SendBuff.LenData])
+		if a.Conn !=nil {
+			numSend, err = (a.Conn).Write(a.SendBuff.SGroove[a.SendBuff.LenRemove : a.SendBuff.LenRemove+a.SendBuff.LenData])
+		}else {
+			numSendAll = SEND_NOTHING
+			//连接丢失
+			err = syscall.ENETRESET
+			return numSendAll,err
+		}
+
 		if numSend > 0 {
 			a.SendBuff.LenRemove += numSend
 			a.SendBuff.LenData -= numSend
@@ -108,8 +114,11 @@ func (a *AppProgram) SendMessage() (numSendAll int, err error) {
 		if 0 == numSend {
 			numSendAll = 0
 			//【WARN】
-			fmt.Println("SendMessage conn:",a.Conn , "Close() ! Because 0 == numSend")
-			a.Conn.Close()
+			logfile.GlobalLog.Warnln("SendMessage conn:",a.Conn , "Close() ! Because 0 == numSend")
+			if a.Conn != nil {
+				a.Conn.Close()
+				a.Conn = nil
+			}
 			break
 		}
 		if numSend < 0 {
@@ -120,9 +129,11 @@ func (a *AppProgram) SendMessage() (numSendAll int, err error) {
 			} else {
 				numSendAll = 0
 				//【WARN】
-				fmt.Println("SendMessage conn:",a.Conn , "Close() ! Because numSend < 0")
-				a.Conn.Close()
-
+				logfile.GlobalLog.Warnln("SendMessage conn:",a.Conn , "Close() ! Because numSend < 0")
+				if a.Conn != nil {
+					a.Conn.Close()
+					a.Conn = nil
+				}
 			}
 		}
 	}
@@ -135,20 +146,26 @@ func (a *AppProgram) SystemSendMessage(d time.Duration) {
 		numSend, err := a.SendMessage()
 		if err != nil || numSend==0 {
 			//【WARN】
-			fmt.Println("SystemSendMessage conn:",a.Conn , "Close() ! Because err != nil || numSend==0")
-			a.Conn.Close()
-			a.AppRobotConn()
+			logfile.GlobalLog.Warnln("SystemSendMessage conn:",a.Conn , "Close() ! Because err != nil || numSend==0")
+			if a.Conn != nil {
+				a.Conn.Close()
+				a.Conn = nil
+			}
+			//a.AppRobotConn()
 		}
 		//如果发送缓存区槽超过 64k 则断开连接 ,并重构新连接
 		if a.SendBuff.LenGroove > GROOVE_CAP_BREAK {
 			//【WARN】
-			fmt.Println("SystemSendMessage conn:",a.Conn , "Close() ! Because SendBuff.LenGroove > GROOVE_CAP_BREAK")
-			a.Conn.Close()
-			a.AppRobotConn()
+			logfile.GlobalLog.Warnln("SystemSendMessage conn:",a.Conn , "Close() ! Because SendBuff.LenGroove > GROOVE_CAP_BREAK")
+			if a.Conn != nil {
+				a.Conn.Close()
+				a.Conn = nil
+			}
+			//a.AppRobotConn()
 		}
 		if numSend != SEND_NOTHING {
 			//【INFO】
-			fmt.Println("System conn:",a.Conn ,"SendMessage, numSend:",numSend,"Sleep:" ,d)
+			logfile.GlobalLog.Infoln("System conn:",a.Conn ,"SendMessage, numSend:",numSend,"Sleep:" ,d)
 		}
 	}
 }
@@ -158,7 +175,14 @@ func (a *AppProgram) ReceiveMessage() (numRecAll int, err error){
 	recNum := 0
 	for  {
 		a.RecBuff.AddDataACup(RECEIVE_CUP)
-		recNum, err = a.Conn.Read(a.RecBuff.SGroove[a.RecBuff.LenRemove+a.RecBuff.LenData : a.RecBuff.LenRemove+a.RecBuff.LenData+RECEIVE_CUP])
+		if a.Conn ==nil {
+			//连接丢失
+			numRecAll = 0
+			err = syscall.ENETRESET
+			break
+		}else {
+			recNum, err = a.Conn.Read(a.RecBuff.SGroove[a.RecBuff.LenRemove+a.RecBuff.LenData : a.RecBuff.LenRemove+a.RecBuff.LenData+RECEIVE_CUP])
+		}
 		if recNum>0 {
 			a.RecBuff.LenData += recNum
 			numRecAll += recNum
@@ -168,10 +192,12 @@ func (a *AppProgram) ReceiveMessage() (numRecAll int, err error){
 			//需要重新启用新连接
 			numRecAll = 0
 			//【WARN】
-			fmt.Println("ReceiveMessage conn:",a.Conn , "Close() ! Because recNum = 0")
-			a.Conn.Close()
-			a.AppRobotConn()
-
+			logfile.GlobalLog.Warnln("ReceiveMessage conn:",&a.Conn , "Close() ! Because recNum = 0 err:",err.Error())
+			if a.Conn != nil {
+				a.Conn.Close()
+				a.Conn = nil
+			}
+			//a.AppRobotConn()
 			break
 		}
 		if recNum < 0 {
@@ -180,16 +206,21 @@ func (a *AppProgram) ReceiveMessage() (numRecAll int, err error){
 				break
 			}else {
 				//【WARN】
-				fmt.Println("ReceiveMessage conn:",a.Conn , "Close() ! Because recNum < 0")
+				logfile.GlobalLog.Warnln("ReceiveMessage conn:",a.Conn , "Close() ! Because recNum < 0 err:",err.Error())
 				//如果是其他异常错误，需要关闭连接，重新建立新的连接（同时清除发送和接收数据槽数据）
-				a.Conn.Close()
-				a.AppRobotConn()
+				if a.Conn != nil {
+					a.Conn.Close()
+					a.Conn = nil
+				}
+				//a.AppRobotConn()
 				break
 			}
 		}
 		//【INFO】
 		if err != nil {
-			fmt.Println("ReceiveMessage Conn:",a.Conn ,a.Conn.LocalAddr(),"numRecAll:",numRecAll,"err:",err)
+			if a.Conn != nil {
+				logfile.GlobalLog.Infoln("ReceiveMessage Conn:",a.Conn ,a.Conn.LocalAddr(),"numRecAll:",numRecAll,"err:",err.Error())
+			}
 		}
 	}
 	return numRecAll ,err
@@ -227,18 +258,18 @@ func (a *AppProgram) DecodeMessage() (){
 				var ph message.PackHead
 				ph.ReadPackHead(&a.RecBuff)
 				//【INFO】
-				fmt.Println("收到uri: ",uri,"消息:",ph)
+				logfile.GlobalLog.Infoln("收到uri: ",uri,"消息:",ph)
 				if ph.ResCode == 200 {
 					//对这个 uri 安卓map 里面函数进行处理
 					getMapV(&a.RecBuff,&a.RobCtrl ,length )
 				}else {
 					//【WARN】
-					fmt.Println("返回包错误 uri:",uri,"ph.ResCode:",ph.ResCode)
+					logfile.GlobalLog.Warnln("返回包错误 uri:",uri,"ph.ResCode:",ph.ResCode)
 				}
 
 			}else {
 				//【DEBUG】如果不在 uri 表里面，则只输出 uri ，跳过消息
-				fmt.Println("收到uri:",uri ," ,但没有解包")
+				//fmt.Println("收到uri:",uri ," ,但没有解包")
 				a.RecBuff.DataJump(length)
 			}
 
