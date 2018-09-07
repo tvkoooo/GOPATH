@@ -79,12 +79,12 @@ func confInit()  {
 
 	//创建/打开 实例号文件夹
 	dirPath :=config.Conf.LogFilePath
-	logfile.SystemLogPrintln("info","Log path:",dirPath)
+	logfile.SystemLogPrintln("info","confInit::Function log path:",dirPath)
 	fileopr.CreateDir(&dirPath)
 
 	//【程序init】初始化日志文件
 	logfile.LogFileNew()
 	logfile.GlobalLog.SetLogLevel(config.Conf.LogLevel)
-	logfile.GlobalLog.LogFileOpen(dirPath +"/"+ "go_robot_d.log")
+	logfile.GlobalLog.StartLogFile(dirPath +"/"+ "go_robot_d.log")
 }
 

@@ -4,8 +4,8 @@ import (
 	"unsafe"
 	"encoding/binary"
 	"time"
-	"fmt"
 	"errors"
+	"robot_d/common/logfile"
 )
 
 const GROOVE_CAP = 1024
@@ -45,7 +45,7 @@ func (d *DataBuff)GetDataAddress(pos int) unsafe.Pointer {
 }
 //获取数据槽内数据
 func (d *DataBuff)PrintDataGroove(){
-	fmt.Println("SGroove:" , d.SGroove)
+	logfile.GlobalLog.Infoln("PrintDataGroove::SGroove:" , d.SGroove)
 }
 //跳过数据槽内数据
 func (d *DataBuff)DataJump(length int) (error){
@@ -54,7 +54,7 @@ func (d *DataBuff)DataJump(length int) (error){
 		d.LenData -= length
 		return nil
 	}else {
-		return	errors.New("ERROR : 数据槽没有足够数据")
+		return	errors.New("ERROR : Data slot does not have enough data")
 	}
 
 }
@@ -65,7 +65,7 @@ func (d *DataBuff)PrintStatus() {
 	interval := int(time.Now().Sub(d.initTime)/1E9 +1)
 	oneDay := int(24*60*60)
 	NpD := oneDay/interval * d.numCross
-	fmt.Println("basePage:" , d.basePage," baseGroove:" , d.baseGroove," numCross:" , d.numCross," maxGroove:" , d.maxGroove," shortFlag:" , d.shortFlag,"interval:" , interval," NpD:" , NpD)
+	logfile.GlobalLog.Infoln("PrintStatus::basePage:" , d.basePage," baseGroove:" , d.baseGroove," numCross:" , d.numCross," maxGroove:" , d.maxGroove," shortFlag:" , d.shortFlag,"interval:" , interval," NpD:" , NpD)
 }
 //本函数只用于变更基本数据槽规格和后续扩容方式
 //用于调整数据槽基本槽大小（默认情况最好是1024等常用计算机存储单位）

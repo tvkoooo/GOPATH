@@ -50,4 +50,14 @@ func main()  {
 	fmt.Println(strings.Replace("oink oink oink", "k", "ky", 2))
 	fmt.Println(strings.Replace("oink oink oink", "oink", "moo", -1))
 	fmt.Println(strings.Replace(ssssss, "-", ":", -1))
+
+
+	newName:=  time.Now().Format("2006-01-02_15_04_05")
+	fmt.Println("newName",newName)
+	time.Sleep(3E9)
+	newName=  time.Now().Format("2006-01-02_15_04_05")
+	fmt.Println("newName",newName)
+	time.Sleep(3E9)
+	newName=  time.Now().Format("2006-01-02_15_04_05")
+	fmt.Println("newName",newName)
 }

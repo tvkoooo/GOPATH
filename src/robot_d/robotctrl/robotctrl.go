@@ -11,12 +11,15 @@ import (
 	"robot_d/common/datagroove"
 	"robot_d/common/logfile"
 
+	"robot_d/common/fileopr"
 )
 const MAXRECEIVEBUFF  = 1024 * 5
 
 //线上机器人连接map  sid:robotId:*net.Conn
+//备注：len(SidRobot.M)是共需要那么多机器人进入房间，但是实际进入房间的机器人数量是Num
 type SidRobot struct {
 	M map[uint32]*net.Conn
+	Num int
 	L *sync.RWMutex
 }
 //线上 即将发送 RobotJoin MSG 机器人
@@ -53,7 +56,7 @@ type RobotCtrl struct {
 func (p *RobotCtrl)RobotCtrlInit(){
 	var listPath string
 	listPath = "/home/longjia/go/robot_config/" + config.Conf.ServiceNum + "/" + "robot_" + config.Conf.Instance + ".list"
-	logfile.SystemLogPrintln("info","listPath:",listPath)
+	logfile.SystemLogPrintln("info","RobotCtrlInit::Loading robot list files Path:",listPath)
 	p.MAppRobot.RobotFreeInit()
 	p.MAppRobot.LoadRobot(listPath)
 	p.MOnlineSid = make(map[uint32]*SidRobot)
@@ -96,7 +99,7 @@ func (p *RobotCtrl)SidRobotLen(sid uint32)(n int ){
 	if _, ok := p.MOnlineSid[sid]; ok {
 		n= len(p.MOnlineSid[sid].M)
 	} else {
-		logfile.GlobalLog.Infoln("SidRobotLen:: 房间 sid:",sid," 不存在")
+		logfile.GlobalLog.Infoln("SidRobotLen::The room sid:",sid," does not exist.")
 		n= 0
 	}
 	return n
@@ -119,7 +122,8 @@ func (p *RobotCtrl)RoomCreate(sid uint32 )() {
 	var r SidRobot
 	r.M = make(map[uint32]*net.Conn)
 	r.L = new(sync.RWMutex)
-	logfile.GlobalLog.Infoln("RoomCreate::创建新房间 sid:",sid)
+	r.Num = 0
+	logfile.GlobalLog.Infoln("RoomCreate::Create a new room sid:",sid)
 	p.LOnlineSid.Lock()
 	(p.MOnlineSid)[sid] = &r
 	p.LOnlineSid.Unlock()
@@ -131,23 +135,31 @@ func (p *RobotCtrl)RoomDel(sid uint32 )() {
 			for k, v := range sidInfo.M{
 				//如果机器人正式入场后，才会有tcp 连接，需要关掉连接
 				if v !=nil {
-					logfile.GlobalLog.Infoln("RoomDel::房间 sid:",sid,"机器人 RobotId:",k,"关闭连接 conn:",v)
+					logfile.GlobalLog.Infoln("RoomDel::Room Sid :",sid,"RobotId:",k,"Disconnect:",v)
 					(*v).Close()
 					//释放 SidRobot v值 conn 连接为 nil
 					v = nil
 				}
+				//无论是否有连接，房间里面的机器人都需要从加人列表当做移除，如果已经移除可以再移除一次
+				p.LJoin.Lock()
+				delete(p.MJoin,k)
+				p.LJoin.Unlock()
+
 				// 把所有加入改房间的机器人 robotId 放回 下线机器人列表
 				p.MAppRobot.AddRobot(k)
 			}
+
+			logfile.GlobalLog.Infoln("RoomDel::Remove the room sid:",sid,"Disconnect robot num:",sidInfo.Num)
+			//因为是直接关播房间，机器人是被直接提出房间，无须发送离场命令,清退所有机器人后房间人数清零
+			sidInfo.Num = 0
 		}
 		// 删除 MOnlineSid 元素 k （sid）
-		logfile.GlobalLog.Infoln("RoomDel::移除房间 sid:",sid)
 		p.LOnlineSid.Lock()
 		delete(p.MOnlineSid,sid)
 		p.LOnlineSid.Unlock()
 
 	}else {
-		logfile.GlobalLog.Infoln("RoomDel::房间 sid:",sid," 不存在")
+		logfile.GlobalLog.Infoln("RoomDel::the room sid:",sid,"does not exist.")
 	}
 }
 //清理所有房间
@@ -157,13 +169,13 @@ func (p *RobotCtrl)RoomClean()() {
 			p.RoomDel(k)
 		}
 	}
-	logfile.GlobalLog.Infoln("RoomClean:: 清理所有房间")
+	logfile.GlobalLog.Infoln("RoomClean:: Clear all rooms")
 	p.LOnlineSid.Lock()
 	p.MOnlineSid = make(map[uint32]*SidRobot)
 	p.LOnlineSid.Unlock()
 }
 ///////////////////////////////////////////////////////////////////////
-//在房间 sid 增加一个机器人
+//在房间 sid 增加一个机器人（房间开启一个加人命令，但还未正式入场）
 func (p *RobotCtrl)AddRobot(sid uint32,t time.Duration) () {
 	//确定该房间存在情况下
 	if sidInfo, ok := p.MOnlineSid[sid]; ok {
@@ -186,7 +198,7 @@ func (p *RobotCtrl)AddRobot(sid uint32,t time.Duration) () {
 		p.LJoin.Unlock()
 	}
 }
-//在房间 sid 减少一个机器人
+//在房间 sid 减少一个机器人（房间开启一个减人命令，但还未正式离场和关闭连接）
 func (p *RobotCtrl)SubRobot(sid uint32)  {
 	//确定该房间存在情况下
 	if sidInfo, ok := p.MOnlineSid[sid]; ok {
@@ -253,7 +265,16 @@ func (p *RobotCtrl)PollOrder()  {
 						}
 					}
 				}
-				logfile.GlobalLog.Infoln("PollOrder::房间sid:",k," 当前机器人人数 Num:",Num-p.RobotJoinLen())
+				fileSize := fileopr.CheckFileSize(&logfile.FunLogPath,logfile.MAXLOGSIZE)
+				if -1 == fileSize || 0 == fileSize{
+					logfile.SystemLogPrintln("SYSTEM","file:",logfile.FunLogPath,"Size:",fileSize,"will create new.")
+					logfile.GlobalLog.LogFileClosed()
+					logfile.GlobalLog.LogFileOpen(&logfile.FunLogPath , fileSize)
+
+				}else {
+					//logfile.SystemLogPrintln("SYSTEM","file:",logfile.FunLogPath,"Size:",fileSize)
+				}
+				logfile.GlobalLog.Infoln("PollOrder::sid:",k,"Robot number:",v.Num)
 			}
 		}
 
@@ -273,11 +294,12 @@ func (p *RobotCtrl)PollOrder()  {
 						message.WritePRealJoinChannelBuff(&sendBuff ,k ,v.sid )
 						_ , err := conn.Write(sendBuff.SGroove[sendBuff.LenRemove : sendBuff.LenRemove+sendBuff.LenData])
 						if nil != err{
-							logfile.GlobalLog.Warnln("PollOrder::机器人 robotId:",k,"连接conn:",v," 发送入场失败")
+							logfile.GlobalLog.Warnln("PollOrder::robotId:",k,"conn:",v,"Sending PRealJoinChannel failed")
 							//如果发送失败，说明机器人并未进入房间，必须去掉该机器人
 							p.delRoomRobot(v.sid,k)
 						}else {
-							logfile.GlobalLog.Infoln("PollOrder::机器人 robotId:",k,"连接conn:",&conn,"send RobotJoinLen message 当前房间sid:",v.sid,"机器人总数",p.SidRobotLen(v.sid)-p.RobotJoinLen()+1 )
+							sidInfo.Num += 1
+							logfile.GlobalLog.Infoln("PollOrder::robotId:",k,"conn:",&conn,"Sending PRealJoinChannel success .Now sid:",v.sid,"Robot number:",sidInfo.Num )
 						}
 						//无论是否发送成功，清空数据槽，下次使用
 						sendBuff.LenRemove = 0
@@ -304,24 +326,27 @@ func (p *RobotCtrl)PollOrder()  {
 							p.delRoomRobot(v.sid,k)
 							continue
 						}
-						message.WritePRealLeaveChannelBuff(&sendBuff ,k ,v.sid )
-						_ , err :=(*v.conn).Write(sendBuff.SGroove[sendBuff.LenRemove : sendBuff.LenRemove+sendBuff.LenData])
-						if nil != err{
-							logfile.GlobalLog.Warnln("PollOrder::机器人 robotId:",k,"连接conn:",v," 发送离场失败")
-							//如果发送失败，说明机器人并未进入房间，必须去掉该机器人
-							p.delRoomRobot(v.sid,k)
-						}else {
-							logfile.GlobalLog.Infoln("PollOrder::机器人 robotId:",k,"连接conn:",v,"send sendLeave message 当前房间sid:",v.sid,"机器人总数",p.SidRobotLen(v.sid)-p.RobotJoinLen() )
+						//确定房间还存在
+						if sidInfo, ok := p.MOnlineSid[v.sid]; ok {
+							message.WritePRealLeaveChannelBuff(&sendBuff ,k ,v.sid )
+							_ , err :=(*v.conn).Write(sendBuff.SGroove[sendBuff.LenRemove : sendBuff.LenRemove+sendBuff.LenData])
+							if nil != err{
+								logfile.GlobalLog.Warnln("PollOrder::robotId:",k,"conn:",v,"Sending PRealLeaveChannel failed")
+								//如果发送失败，说明机器人并未进入房间，必须去掉该机器人
+								p.delRoomRobot(v.sid,k)
+							}else {
+								sidInfo.Num -= 1
+								logfile.GlobalLog.Infoln("PollOrder::robotId:",k,"conn:",&v.conn,"send PRealLeaveChannel success .Now sid:",v.sid,"Robot number:",sidInfo.Num)
+							}
+							//无论是否发送成功，清空数据槽，下次使用
+							sendBuff.LenRemove = 0
+							sendBuff.LenData = 0
 						}
 						//去掉延时命令
 						p.LQuit.Lock()
 						delete(p.MQuit,k)
 						p.LQuit.Unlock()
-						//无论是否发送成功，清空数据槽，下次使用
-						sendBuff.LenRemove = 0
-						sendBuff.LenData = 0
 					}
-
 				}
 			}
 		}
@@ -333,12 +358,11 @@ func (p *RobotCtrl)PollOrder()  {
 					if v !=nil {
 						//关闭机器人连接
 						if v.conn != nil {
-							logfile.GlobalLog.Infoln("RoomDel::房间 sid:",v.sid,"机器人 RobotId:",k,"关闭连接 conn:",v.conn)
+							logfile.GlobalLog.Infoln("PollOrder::sid:",v.sid,"RobotId:",k,"close conn:",&v.conn)
 							(*v.conn).Close()
 							v.conn = nil
 							v = nil
 						}
-
 						//去掉延时命令
 						p.LClose.Lock()
 						delete(p.MClose,k)
@@ -365,9 +389,14 @@ func (p *RobotCtrl)delRoomRobot(sid uint32,robotId uint32)() {
 					(*robot).Close()
 					robot = nil
 				}
+				//无论是否有连接，这个机器人都需要从加人列表当做移除，如果已经移除可以再移除一次
+				p.LJoin.Lock()
+				delete(p.MJoin,robotId)
+				p.LJoin.Unlock()
+
 			}
 		}
-		logfile.GlobalLog.Infoln("delRoomRobot::异常处理，机器人 robotId:",robotId,"退出房间 sid:",sid)
+		logfile.GlobalLog.Infoln("delRoomRobot::Special execution operation .robotId:",robotId,"Exit the room sid:",sid)
 		//把该机器人放回下线机器人（如果之前已经放回，可以再次覆盖放入）
 		p.MAppRobot.AddRobot(robotId)
 	}

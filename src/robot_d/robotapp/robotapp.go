@@ -66,11 +66,11 @@ func (a *AppProgram) AppRobotConn()( bool)  {
 
 	senNum , err := a.SendMessage()
 	if err != nil  {
-		logfile.GlobalLog.Fatalln("机器人注册房间服务器失败 err :" ,err)
+		logfile.GlobalLog.Fatalln("AppRobotConn::Robot registration room server failure, err :" ,err)
 		return false
 	}else {
 		if senNum >0 {
-			logfile.GlobalLog.Infoln("注册次数:",a.NumConnect,"连接conn:",&a.Conn," AppRobotConn success. LocalAddr: " ,a.Conn.LocalAddr(),"LocalAddr: " ,a.Conn.RemoteAddr(),"发送数据:",senNum)
+			logfile.GlobalLog.Infoln("AppRobotConn::register num:",a.NumConnect,"conn:",&a.Conn," AppRobotConn success. LocalAddr: " ,a.Conn.LocalAddr(),"LocalAddr: " ,a.Conn.RemoteAddr(),"send num:",senNum)
 			a.NumConnect ++
 			return true
 		}else {
@@ -114,7 +114,7 @@ func (a *AppProgram) SendMessage() (numSendAll int, err error) {
 		if 0 == numSend {
 			numSendAll = 0
 			//【WARN】
-			logfile.GlobalLog.Warnln("SendMessage conn:",a.Conn , "Close() ! Because 0 == numSend")
+			logfile.GlobalLog.Warnln("SendMessage::conn:",&a.Conn , "Close() ! Because 0 == numSend ,The connection will be closed! err:",err.Error())
 			if a.Conn != nil {
 				a.Conn.Close()
 				a.Conn = nil
@@ -129,7 +129,7 @@ func (a *AppProgram) SendMessage() (numSendAll int, err error) {
 			} else {
 				numSendAll = 0
 				//【WARN】
-				logfile.GlobalLog.Warnln("SendMessage conn:",a.Conn , "Close() ! Because numSend < 0")
+				logfile.GlobalLog.Warnln("SendMessage::conn:",&a.Conn , "Close() ! Because 0 < numSend ,The connection will be closed! err:",err.Error())
 				if a.Conn != nil {
 					a.Conn.Close()
 					a.Conn = nil
@@ -162,7 +162,7 @@ func (a *AppProgram) ReceiveMessage() (numRecAll int, err error){
 			//需要重新启用新连接
 			numRecAll = 0
 			//【WARN】
-			logfile.GlobalLog.Warnln("ReceiveMessage conn:",&a.Conn , "Close() ! Because recNum = 0 err:",err.Error())
+			logfile.GlobalLog.Warnln("ReceiveMessage::conn:",&a.Conn , "Close() ! Because 0 == numSend ,The connection will be closed! err:",err.Error())
 			if a.Conn != nil {
 				a.Conn.Close()
 				a.Conn = nil
@@ -176,7 +176,7 @@ func (a *AppProgram) ReceiveMessage() (numRecAll int, err error){
 				break
 			}else {
 				//【WARN】
-				logfile.GlobalLog.Warnln("ReceiveMessage conn:",a.Conn , "Close() ! Because recNum < 0 err:",err.Error())
+				logfile.GlobalLog.Warnln("ReceiveMessage::conn:",&a.Conn , "Close() ! Because 0 < numSend ,The connection will be closed! err:",err.Error())
 				//如果是其他异常错误，需要关闭连接，重新建立新的连接（同时清除发送和接收数据槽数据）
 				if a.Conn != nil {
 					a.Conn.Close()
@@ -189,7 +189,7 @@ func (a *AppProgram) ReceiveMessage() (numRecAll int, err error){
 		//【INFO】
 		if err != nil {
 			if a.Conn != nil {
-				logfile.GlobalLog.Infoln("ReceiveMessage Conn:",a.Conn ,a.Conn.LocalAddr(),"numRecAll:",numRecAll,"err:",err.Error())
+				logfile.GlobalLog.Infoln("ReceiveMessage Conn:",&a.Conn ,"LocalAddr:",a.Conn.LocalAddr(),"numRecAll:",numRecAll,"err:",err.Error())
 			}
 		}
 	}
@@ -228,13 +228,13 @@ func (a *AppProgram) DecodeMessage() (){
 				var ph message.PackHead
 				ph.ReadPackHead(&a.RecBuff)
 				//【INFO】
-				logfile.GlobalLog.Infoln("收到uri: ",uri,"消息:",ph)
+				logfile.GlobalLog.Infoln("DecodeMessage::Receive URI: ",uri,"Message package head:",ph)
 				if ph.ResCode == 200 {
 					//对这个 uri 安卓map 里面函数进行处理
 					getMapV(&a.RecBuff,&a.RobCtrl ,length )
 				}else {
 					//【WARN】
-					logfile.GlobalLog.Warnln("返回包错误 uri:",uri,"ph.ResCode:",ph.ResCode)
+					logfile.GlobalLog.Warnln("DecodeMessage::Unsuccessful return packet URI:",uri,"ph.ResCode:",ph.ResCode)
 				}
 
 			}else {

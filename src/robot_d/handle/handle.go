@@ -15,20 +15,28 @@ func Decode_PRobotServerCmd(d *datagroove.DataBuff, i interface{}, length int) {
 	var t time.Duration
 	b.ReadPackBody(d, length)
 	//【INFO】
-	logfile.GlobalLog.Infof("消息包内容: %+v \n", b)
+	logfile.GlobalLog.Infof("Decode_PRobotServerCmd::Message package content: %+v \n", b)
 	var a  *robotctrl.RobotCtrl
 	a = i.(*robotctrl.RobotCtrl)
 	//fmt.Println("b.Cmd: ",b.Cmd)
 	switch b.Cmd {
 	case 0:
-		logfile.GlobalLog.Infoln("Decode_PRobotServerCmd::房间: ", b.Sid, "START")
+		logfile.GlobalLog.Infoln("Decode_PRobotServerCmd::sid:", b.Sid, "START")
 		//创建房间
 		a.RoomCreate(b.Sid)
-		//增加机器人
-		for iii := 0; iii < 3; iii++ {
+		//在6s 内 迅速进入10人
+		for iii := 0; iii < 10; iii++ {
 			//确定房间还存在情况下进行加人操作
 			if _, ok := a.MOnlineSid[b.Sid]; ok {
-				t = time.Duration(1E7 * maths.BetweenRand(50,100) * iii)
+				t = time.Duration(1E7 * maths.BetweenRand(10,60) * iii)
+				a.AddRobot(b.Sid , t)
+			}
+		}
+		//6s 过后 4分钟内随机缓慢再增加 40人
+		for iii := 0; iii < 40; iii++ {
+			//确定房间还存在情况下进行加人操作
+			if _, ok := a.MOnlineSid[b.Sid]; ok {
+				t = time.Duration(6E7 * maths.BetweenRand(50,100) * iii + 6E9)
 				a.AddRobot(b.Sid , t)
 			}
 		}
@@ -36,26 +44,26 @@ func Decode_PRobotServerCmd(d *datagroove.DataBuff, i interface{}, length int) {
 	case 1:
 		//把房间里面的机器人全部移除
 		numSidRobot := a.SidRobotLen(b.Sid)
-		logfile.GlobalLog.Infoln( b.Sid,"房间机器人数: ", numSidRobot, " 关闭房间:",b.Sid)
+		logfile.GlobalLog.Infoln( b.Sid,"Decode_PRobotServerCmd::sid all robot num:", numSidRobot, "close sid:",b.Sid)
 		a.RoomDel(b.Sid)
 	case 2:
-		logfile.GlobalLog.Infoln("目前没有用")
+		logfile.GlobalLog.Infoln("Decode_PRobotServerCmd::No use at present.")
 	case 3:
-		logfile.GlobalLog.Infoln("用户进场 ADD_ROBOT")
+		logfile.GlobalLog.Infoln("Decode_PRobotServerCmd::User coming, ADD_ROBOT")
 		//增加一个机器人
 		t = time.Duration(1E7 * maths.BetweenRand(50,100))
 		a.AddRobot(b.Sid ,t)
 
 	case 4:
-		logfile.GlobalLog.Infoln("用户出场 REMOVE_ROBOT")
+		logfile.GlobalLog.Infoln("Decode_PRobotServerCmd::User out, REMOVE_ROBOT")
 		//减少一个机器人
 		numSidRobot := a.SidRobotLen(b.Sid)
 		if numSidRobot > 0 {
 			a.SubRobot(b.Sid)
 		}else {
-			logfile.GlobalLog.Infoln("房间sid:",b.Sid,"已经没有机器人")
+			logfile.GlobalLog.Infoln("Decode_PRobotServerCmd::sid:",b.Sid,"has no robot")
 		}
 	default:
-		logfile.GlobalLog.Infoln("收到 房间服发来的 cmd:", b.Cmd, " 不在正常cmd(0,1,2,3,4)范围")
+		logfile.GlobalLog.Infoln("Decode_PRobotServerCmd::the cmd:", b.Cmd, " not in(0,1,2,3,4)")
 	}
 }

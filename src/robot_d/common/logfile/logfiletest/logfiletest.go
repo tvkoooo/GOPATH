@@ -29,7 +29,7 @@ func main()  {
 
 
 	fmt.Println("pathsss",pathsss)
-	logfile.GlobalLog.LogFileOpen(pathsss)
+	logfile.GlobalLog.StartLogFile(pathsss)
 	defer logfile.GlobalLog.LogFileClosed()
 	logfile.GlobalLog.SetLogLevel(config.Conf.LogLevel)
 

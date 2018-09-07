@@ -1,9 +1,8 @@
 package tcplink
 
 import (
-	"fmt"
 	"net"
-	"os"
+	"robot_d/common/logfile"
 )
 
 // Tcplink
@@ -12,14 +11,14 @@ func Tcplink(server string)(conn net.Conn){
 	//server := "59.110.125.134:30302"
 	tcpAddr, err := net.ResolveTCPAddr("tcp4", server)
 	if err != nil {
-		//【FAIL】
-		fmt.Println("TCP Fatal error:", err.Error())
+		//【Warn】
+		logfile.GlobalLog.Warnln("Tcplink::TCP link error:", err.Error(),"Please wait a little later")
 		conn = nil
 	}
 	conn, err = net.DialTCP("tcp", nil, tcpAddr)
 	if err != nil {
-		//【FAIL】
-		fmt.Println("TCP Fatal error", err.Error())
+		//【Warn】
+		logfile.GlobalLog.Warnln("Tcplink::TCP link error:", err.Error(),"Please wait a little later")
 		conn = nil
 	}
 	//fmt.Println("connect success:",server)
@@ -27,23 +26,22 @@ func Tcplink(server string)(conn net.Conn){
 }
 //
 func Tcplisten(server string)(conn net.Conn){
-
 	//建立socket，监听端口
 	//server := "localhost:9090"
 	netListen, err := net.Listen("tcp", server)
 	if err != nil {
-		fmt.Println( "Fatal error: ", err.Error())
-		os.Exit(1)
+		logfile.GlobalLog.Warnln("Tcplisten::TCP listen error:", err.Error(),"Please wait a little later")
+		conn = nil
 	}
 	defer netListen.Close()
 
-	fmt.Println("Waiting for clients")
+	//logfile.SystemLogPrintln("info","Waiting for clients")
 	for {
 		conn, err = netListen.Accept()
 		if err != nil {
 			continue
 		}
-		fmt.Println(conn.RemoteAddr().String(), " tcp connect success")
+		//logfile.SystemLogPrintln("info",conn.RemoteAddr().String(), " tcp connect success")
 		return conn
 	}
 }

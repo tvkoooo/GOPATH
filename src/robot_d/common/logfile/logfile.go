@@ -6,17 +6,20 @@ import (
 	"os"
 	"runtime"
 	"path"
+	"robot_d/common/fileopr"
+	"time"
 )
 
 //系统日志
 var (
-	SysLogPath *string
+	SysLogPath string
+	FunLogPath string
     FilePath string
     FileName string
 	FileInstance string
 )
 
-
+const MAXLOGSIZE  = 1024*1024*50
 
 //默认 最后一次初始化的 日志系统，便于跨函数（无参数）使用
 var GlobalLog *LogFileName
@@ -71,11 +74,24 @@ func (l *LogFileName)GetLogLevel() (level int) {
 	return l.logLevel
 }
 
+func (l *LogFileName)StartLogFile(patch string) ( err error) {
+	FunLogPath = patch
+	fileSize := fileopr.CheckFileSize(&FunLogPath,MAXLOGSIZE)
+	return l.LogFileOpen(&FunLogPath ,fileSize )
+}
+
 // Initialization(Open) log . You need to provide a log path
-func (l *LogFileName)LogFileOpen(patch string) ( err error) {
-	l.openFile, err = os.OpenFile(patch, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0)
+func (l *LogFileName)LogFileOpen(patch *string , size int64) ( err error) {
+	//检测文件，如果超出大小则重名文件，然后可以重新生成需要文件名的文件
+	if -1 == size {
+		newName:= *patch + time.Now().Format("2006-01-02_15_04_05")
+		fileopr.RenameFile(patch , &newName)
+		SystemLogPrintln("SYSTEM","LogFileOpen::Log file create new \n LogFile Path:", *patch,"\n Old LogFile Path:",newName)
+	}
+	//打开或者新建该文件
+	l.openFile, err = os.OpenFile(*patch, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0777)
 	if err != nil {
-		SystemLogPrintln("FAIL","日志文件操作失败", err)
+		SystemLogPrintln("FAIL","LogFileOpen::Log file operation failed", err)
 		os.Exit(1)
 		return  err
 	}
@@ -86,6 +102,9 @@ func (l *LogFileName)LogFileOpen(patch string) ( err error) {
 	l.err = log.New(l.openFile, "[ERROR]", log.Ldate|log.Ltime|log.Llongfile)
 	l.alert = log.New(l.openFile, "[ALERT]", log.Ldate|log.Ltime|log.Llongfile)
 	l.fail = log.New(l.openFile, "[FAIL]", log.Ldate|log.Ltime|log.Llongfile)
+
+	l.openFile.Fd()
+
 	return  err
 }
 
@@ -189,13 +208,13 @@ func SystemLogSetDefaultPath()  {
 	_,FilePath,_,_ = runtime.Caller(1)
 	FileName = path.Base(FilePath)
 	FileInstance = ""
-	SysLogPath = &FileName
+	SysLogPath = FileName
 }
 func SystemLogSetPath(str *string)  {
 	_,FilePath,_,_ = runtime.Caller(1)
 	FileName = path.Base(FilePath)
 	FileInstance = ""
-	SysLogPath = str
+	SysLogPath = *str
 }
 
 func SystemLogSetInstance(str string)  {
@@ -203,9 +222,9 @@ func SystemLogSetInstance(str string)  {
 }
 
 func SystemLogPrintln(logLevel string,a ...interface{})() {
-	openFile, err := os.OpenFile(*SysLogPath + ".log", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0)
+	openFile, err := os.OpenFile(SysLogPath + ".log", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0777)
 	if err != nil {
-		fmt.Println("日志文件操作失败", err)
+		fmt.Println("SystemLogPrintln::Log file operation failed", err)
 		os.Exit(1)
 	}
 	var logText string
@@ -224,9 +243,9 @@ func SystemLogPrintln(logLevel string,a ...interface{})() {
 	openFile.Close()
 }
 func SystemLogPrintf(logLevel string,format string, v ...interface{})() {
-	openFile, err := os.OpenFile(*SysLogPath + ".log", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0)
+	openFile, err := os.OpenFile(SysLogPath + ".log", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0777)
 	if err != nil {
-		fmt.Println("日志文件操作失败", err)
+		fmt.Println("SystemLogPrintf::Log file operation failed", err)
 		os.Exit(1)
 	}
 	var logText string
