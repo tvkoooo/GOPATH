@@ -70,8 +70,9 @@ func (a *AppProgram) AppRobotConn()( bool)  {
 		return false
 	}else {
 		if senNum >0 {
-			logfile.GlobalLog.Infoln("AppRobotConn::register num:",a.NumConnect,"conn:",&a.Conn," AppRobotConn success. LocalAddr: " ,a.Conn.LocalAddr(),"LocalAddr: " ,a.Conn.RemoteAddr(),"send num:",senNum)
 			a.NumConnect ++
+			logfile.GlobalLog.Infoln("AppRobotConn::register num:",a.NumConnect,"conn:",&a.Conn," AppRobotConn success. LocalAddr: " ,a.Conn.LocalAddr(),"LocalAddr: " ,a.Conn.RemoteAddr(),"send num:",senNum)
+			logfile.GlobalLog.Infoln("info","GetParameter:\n","Set log path:",config.Conf.LogFilePath,"\n","Set log level:",config.Conf.LogLevel,"\n","Set Case number:",config.Conf.Instance,"\n","Set ServiceNum:",config.Conf.ServiceNum,"\n","Set Connect remote address:",config.Conf.ObjectNet)
 			return true
 		}else {
 			return false
@@ -228,7 +229,7 @@ func (a *AppProgram) DecodeMessage() (){
 				var ph message.PackHead
 				ph.ReadPackHead(&a.RecBuff)
 				//【INFO】
-				logfile.GlobalLog.Infoln("DecodeMessage::Receive URI: ",uri,"Message package head:",ph)
+				logfile.GlobalLog.Debugln("DecodeMessage::Receive URI: ",uri,"Message package head:",ph)
 				if ph.ResCode == 200 {
 					//对这个 uri 安卓map 里面函数进行处理
 					getMapV(&a.RecBuff,&a.RobCtrl ,length )

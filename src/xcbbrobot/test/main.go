@@ -54,10 +54,21 @@ func main()  {
 
 	newName:=  time.Now().Format("2006-01-02_15_04_05")
 	fmt.Println("newName",newName)
-	time.Sleep(3E9)
+	time.Sleep(3E8)
 	newName=  time.Now().Format("2006-01-02_15_04_05")
 	fmt.Println("newName",newName)
-	time.Sleep(3E9)
+	time.Sleep(3E8)
 	newName=  time.Now().Format("2006-01-02_15_04_05")
 	fmt.Println("newName",newName)
+
+
+	ta := float32((644 *1.0) / (1322 * 1.0))
+	fmt.Println("ta baifenb:",ta)
+
+	OfflineNum := 938
+	allNum := 988
+	percent := float32(float32(OfflineNum) /float32 (allNum))
+	fmt.Println("percent baifenb:",percent)
+
+
 }

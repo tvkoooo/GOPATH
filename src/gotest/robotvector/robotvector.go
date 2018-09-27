@@ -5,20 +5,18 @@ import (
 	"bufio"
 	"strings"
 	"io"
-	"robot_d/common/typechange"
+	"gotest/common/typechange"
 	"sync"
-	"robot_d/common/logfile"
+	"gotest/common/logfile"
 )
 
 type MapAppRobot struct {
-	Num int
 	m map[uint32]bool
 	l *sync.RWMutex
 }
 
 
 func (p *MapAppRobot)RobotFreeInit(){
-	p.Num = 0
 	p.m = make(map[uint32]bool)
 	p.l = new(sync.RWMutex)
 }
@@ -61,7 +59,6 @@ func (p *MapAppRobot)readLine(fileName string, handler func(string)) error {
 }
 func (p *MapAppRobot)LoadRobot(robotList string )  {
 	p.readLine(robotList ,p.handleLoadRobot)
-	p.Num = p.Len()
 }
 
 func (p *MapAppRobot)AddRobot(robotId uint32)  {

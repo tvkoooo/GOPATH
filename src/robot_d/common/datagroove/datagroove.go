@@ -134,13 +134,17 @@ func (d *DataBuff)DataAppend(addData []byte)() {
 //////////////////////////////////////////////////////////////////////////////////////////
 // package function move buffer
 func (d *DataBuff)bufferMove()  {
-	copy(d.SGroove[0:d.LenData], d.SGroove[d.LenRemove:(d.LenRemove + d.LenData)])
-	d.LenRemove = 0
+	if 0 != d.LenRemove {
+		copy(d.SGroove[0:d.LenData], d.SGroove[d.LenRemove:(d.LenRemove + d.LenData)])
+		d.LenRemove = 0
+	}
 }
 // package function move buffer
 func (d *DataBuff)crossBufferMove(page int)  {
 	groove := make([]byte, d.baseGroove * page)
-	copy(groove[0:d.LenData], d.SGroove[d.LenRemove:(d.LenRemove + d.LenData)])
+	if 0 != d.LenData {
+		copy(groove[0:d.LenData], d.SGroove[d.LenRemove:(d.LenRemove + d.LenData)])
+	}
 	d.LenGroove = d.baseGroove * page
 	d.LenRemove = 0
 	d.shortFlag = 0

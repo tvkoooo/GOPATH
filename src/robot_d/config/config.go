@@ -38,7 +38,7 @@ func AppConfigNew()(*AppConfig) {
 //对已经创建的config进行初始化
 func (a *AppConfig)AppConfigInit()()  {
 	a.GetParameter()
-	a.LoadConfig()
+	//a.LoadConfig()
 }
 //获得程序输入参数
 func (a *AppConfig)GetParameter()  {
