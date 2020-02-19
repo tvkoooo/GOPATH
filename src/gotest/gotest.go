@@ -1,16 +1,16 @@
 package main
 
 import (
-	"gotest/robotvector"
-	"gotest/common/logfile"
-	"gotest/common/datagroove"
-	"time"
-	"os"
 	"fmt"
+	"gotest/common/datagroove"
+	"gotest/common/logfile"
+	"gotest/robotvector"
 	"net"
+	"os"
+	"time"
 )
 
-func main()  {
+func main() {
 	logfile.SystemLogSetDefaultPath()
 
 	args := os.Args //获取用户输入的所有参数
@@ -25,9 +25,9 @@ func main()  {
 	//message.WritePRegisteredPI(&zBuff)
 	//
 	var netPath string
-	if len(args) ==1 {
-		netPath ="59.110.125.134:30302"
-	}else {
+	if len(args) == 1 {
+		netPath = "59.110.125.134:30302"
+	} else {
 		netPath = args[1]
 	}
 	//
@@ -35,9 +35,6 @@ func main()  {
 	//connZ := tcplink.Tcplink(netPath)
 	tcpAddr, _ := net.ResolveTCPAddr("tcp4", netPath)
 	connZ, _ := net.DialTCP("tcp", nil, tcpAddr)
-
-
-
 
 	//connZ.Write(zBuff.SGroove[zBuff.LenRemove : zBuff.LenRemove+zBuff.LenData])
 	//
@@ -68,9 +65,4 @@ func main()  {
 	//	time.Sleep(3E9)
 	//}
 
-
-
-
-
 }
-

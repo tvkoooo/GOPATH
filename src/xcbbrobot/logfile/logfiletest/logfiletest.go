@@ -1,14 +1,14 @@
 package main
 
 import (
-	"xcbbrobot/logfile"
-	"xcbbrobot/config"
-	"time"
-	"os"
 	"fmt"
+	"os"
+	"time"
+	"xcbbrobot/config"
+	"xcbbrobot/logfile"
 )
 
-func main()  {
+func main() {
 
 	//【程序init】初始化配置
 	config.AppConfigNew()
@@ -18,22 +18,19 @@ func main()  {
 	logfile.LogFileNew()
 	var nowdate string
 	nowdate = time.Now().Format("20060102")
-	pathsss := config.Conf.LogFilePath  + nowdate+"/"+ "robot_d.log"
+	pathsss := config.Conf.LogFilePath + nowdate + "/" + "robot_d.log"
 
-	_dir :=config.Conf.LogFilePath  + nowdate
+	_dir := config.Conf.LogFilePath + nowdate
 	// 创建文件夹
 	err := os.Mkdir(_dir, os.ModePerm)
 	if err != nil {
 		fmt.Printf("mkdir failed![%v]\n", err)
 	}
 
-
-	fmt.Println("pathsss",pathsss)
+	fmt.Println("pathsss", pathsss)
 	logfile.GlobalLog.LogFileOpen(pathsss)
 	defer logfile.GlobalLog.LogFileClosed()
 	logfile.GlobalLog.SetLoglevel(config.Conf.LogLevel)
-
-
 
 	//
 	logfile.GlobalLog.Debugln("2w2w2w22w2w2w2w2w2w2w2w2")
@@ -41,7 +38,6 @@ func main()  {
 	logfile.GlobalLog.Infoln("bbbbbbbbbbbbbb")
 	logfile.GlobalLog.Errorln("ccccccccccccccccccc")
 	logfile.GlobalLog.Fatalln("ddddddddddddddddd")
-
 
 	//打开本地文件 读取出全部数据
 	fin, err := os.Open(config.Conf.LogFilePath + "robot_d_" + time.Now().Format("20060102") + ".log")
@@ -62,18 +58,3 @@ func main()  {
 	fmt.Println(string(buf[:]), len(buf))
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

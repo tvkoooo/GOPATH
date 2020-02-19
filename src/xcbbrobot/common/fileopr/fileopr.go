@@ -1,12 +1,12 @@
 package fileopr
 
 import (
-	"os"
 	"fmt"
+	"os"
 )
 
 //创建文件夹
-func CreateDir(dir *string)()  {
+func CreateDir(dir *string) {
 	//打开/新建今日文件夹
 	exist, err := PathExists(dir)
 	if err != nil {
@@ -15,7 +15,7 @@ func CreateDir(dir *string)()  {
 	}
 	if exist {
 		fmt.Printf("has dir![%v]\n", *dir)
-	} else{
+	} else {
 		// 创建路径文件夹
 		err := os.Mkdir(*dir, os.ModePerm)
 		if err != nil {
@@ -24,7 +24,6 @@ func CreateDir(dir *string)()  {
 		}
 	}
 }
-
 
 // 判断文件夹是否存在
 func PathExists(path *string) (bool, error) {

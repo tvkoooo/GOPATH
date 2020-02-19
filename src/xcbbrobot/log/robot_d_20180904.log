@@ -1,0 +1,4 @@
+[INFO]2018/09/04 17:46:09 [注册次数: 1 连接conn: 0xc0420a6060  AppRobotConn success. LocalAddr:  192.168.111.72:30058 LocalAddr:  59.110.125.134:30301 发送数据: 23]
+[INFO]2018/09/04 17:49:46 [bbbbbbbbbbbbbb]
+[ERROR]2018/09/04 17:49:46 D:/GOPATH/src/xcbbrobot/logfile/logfile.go:116: [ccccccccccccccccccc]
+[FATAL]2018/09/04 17:49:46 D:/GOPATH/src/xcbbrobot/logfile/logfile.go:129: [ddddddddddddddddd]

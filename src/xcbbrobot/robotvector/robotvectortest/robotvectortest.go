@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"xcbbrobot/robotvector"
 	"unsafe"
+	"xcbbrobot/robotvector"
 )
 
 func main() {
@@ -21,12 +21,9 @@ func main() {
 	fmt.Println("sub map now")
 	ar.PrintRobotMap()
 
-
-
 	ar.CleanRobot()
 	fmt.Println("new map clean")
 	ar.PrintRobotMap()
-
 
 	ar.AddRobot(10002844)
 	fmt.Println("new add map")
@@ -36,24 +33,22 @@ func main() {
 	ar.LoadRobot("./xcbbrobot/robotvector/robottt.list")
 	ar.PrintRobotMap()
 
-	a:= ar.PopRobot()
+	a := ar.PopRobot()
 	fmt.Println("a", a, "len", ar.Len())
-	b:= ar.PopRobot()
+	b := ar.PopRobot()
 	fmt.Println("a", b, "len", ar.Len())
-	qq:= ar.PopRobot()
+	qq := ar.PopRobot()
 	fmt.Println("a", qq, "len", ar.Len())
-	qb:= ar.PopRobot()
+	qb := ar.PopRobot()
 	fmt.Println("a", qb, "len", ar.Len())
-	wb:= ar.PopRobot()
+	wb := ar.PopRobot()
 	fmt.Println("a", wb, "len", ar.Len())
-	be:= ar.PopRobot()
+	be := ar.PopRobot()
 	fmt.Println("a", be, "len", ar.Len())
-	gb:= ar.PopRobot()
+	gb := ar.PopRobot()
 	fmt.Println("a", gb, "len", ar.Len())
 
-
-
-	ccc := make(map[int]int )
+	ccc := make(map[int]int)
 	fmt.Println(ccc)
 	fmt.Println(len(ccc))
 	ccc[1] = 1
@@ -67,10 +62,7 @@ func main() {
 	fmt.Println(len(ccc))
 	fmt.Println(unsafe.Pointer(&ccc))
 
-
-
-
-	ddd := make(map[int]int , 2)
+	ddd := make(map[int]int, 2)
 	fmt.Println(ddd)
 	fmt.Println(len(ddd))
 	ddd[1] = 1
@@ -83,6 +75,5 @@ func main() {
 	fmt.Println(ddd)
 	fmt.Println(len(ddd))
 	fmt.Println(unsafe.Pointer(&ddd))
-
 
 }

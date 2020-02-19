@@ -1,14 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"time"
-	"xcbbrobot/robotlife"
 	"xcbbrobot/config"
 	"xcbbrobot/logfile"
-	"fmt"
+	"xcbbrobot/robotlife"
 )
 
-func main()  {
+func main() {
 
 	//初始化配置
 	config.Initconf()
@@ -24,13 +24,13 @@ func main()  {
 			time.Sleep(1E9)
 		}
 	}()
-	var(
+	var (
 		r1 robotlife.RobotLife
 		//r2 robotlife.RobotSeed
 		//r3 robotlife.RobotSeed
 	)
 
-	r1.RobotInit(10005259,102692)
+	r1.RobotInit(10005259, 102692)
 	go r1.RobotWork()
 	//go r2.RobotWork(10005127,102692)
 	//go r3.RobotWork(10005131,102692)
@@ -52,4 +52,3 @@ func main()  {
 
 	time.Sleep(40E9)
 }
-

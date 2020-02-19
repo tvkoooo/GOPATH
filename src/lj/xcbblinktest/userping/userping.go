@@ -3,10 +3,10 @@
 package userping
 
 import (
+	"encoding/json"
 	"fmt"
 	"lj/xcbblinktest/datastream"
 	"unsafe"
-	"encoding/json"
 )
 
 //Peakhead pack head
@@ -19,8 +19,8 @@ type Peakhead struct {
 
 //PPlus RQ DATA
 type PPlusRQ struct {
-	Uid uint32
-	Sid uint32
+	Uid    uint32
+	Sid    uint32
 	Stampc uint32
 	Stamps uint32
 }
@@ -34,7 +34,7 @@ type PPlusRS struct {
 }
 
 //PPlus RQ add peak uri head
-func Addpeakhead(uri uint32 ,inbyte []byte) (outbyte []byte) {
+func Addpeakhead(uri uint32, inbyte []byte) (outbyte []byte) {
 	var ph Peakhead
 	ph.Uri = uri
 	ph.Sid = 0
@@ -49,21 +49,22 @@ func Addpeakhead(uri uint32 ,inbyte []byte) (outbyte []byte) {
 }
 
 //PPlus RQ add user body struct to datastream
-func ADDsenderbody(uri uint32 ,rq PPlusRQ,) (outbyte []byte) {
+func ADDsenderbody(uri uint32, rq PPlusRQ) (outbyte []byte) {
 	sendstream := make([]byte, 0)
-	length := uint32(unsafe.Sizeof(rq))+13
+	length := uint32(unsafe.Sizeof(rq)) + 13
 	outbyte = datastream.AddUint32(length, sendstream)
-	outbyte = Addpeakhead(uri,outbyte)
+	outbyte = Addpeakhead(uri, outbyte)
 	outbyte = datastream.AddUint32(rq.Uid, outbyte)
 	outbyte = datastream.AddUint32(rq.Sid, outbyte)
 	outbyte = datastream.AddUint32(rq.Stampc, outbyte)
 	outbyte = datastream.AddUint32(rq.Stamps, outbyte)
-	jsonrq,_ := json.Marshal(rq)
-	fmt.Println("Send body \n length:", length,"uri:",uri,"rq = ", string(jsonrq))
+	jsonrq, _ := json.Marshal(rq)
+	fmt.Println("Send body \n length:", length, "uri:", uri, "rq = ", string(jsonrq))
 	fmt.Println(outbyte)
 	return outbyte
 }
+
 //PPlusRS get user body struct from datastream
-func Getreceivebody(inbyte []byte) () {
-	fmt.Println("Receive body \n :",inbyte )
+func Getreceivebody(inbyte []byte) {
+	fmt.Println("Receive body \n :", inbyte)
 }

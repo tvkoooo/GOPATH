@@ -1,0 +1,117 @@
+[SystemLog]2018/09/06 14:13:27 D:/GOPATH/src/robot_d/config/config.go:45: 参数不够，举个例子：
+[SystemLog]2018/09/06 14:13:27 D:/GOPATH/src/robot_d/config/config.go:46: robot_d 0 "../src/robot_d/log/" 4 "59.110.125.134:30302"
+[SystemLog]2018/09/06 14:13:27 D:/GOPATH/src/robot_d/robot_d.go:80: dirPath: ../src/robot_d/log/vnc_robot_0
+[SystemLog]2018/09/06 14:13:27 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:17: has dir![../src/robot_d/log/vnc_robot_0]
+[SystemLog]2018/09/06 14:13:27 D:/GOPATH/src/robot_d/robot_d.go:86: today: 20180906 dir: ../src/robot_d/log/vnc_robot_0/20180906
+[SystemLog]2018/09/06 14:13:27 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:17: has dir![../src/robot_d/log/vnc_robot_0/20180906]
+[SystemLog]2018/09/06 14:13:46 D:/GOPATH/src/robot_d/robot_d.go:40: Got signal: interrupt
+[SystemLog]2018/09/06 14:14:07 D:/GOPATH/src/robot_d/robot_d.go:80: dirPath: ../src/xcbbrobot/log/vnc_robot_0
+[SystemLog]2018/09/06 14:14:07 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:17: has dir![../src/xcbbrobot/log/vnc_robot_0]
+[SystemLog]2018/09/06 14:14:07 D:/GOPATH/src/robot_d/robot_d.go:86: today: 20180906 dir: ../src/xcbbrobot/log/vnc_robot_0/20180906
+[SystemLog]2018/09/06 14:14:07 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:17: has dir![../src/xcbbrobot/log/vnc_robot_0/20180906]
+[SystemLog]2018/09/06 14:14:24 D:/GOPATH/src/robot_d/robot_d.go:80: dirPath: ../src/xcbbrobot/log/vnc_robot_1
+[SystemLog]2018/09/06 14:14:24 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:17: has dir![../src/xcbbrobot/log/vnc_robot_1]
+[SystemLog]2018/09/06 14:14:24 D:/GOPATH/src/robot_d/robot_d.go:86: today: 20180906 dir: ../src/xcbbrobot/log/vnc_robot_1/20180906
+[SystemLog]2018/09/06 14:14:46 D:/GOPATH/src/robot_d/robot_d.go:40: Got signal: interrupt
+[SystemLog]2018/09/06 14:14:49 D:/GOPATH/src/robot_d/robot_d.go:80: dirPath: ../src/xcbbrobot/log/vnc_robot_1
+[SystemLog]2018/09/06 14:14:49 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:17: has dir![../src/xcbbrobot/log/vnc_robot_1]
+[SystemLog]2018/09/06 14:14:49 D:/GOPATH/src/robot_d/robot_d.go:86: today: 20180906 dir: ../src/xcbbrobot/log/vnc_robot_1/20180906
+[SystemLog]2018/09/06 14:14:49 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:17: has dir![../src/xcbbrobot/log/vnc_robot_1/20180906]
+[SystemLog]2018/09/06 14:15:54 D:/GOPATH/src/robot_d/robot_d.go:40: Got signal: interrupt
+[SystemLog]2018/09/06 14:15:59 D:/GOPATH/src/robot_d/robot_d.go:40: Got signal: interrupt
+[info]2018/09/06 14:30:28 D:/GOPATH/src/robot_d/robot_d.go:80: 路径: ../src/xcbbrobot/log/vnc_robot_1
+[info]2018/09/06 14:30:28 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:17: has dir![../src/xcbbrobot/log/vnc_robot_1]
+[info]2018/09/06 14:30:28 D:/GOPATH/src/robot_d/robot_d.go:86: 日期文件夹: 20180906 dir: ../src/xcbbrobot/log/vnc_robot_1/20180906
+[info]2018/09/06 14:30:28 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:17: has dir![../src/xcbbrobot/log/vnc_robot_1/20180906]
+[info]2018/09/06 14:30:32 D:/GOPATH/src/robot_d/robot_d.go:80: 路径: ../src/xcbbrobot/log/vnc_robot_0
+[info]2018/09/06 14:30:32 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:17: has dir![../src/xcbbrobot/log/vnc_robot_0]
+[info]2018/09/06 14:30:32 D:/GOPATH/src/robot_d/robot_d.go:86: 日期文件夹: 20180906 dir: ../src/xcbbrobot/log/vnc_robot_0/20180906
+[info]2018/09/06 14:30:32 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:17: has dir![../src/xcbbrobot/log/vnc_robot_0/20180906]
+[SYSTEM]2018/09/06 14:30:37 D:/GOPATH/src/robot_d/robot_d.go:40: Got signal: interrupt
+[SYSTEM]2018/09/06 14:30:40 D:/GOPATH/src/robot_d/robot_d.go:40: Got signal: interrupt
+[info]2018/09/06 14:38:31 Log path: ../src/xcbbrobot/log/vnc_robot_1
+[info]2018/09/06 14:38:31 Folder already exists![../src/xcbbrobot/log/vnc_robot_1]
+[info]2018/09/06 14:38:31 Log folder: 20180906 Full log path: ../src/xcbbrobot/log/vnc_robot_1/20180906
+[info]2018/09/06 14:38:31 Folder already exists![../src/xcbbrobot/log/vnc_robot_1/20180906]
+[SYSTEM]2018/09/06 14:38:33 D:/GOPATH/src/robot_d/robot_d.go:40: Got signal: interrupt
+[info]2018/09/06 14:51:00 Program startup: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/06 14:51:00 Set Case number 1 Set log path: ../src/xcbbrobot/log/ Set log level: 4 Set Connect remote address: 59.110.125.134:30302
+[info]2018/09/06 14:51:00 Log path: ../src/xcbbrobot/log/vnc_robot_1
+[info]2018/09/06 14:51:00 Log folder: 20180906 Full log path: ../src/xcbbrobot/log/vnc_robot_1/20180906
+[SYSTEM]2018/09/06 14:51:01 D:/GOPATH/src/robot_d/robot_d.go:40: Got signal: interrupt
+[SYSTEM]2018/09/06 14:52:56 D:/GOPATH/src/robot_d/robot_d.go:73: Program startup: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/06 14:52:56 Set Case number: 1 Set log path: ../src/xcbbrobot/log/ Set log level: 4 Set Connect remote address: 59.110.125.134:30302
+[info]2018/09/06 14:52:56 Log path: ../src/xcbbrobot/log/vnc_robot_1
+[info]2018/09/06 14:52:56 Log folder: 20180906 Full log path: ../src/xcbbrobot/log/vnc_robot_1/20180906
+[SYSTEM]2018/09/06 14:52:56 D:/GOPATH/src/robot_d/robot_d.go:40: Got signal: interrupt
+[SYSTEM]2018/09/06 14:56:00 D:/GOPATH/src/robot_d/robot_d.go:73: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/06 14:56:00 Set Case number: 1 Set log path: ../src/xcbbrobot/log/ Set log level: 4 Set Connect remote address: 59.110.125.134:30302
+[info]2018/09/06 14:56:00 Log path: ../src/xcbbrobot/log/vnc_robot_1
+[info]2018/09/06 14:56:00 Log folder: 20180906 Full log path: ../src/xcbbrobot/log/vnc_robot_1/20180906
+[SYSTEM]2018/09/06 14:56:01 D:/GOPATH/src/robot_d/robot_d.go:40: Program exit<<==: D:/GOPATH/src/robot_d/robot_d.go Got signal: interrupt
+[SYSTEM]2018/09/06 15:00:05 D:/GOPATH/src/robot_d/robot_d.go:17: 
+ Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/06 15:00:05 Set Case number: 1 
+ Set log path: ../src/xcbbrobot/log/ 
+ Set log level: 4 
+ Set Connect remote address: 59.110.125.134:30302
+[info]2018/09/06 15:00:05 Log path: ../src/xcbbrobot/log/vnc_robot_1
+[info]2018/09/06 15:00:05 Log folder: 20180906 Full log path: ../src/xcbbrobot/log/vnc_robot_1/20180906
+[SYSTEM]2018/09/06 15:00:07 D:/GOPATH/src/robot_d/robot_d.go:17: 
+ Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/06 15:00:07 Set Case number: 0 
+ Set log path: ../src/xcbbrobot/log/ 
+ Set log level: 4 
+ Set Connect remote address: 59.110.125.134:30301
+[info]2018/09/06 15:00:07 Log path: ../src/xcbbrobot/log/vnc_robot_0
+[info]2018/09/06 15:00:07 Log folder: 20180906 Full log path: ../src/xcbbrobot/log/vnc_robot_0/20180906
+[SYSTEM]2018/09/06 15:00:19 D:/GOPATH/src/robot_d/robot_d.go:44: Program exit<<==: D:/GOPATH/src/robot_d/robot_d.go Got signal: interrupt
+[SYSTEM]2018/09/06 15:00:20 D:/GOPATH/src/robot_d/robot_d.go:44: Program exit<<==: D:/GOPATH/src/robot_d/robot_d.go Got signal: interrupt
+[SYSTEM]2018/09/06 15:02:19 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/06 15:02:19 
+ Set Case number: 0 
+ Set log path: ../src/xcbbrobot/log/ 
+ Set log level: 4 
+ Set Connect remote address: 59.110.125.134:30301
+[info]2018/09/06 15:02:19 Log path: ../src/xcbbrobot/log/vnc_robot_0
+[info]2018/09/06 15:02:19 Log folder: 20180906 Full log path: ../src/xcbbrobot/log/vnc_robot_0/20180906
+[SYSTEM]2018/09/06 15:02:21 D:/GOPATH/src/robot_d/robot_d.go:44: Program exit<<==: D:/GOPATH/src/robot_d/robot_d.go Got signal: interrupt
+[SYSTEM]2018/09/06 15:21:01 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/06 15:21:02 
+ Set Case number: 1 
+ Set log path: ../src/xcbbrobot/log/ 
+ Set log level: 4 
+ Set Connect remote address: 59.110.125.134:30302
+[info]2018/09/06 15:21:02 Log path: ../src/xcbbrobot/log/vnc_robot_1
+[info]2018/09/06 15:21:02 Log folder: 20180906 Full log path: ../src/xcbbrobot/log/vnc_robot_1/20180906
+[robot_d.go_1_SYSTEM]2018/09/06 15:21:03 D:/GOPATH/src/robot_d/robot_d.go:44: Program exit<<==: D:/GOPATH/src/robot_d/robot_d.go Got signal: interrupt
+[SYSTEM]2018/09/06 15:24:02 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/06 15:24:02 
+ Set Case number: 1 
+ Set log path: ../src/xcbbrobot/log/ 
+ Set log level: 4 
+ Set Connect remote address: 59.110.125.134:30302
+[SYSTEM]2018/09/06 15:24:04 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/06 15:24:04 
+ Set Case number: 0 
+ Set log path: ../src/xcbbrobot/log/ 
+ Set log level: 4 
+ Set Connect remote address: 59.110.125.134:30301
+[SYSTEM]2018/09/06 15:29:13 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/06 15:29:13 
+ Set Case number: 1 
+ Set log path: ../src/xcbbrobot/log/ 
+ Set log level: 4 
+ Set Connect remote address: 59.110.125.134:30302
+[robot_d.go_1_info]2018/09/06 15:29:13 Log path: ../src/xcbbrobot/log/vnc_robot_1
+[robot_d.go_1_info]2018/09/06 15:29:13 Log folder: 20180906 Full log path: ../src/xcbbrobot/log/vnc_robot_1/20180906
+[SYSTEM]2018/09/06 15:29:17 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/06 15:29:17 
+ Set Case number: 0 
+ Set log path: ../src/xcbbrobot/log/ 
+ Set log level: 4 
+ Set Connect remote address: 59.110.125.134:30301
+[robot_d.go_0_info]2018/09/06 15:29:17 Log path: ../src/xcbbrobot/log/vnc_robot_0
+[robot_d.go_0_info]2018/09/06 15:29:17 Log folder: 20180906 Full log path: ../src/xcbbrobot/log/vnc_robot_0/20180906
+[robot_d.go_1_SYSTEM]2018/09/06 15:29:22 D:/GOPATH/src/robot_d/robot_d.go:44: Program exit<<==: D:/GOPATH/src/robot_d/robot_d.go Got signal: interrupt
+[robot_d.go_0_SYSTEM]2018/09/06 15:29:24 D:/GOPATH/src/robot_d/robot_d.go:44: Program exit<<==: D:/GOPATH/src/robot_d/robot_d.go Got signal: interrupt

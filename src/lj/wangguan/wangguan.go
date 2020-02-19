@@ -1,12 +1,14 @@
 package main
+
 import (
 	"fmt"
-	"net"
 	"log"
+	"net"
 	"os"
 	//"encoding/json"
 	"lj/messagehead"
 )
+
 type sendword struct {
 	Pid       uint64
 	Mid       uint64
@@ -40,10 +42,10 @@ func main() {
 		Log(fconn.RemoteAddr().String(), " tcp connect success")
 		fhandleConnection(fconn)
 
-
 	}
 
 }
+
 //处理连接
 func handleConnection(conn net.Conn) {
 
@@ -60,13 +62,13 @@ func handleConnection(conn net.Conn) {
 		fmt.Println(n)
 		fmt.Print(buffer[:n])
 		buffer_send := buffer[:n]
-		g_len :=messagehead.Get_lenth(buffer)
+		g_len := messagehead.Get_lenth(buffer)
 		fmt.Println("\r\n")
 		fmt.Println(g_len)
-		g_pid :=messagehead.Get_pid(buffer)
+		g_pid := messagehead.Get_pid(buffer)
 		fmt.Println(g_pid)
-		w_linkd :=uint32(332)
-		messagehead.Change_linkd(buffer,w_linkd)
+		w_linkd := uint32(332)
+		messagehead.Change_linkd(buffer, w_linkd)
 
 		//fmt.Print(string(buffer[:n]))
 		//datarec := &sendword{}
@@ -117,13 +119,13 @@ func fhandleConnection(fconn net.Conn) {
 		fmt.Println(n)
 		fmt.Print(buffer[:n])
 		buffer_send := buffer[:n]
-		g_len :=messagehead.Get_lenth(buffer)
+		g_len := messagehead.Get_lenth(buffer)
 		fmt.Println("\r\n")
 		fmt.Println(g_len)
-		g_pid :=messagehead.Get_pid(buffer)
+		g_pid := messagehead.Get_pid(buffer)
 		fmt.Println(g_pid)
-		w_linkd :=uint32(332)
-		messagehead.Change_linkd(buffer,w_linkd)
+		w_linkd := uint32(332)
+		messagehead.Change_linkd(buffer, w_linkd)
 		fmt.Print(buffer_send[:n])
 
 		//fmt.Print(string(buffer[:n]))
@@ -148,15 +150,11 @@ func fhandleConnection(fconn net.Conn) {
 		//}
 		//fmt.Println("connect success")
 
-
-
-
 		//datasendj, err := json.Marshal(datarec)
 		//if err != nil {
 		//	fmt.Print(err.Error())
 		//}
 		//err = json.Unmarshal([]byte(datasendj), &datarec)
-
 
 		//
 		//fmt.Print(buffer[:n])

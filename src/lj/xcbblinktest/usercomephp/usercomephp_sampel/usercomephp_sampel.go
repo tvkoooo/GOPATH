@@ -3,15 +3,16 @@
 package usercomephp_sampel
 
 import (
-	"net"
 	"fmt"
-	"os"
 	"lj/xcbblinktest/tcplink"
-	"time"
 	"lj/xcbblinktest/usercomephp"
+	"net"
+	"os"
+	"time"
 )
+
 //use the default data for example to send
-func Sendbody(uid uint32,sid uint32,s_sender string,uid_onmic uint32)(outbyte []byte){
+func Sendbody(uid uint32, sid uint32, s_sender string, uid_onmic uint32) (outbyte []byte) {
 	var mysend usercomephp.PEnterChannelRQ
 	var uri uint32 = (253 << 8) | 2
 	mysend.Cmd = "PEnterChannel"
@@ -19,24 +20,25 @@ func Sendbody(uid uint32,sid uint32,s_sender string,uid_onmic uint32)(outbyte []
 	mysend.Uid = uid
 	mysend.Sender = s_sender
 	mysend.Uid_onmic = uid_onmic
-	outbyte = usercomephp.ADDsenderbody(uri,mysend)
+	outbyte = usercomephp.ADDsenderbody(uri, mysend)
 	return outbyte
 }
+
 //Receive data and decode
-func Recebody(inbyte []byte)(){
+func Recebody(inbyte []byte) {
 	usercomephp.Getreceivebody(inbyte)
 }
 
 //tcp send
-func sender(conn net.Conn,uid uint32,sid uint32,s_sender string,uid_onmic uint32) {
-	senddata := make([]byte , 0)
-	senddata = Sendbody(uid,sid,s_sender,uid_onmic)
+func sender(conn net.Conn, uid uint32, sid uint32, s_sender string, uid_onmic uint32) {
+	senddata := make([]byte, 0)
+	senddata = Sendbody(uid, sid, s_sender, uid_onmic)
 	conn.Write([]byte(senddata))
-	fmt.Println(uid," send over",conn.LocalAddr(),"timenow:",time.Now().Format("2006-01-02 15:04:05"),"\r\n")
+	fmt.Println(uid, " send over", conn.LocalAddr(), "timenow:", time.Now().Format("2006-01-02 15:04:05"), "\r\n")
 }
 
 //tcp rec
-func recev(conn net.Conn)() {
+func recev(conn net.Conn) {
 	recevdata := make([]uint8, 4096)
 	for {
 		count, err := conn.Read(recevdata)
@@ -54,13 +56,14 @@ func recev(conn net.Conn)() {
 	//fmt.Println("connect close success LocalAddr:",conn.LocalAddr(),"RemoteAddr",conn.RemoteAddr(),"timenow:",time.Now().Format("2006-01-02 15:04:05"),"\r\n")
 
 }
+
 //user test
-func PEnterChannel(uid uint32,sid uint32,s_sender string,uid_onmic uint32,ch *chan int) {
+func PEnterChannel(uid uint32, sid uint32, s_sender string, uid_onmic uint32, ch *chan int) {
 
 	conn := tcplink.Tcplink()
-	sender(conn,uid,sid,s_sender,uid_onmic)
+	sender(conn, uid, sid, s_sender, uid_onmic)
 	//time.Sleep(1E9)
 	recev(conn)
 	time.Sleep(1E9)
-	*ch<-1
+	*ch <- 1
 }

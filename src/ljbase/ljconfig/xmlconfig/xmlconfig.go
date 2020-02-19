@@ -1,11 +1,10 @@
 package ljconfig
 
 import (
-	"os"
-	"fmt"
 	"encoding/xml"
+	"fmt"
+	"os"
 )
-
 
 type ConfigXml struct {
 	Enabled bool   `xml:"enabled"`
@@ -24,6 +23,4 @@ func (c *ConfigXml) InitConfig(path string) {
 		return
 	}
 
-
 }
-

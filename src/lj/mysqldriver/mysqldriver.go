@@ -104,9 +104,9 @@ func main() {
 	rows4.Scan(&id, &name)
 	fmt.Println(id, name)
 
-/*		stmt2, _ := db.Prepare("insert into test.mysq values(null, ?, ?)")
-		rows5, _ := stmt2.Exec("666", 66)
-		fmt.Println(rows5.RowsAffected())*/
+	/*		stmt2, _ := db.Prepare("insert into test.mysq values(null, ?, ?)")
+			rows5, _ := stmt2.Exec("666", 66)
+			fmt.Println(rows5.RowsAffected())*/
 
 	/*	//事务处理
 		tx, _ := db.Begin();

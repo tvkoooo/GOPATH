@@ -1,9 +1,9 @@
 package message
 
 import (
+	"encoding/json"
 	"xcbbrobot/common/datastream"
 	"xcbbrobot/common/typechange"
-	"encoding/json"
 )
 
 //PEnterChannelRQ RQ DATA  (1 << 8) | 23
@@ -12,16 +12,15 @@ type PEnterChannlRQ struct {
 }
 
 type PEnterRQJson struct {
-	Cmd string `json:"cmd"`
-	Uid string `json:"uid"`
-	Sender string `json:"sender"`
+	Cmd       string `json:"cmd"`
+	Uid       string `json:"uid"`
+	Sender    string `json:"sender"`
 	Uid_onmic string `json:"uid_onmic"`
-	Sid string `json:"sid"`
+	Sid       string `json:"sid"`
 	Socket_id string `json:"socket_id"`
 }
 
-
-func SendPEnterChannel(robotId uint32 ,uid uint32 , sid uint32 )( mess []byte){
+func SendPEnterChannel(robotId uint32, uid uint32, sid uint32) (mess []byte) {
 	var ph PackHead
 	ph.Uri = (1 << 8) | 23
 	ph.Sid = 0
@@ -36,20 +35,18 @@ func SendPEnterChannel(robotId uint32 ,uid uint32 , sid uint32 )( mess []byte){
 	robotEnterChanlJson.Sid = typechange.Int2StringRe(int(sid))
 	robotEnterChanlJson.Socket_id = "0"
 
-
-	jsonSend ,_ := json.Marshal(robotEnterChanlJson)
+	jsonSend, _ := json.Marshal(robotEnterChanlJson)
 
 	var sendPEnterChannlRQ PEnterChannlRQ
 	sendPEnterChannlRQ.Str32 = string(jsonSend)
 
-	body:= EncodePEnterChannel(sendPEnterChannlRQ)
-	mess = AddPeakHead(ph ,body)
+	body := EncodePEnterChannel(sendPEnterChannlRQ)
+	mess = AddPeakHead(ph, body)
 	return mess
 }
 
-
-func EncodePEnterChannel(rq PEnterChannlRQ ) (outbyte []byte) {
-	body := make([]byte,0)
+func EncodePEnterChannel(rq PEnterChannlRQ) (outbyte []byte) {
+	body := make([]byte, 0)
 	outbyte = datastream.AddString32(rq.Str32, body)
 	return outbyte
 }

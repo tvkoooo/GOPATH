@@ -11,11 +11,11 @@ import (
 func main() {
 	myConfig := new(ljconfig.ConfigUnix)
 	myConfig.InitConfig("./ljbase/ljconfig/unixconfig/unixconfigtest/unixconfig.uni")
-	default_path :=myConfig.Read("default", "path")
+	default_path := myConfig.Read("default", "path")
 	fmt.Println(default_path)
-	default_version  :=myConfig.Read("default", "version")
+	default_version := myConfig.Read("default", "version")
 	fmt.Println(default_version)
-	test_num  :=myConfig.Read("test", "num")
+	test_num := myConfig.Read("test", "num")
 	fmt.Println(test_num)
 	//
 	fmt.Println(myConfig.Mymap["test.something"])

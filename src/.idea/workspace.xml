@@ -2,22 +2,132 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="934e39e4-ef7a-4330-84df-72d3baf049df" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/common/datagroove.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/common/datagroove.a" />
-      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/common/fileopr.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/common/fileopr.a" />
-      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/common/logfile.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/common/logfile.a" />
       <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/config.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/config.a" />
-      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/handle.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/handle.a" />
-      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/message.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/message.a" />
-      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/robotapp.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/robotapp.a" />
       <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/robotctrl.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/robotctrl.a" />
-      <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/robotvector.a" afterPath="$PROJECT_DIR$/../pkg/windows_amd64/robot_d/robotvector.a" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/gotest/common/callback/callback.go" afterPath="$PROJECT_DIR$/gotest/common/callback/callback.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/common/datagroove/datagroove.go" afterPath="$PROJECT_DIR$/gotest/common/datagroove/datagroove.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/common/datastream/datastream.go" afterPath="$PROJECT_DIR$/gotest/common/datastream/datastream.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/common/fileopr/fileopr.go" afterPath="$PROJECT_DIR$/gotest/common/fileopr/fileopr.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/common/logfile/logfile.go" afterPath="$PROJECT_DIR$/gotest/common/logfile/logfile.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/common/maths/rand.go" afterPath="$PROJECT_DIR$/gotest/common/maths/rand.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/common/tcplink/tcplink.go" afterPath="$PROJECT_DIR$/gotest/common/tcplink/tcplink.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/common/typechange/typechange.go" afterPath="$PROJECT_DIR$/gotest/common/typechange/typechange.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/gotest.go" afterPath="$PROJECT_DIR$/gotest/gotest.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/message/PPlusRQ.go" afterPath="$PROJECT_DIR$/gotest/message/PPlusRQ.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/message/PRealJoinChannelRQ.go" afterPath="$PROJECT_DIR$/gotest/message/PRealJoinChannelRQ.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/message/PRealLeaveChannelRQ.go" afterPath="$PROJECT_DIR$/gotest/message/PRealLeaveChannelRQ.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/message/message.go" afterPath="$PROJECT_DIR$/gotest/message/message.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/message/packhead.go" afterPath="$PROJECT_DIR$/gotest/message/packhead.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/message/robotConnect.go" afterPath="$PROJECT_DIR$/gotest/message/robotConnect.go" />
+      <change beforePath="$PROJECT_DIR$/gotest/robotvector/robotvector.go" afterPath="$PROJECT_DIR$/gotest/robotvector/robotvector.go" />
+      <change beforePath="$PROJECT_DIR$/ionet/main/main.go" afterPath="$PROJECT_DIR$/ionet/main/main.go" />
+      <change beforePath="$PROJECT_DIR$/lj/bufferout/bufferout.go" afterPath="$PROJECT_DIR$/lj/bufferout/bufferout.go" />
+      <change beforePath="$PROJECT_DIR$/lj/duotai/duotai.go" afterPath="$PROJECT_DIR$/lj/duotai/duotai.go" />
+      <change beforePath="$PROJECT_DIR$/lj/fangfaqianru/fangfaqianru.go" afterPath="$PROJECT_DIR$/lj/fangfaqianru/fangfaqianru.go" />
+      <change beforePath="$PROJECT_DIR$/lj/fuwuqi/fuwuqi.go" afterPath="$PROJECT_DIR$/lj/fuwuqi/fuwuqi.go" />
+      <change beforePath="$PROJECT_DIR$/lj/fuwuqiceshi/fuwuqiceshi.go" afterPath="$PROJECT_DIR$/lj/fuwuqiceshi/fuwuqiceshi.go" />
+      <change beforePath="$PROJECT_DIR$/lj/hello/hello.go" afterPath="$PROJECT_DIR$/lj/hello/hello.go" />
+      <change beforePath="$PROJECT_DIR$/lj/httpget/gohanshu.go" afterPath="$PROJECT_DIR$/lj/httpget/gohanshu.go" />
+      <change beforePath="$PROJECT_DIR$/lj/kehuduan/kehuduan.go" afterPath="$PROJECT_DIR$/lj/kehuduan/kehuduan.go" />
+      <change beforePath="$PROJECT_DIR$/lj/messagehead/mess.go" afterPath="$PROJECT_DIR$/lj/messagehead/mess.go" />
+      <change beforePath="$PROJECT_DIR$/lj/mysqldriver/mysqldriver.go" afterPath="$PROJECT_DIR$/lj/mysqldriver/mysqldriver.go" />
+      <change beforePath="$PROJECT_DIR$/lj/readline/readline.go" afterPath="$PROJECT_DIR$/lj/readline/readline.go" />
+      <change beforePath="$PROJECT_DIR$/lj/redisgo/redisgo.go" afterPath="$PROJECT_DIR$/lj/redisgo/redisgo.go" />
+      <change beforePath="$PROJECT_DIR$/lj/stringutil/reverse.go" afterPath="$PROJECT_DIR$/lj/stringutil/reverse.go" />
+      <change beforePath="$PROJECT_DIR$/lj/testlj/learnlj.go" afterPath="$PROJECT_DIR$/lj/testlj/learnlj.go" />
+      <change beforePath="$PROJECT_DIR$/lj/wangguan/wangguan.go" afterPath="$PROJECT_DIR$/lj/wangguan/wangguan.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/datastream/datastream.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/datastream/datastream.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/tcplink/tcplink.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/tcplink/tcplink.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/user/user.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/user/user.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/usercome/usercome.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/usercome/usercome.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/usercome/usercome_sampel/usercome_sampel.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/usercome/usercome_sampel/usercome_sampel.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/usercomephp/usercomephp.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/usercomephp/usercomephp.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/usercomephp/usercomephp_sampel/usercomephp_sampel.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/usercomephp/usercomephp_sampel/usercomephp_sampel.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/userleave/userleave.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/userleave/userleave.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/userleave/userleave_sampel/userleave_sampel.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/userleave/userleave_sampel/userleave_sampel.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/userping/userping.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/userping/userping.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/userping/userping_sampel/userping_sampel.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/userping/userping_sampel/userping_sampel.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/usertalk/usertalk.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/usertalk/usertalk.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/usertalk/usertalk_sampel/usertalk_sampel.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/usertalk/usertalk_sampel/usertalk_sampel.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbblinktest/xcbblinktest.go" afterPath="$PROJECT_DIR$/lj/xcbblinktest/xcbblinktest.go" />
+      <change beforePath="$PROJECT_DIR$/lj/xcbbrobot/xcbbrobot.go" afterPath="$PROJECT_DIR$/lj/xcbbrobot/xcbbrobot.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/ljconfig/jsonconfig/jsonconfig.go" afterPath="$PROJECT_DIR$/ljbase/ljconfig/jsonconfig/jsonconfig.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/ljconfig/jsonconfig/jsonconfigtest/jsonconfigtest.go" afterPath="$PROJECT_DIR$/ljbase/ljconfig/jsonconfig/jsonconfigtest/jsonconfigtest.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/ljconfig/unixconfig/unixconfig.go" afterPath="$PROJECT_DIR$/ljbase/ljconfig/unixconfig/unixconfig.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/ljconfig/unixconfig/unixconfigtest/unixconfigtest.go" afterPath="$PROJECT_DIR$/ljbase/ljconfig/unixconfig/unixconfigtest/unixconfigtest.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/ljconfig/xmlconfig/xmlconfig.go" afterPath="$PROJECT_DIR$/ljbase/ljconfig/xmlconfig/xmlconfig.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/ljconfig/xmlconfig/xmlconfigtest/xmlconfigtest.go" afterPath="$PROJECT_DIR$/ljbase/ljconfig/xmlconfig/xmlconfigtest/xmlconfigtest.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/ljconfig/yamlconfig/yamlconfigtest/yamlconfigtest.go" afterPath="$PROJECT_DIR$/ljbase/ljconfig/yamlconfig/yamlconfigtest/yamlconfigtest.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/ljlog/ljlog.go" afterPath="$PROJECT_DIR$/ljbase/ljlog/ljlog.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/ljlog/ljlogtest/ljlogtest.go" afterPath="$PROJECT_DIR$/ljbase/ljlog/ljlogtest/ljlogtest.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/ljtypechange/typechange.go" afterPath="$PROJECT_DIR$/ljbase/ljtypechange/typechange.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/xcbbprotocol/datastream/datastream.go" afterPath="$PROJECT_DIR$/ljbase/xcbbprotocol/datastream/datastream.go" />
+      <change beforePath="$PROJECT_DIR$/ljbase/xcbbprotocol/tcplink/tcplink.go" afterPath="$PROJECT_DIR$/ljbase/xcbbprotocol/tcplink/tcplink.go" />
+      <change beforePath="$PROJECT_DIR$/ljnew/chantest/chantest.go" afterPath="$PROJECT_DIR$/ljnew/chantest/chantest.go" />
+      <change beforePath="$PROJECT_DIR$/ljnew/configtest/configmain.go" afterPath="$PROJECT_DIR$/ljnew/configtest/configmain.go" />
+      <change beforePath="$PROJECT_DIR$/ljnew/configtest/configtest/configtest.go" afterPath="$PROJECT_DIR$/ljnew/configtest/configtest/configtest.go" />
+      <change beforePath="$PROJECT_DIR$/ljnew/loglj/loglj.go" afterPath="$PROJECT_DIR$/ljnew/loglj/loglj.go" />
+      <change beforePath="$PROJECT_DIR$/ljnew/loglj/logtest/logtest.go" afterPath="$PROJECT_DIR$/ljnew/loglj/logtest/logtest.go" />
+      <change beforePath="$PROJECT_DIR$/ljnew/memory/memory.go" afterPath="$PROJECT_DIR$/ljnew/memory/memory.go" />
+      <change beforePath="$PROJECT_DIR$/ljnew/readfile/readfile.go" afterPath="$PROJECT_DIR$/ljnew/readfile/readfile.go" />
+      <change beforePath="$PROJECT_DIR$/ljnew/robotC/robotC.go" afterPath="$PROJECT_DIR$/ljnew/robotC/robotC.go" />
+      <change beforePath="$PROJECT_DIR$/ljnew/robotS/robotS.go" afterPath="$PROJECT_DIR$/ljnew/robotS/robotS.go" />
+      <change beforePath="$PROJECT_DIR$/ljnew/typechange/typechange.go" afterPath="$PROJECT_DIR$/ljnew/typechange/typechange.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/common/callback/callback.go" afterPath="$PROJECT_DIR$/robot_d/common/callback/callback.go" />
       <change beforePath="$PROJECT_DIR$/robot_d/common/datagroove/datagroove.go" afterPath="$PROJECT_DIR$/robot_d/common/datagroove/datagroove.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/common/datastream/datastream.go" afterPath="$PROJECT_DIR$/robot_d/common/datastream/datastream.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/common/fileopr/fileopr.go" afterPath="$PROJECT_DIR$/robot_d/common/fileopr/fileopr.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/common/logfile/logfile.go" afterPath="$PROJECT_DIR$/robot_d/common/logfile/logfile.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/common/logfile/logfiletest/logfiletest.go" afterPath="$PROJECT_DIR$/robot_d/common/logfile/logfiletest/logfiletest.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/common/maths/rand.go" afterPath="$PROJECT_DIR$/robot_d/common/maths/rand.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/common/tcplink/tcplink.go" afterPath="$PROJECT_DIR$/robot_d/common/tcplink/tcplink.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/common/typechange/typechange.go" afterPath="$PROJECT_DIR$/robot_d/common/typechange/typechange.go" />
       <change beforePath="$PROJECT_DIR$/robot_d/config/config.go" afterPath="$PROJECT_DIR$/robot_d/config/config.go" />
       <change beforePath="$PROJECT_DIR$/robot_d/handle/handle.go" afterPath="$PROJECT_DIR$/robot_d/handle/handle.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/message/PPlusRQ.go" afterPath="$PROJECT_DIR$/robot_d/message/PPlusRQ.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/message/PRealJoinChannelRQ.go" afterPath="$PROJECT_DIR$/robot_d/message/PRealJoinChannelRQ.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/message/PRealLeaveChannelRQ.go" afterPath="$PROJECT_DIR$/robot_d/message/PRealLeaveChannelRQ.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/message/message.go" afterPath="$PROJECT_DIR$/robot_d/message/message.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/message/packhead.go" afterPath="$PROJECT_DIR$/robot_d/message/packhead.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/message/robotConnect.go" afterPath="$PROJECT_DIR$/robot_d/message/robotConnect.go" />
+      <change beforePath="$PROJECT_DIR$/robot_d/robot_d.go" afterPath="$PROJECT_DIR$/robot_d/robot_d.go" />
       <change beforePath="$PROJECT_DIR$/robot_d/robotapp/robotapp.go" afterPath="$PROJECT_DIR$/robot_d/robotapp/robotapp.go" />
       <change beforePath="$PROJECT_DIR$/robot_d/robotctrl/robotctrl.go" afterPath="$PROJECT_DIR$/robot_d/robotctrl/robotctrl.go" />
       <change beforePath="$PROJECT_DIR$/robot_d/robotvector/robotvector.go" afterPath="$PROJECT_DIR$/robot_d/robotvector/robotvector.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/callback/callback.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/callback/callback.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/datagroove/datagroove.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/datagroove/datagroove.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/datagroove/datagroovetest/datagroovetest.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/datagroove/datagroovetest/datagroovetest.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/datastream/datastream.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/datastream/datastream.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/fileopr/fileopr.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/fileopr/fileopr.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/maths/rand.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/maths/rand.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/PEnterChannel.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/PEnterChannel.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/PPlusRQ.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/PPlusRQ.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/PRealJoinChannelRQ.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/PRealJoinChannelRQ.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/PRealLeaveChannelRQ.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/PRealLeaveChannelRQ.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/message.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/message.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/messagetest/joinroomtest.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/messagetest/joinroomtest.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/messagetest/robotConnecttest.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/messagetest/robotConnecttest.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/messagetest/robotpingtest.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/messagetest/robotpingtest.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/messagetest/test.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/messagetest/test.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/packhead.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/packhead.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/message/robotConnect.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/message/robotConnect.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/tcplink/tcplink.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/tcplink/tcplink.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/common/typechange/typechange.go" afterPath="$PROJECT_DIR$/xcbbrobot/common/typechange/typechange.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/config/config.go" afterPath="$PROJECT_DIR$/xcbbrobot/config/config.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/config/configtest/configtest.go" afterPath="$PROJECT_DIR$/xcbbrobot/config/configtest/configtest.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/handle/handle.go" afterPath="$PROJECT_DIR$/xcbbrobot/handle/handle.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/logfile/logfile.go" afterPath="$PROJECT_DIR$/xcbbrobot/logfile/logfile.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/logfile/logfiletest/logfiletest.go" afterPath="$PROJECT_DIR$/xcbbrobot/logfile/logfiletest/logfiletest.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/robot_d.go" afterPath="$PROJECT_DIR$/xcbbrobot/robot_d.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/robotapp/robotapp.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotapp/robotapp.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/robotapp/robotapptest/robotapptest.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotapp/robotapptest/robotapptest.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/robotctrl/robotctrl.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotctrl/robotctrl.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/robotlife/robotlife.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotlife/robotlife.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/robotlife/robotlifetest/robotlifetest.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotlife/robotlifetest/robotlifetest.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/robotvector/robotvector.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotvector/robotvector.go" />
+      <change beforePath="$PROJECT_DIR$/xcbbrobot/robotvector/robotvectortest/robotvectortest.go" afterPath="$PROJECT_DIR$/xcbbrobot/robotvector/robotvectortest/robotvectortest.go" />
       <change beforePath="$PROJECT_DIR$/xcbbrobot/test/main.go" afterPath="$PROJECT_DIR$/xcbbrobot/test/main.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,104 +154,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_d/config/config.go">
+      <file leaf-file-name="sqltest.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sqltest/sqltest.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="52" column="44" lean-forward="false" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="44" />
+            <state relative-caret-position="223">
+              <caret line="36" column="48" lean-forward="true" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
               <folding>
-                <element signature="e#16#131#0" expanded="true" />
+                <element signature="e#14#89#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datagroove.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_d/common/datagroove/datagroove.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3914">
-              <caret line="212" column="1" lean-forward="false" selection-start-line="212" selection-start-column="1" selection-end-line="212" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tcplink.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_d/common/tcplink/tcplink.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="robotctrl.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_d/robotctrl/robotctrl.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="255" column="45" lean-forward="true" selection-start-line="255" selection-start-column="45" selection-end-line="255" selection-end-column="45" />
-              <folding>
-                <element signature="e#19#243#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="robot_d.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/robot_d/robot_d.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-494">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-              <folding>
-                <element signature="e#14#141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="robotvector.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_d/robotvector/robotvector.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="e#21#126#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="robotapp.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_d/robotapp/robotapp.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1843">
-              <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
-              <folding>
-                <element signature="e#18#211#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="handle.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_d/handle/handle.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="61" column="50" lean-forward="false" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
-              <folding>
-                <element signature="e#16#153#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="robotConnect.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_d/message/robotConnect.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -212,17 +232,13 @@
       <dir>D:\GOPATH\src\lj</dir>
     </dirStrings>
   </component>
-  <component name="GOROOT" path="D:\tools\Go" />
+  <component name="GOROOT" path="F:\Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/xcbbrobot/robotcontrol/robotcontrol.go" />
-        <option value="$PROJECT_DIR$/xcbbrobot/common/message/PRealJoinChannelRQ.go" />
-        <option value="$PROJECT_DIR$/xcbbrobot/config/config.yaml" />
-        <option value="$PROJECT_DIR$/xcbbrobot/logfile/logfiletest/logfiletest.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/robotvector/robotvector.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/handle/handle.go" />
         <option value="$PROJECT_DIR$/xcbbrobot/main.go" />
@@ -266,10 +282,14 @@
         <option value="$PROJECT_DIR$/gotest/message/PRealJoinChannelRQ.go" />
         <option value="$PROJECT_DIR$/gotest/gotest.go" />
         <option value="$PROJECT_DIR$/robot_d/handle/handle.go" />
-        <option value="$PROJECT_DIR$/robot_d/config/config.go" />
         <option value="$PROJECT_DIR$/robot_d/robotapp/robotapp.go" />
         <option value="$PROJECT_DIR$/robot_d/robotvector/robotvector.go" />
         <option value="$PROJECT_DIR$/robot_d/robotctrl/robotctrl.go" />
+        <option value="$PROJECT_DIR$/robot_d/config/config.go" />
+        <option value="$PROJECT_DIR$/lj/mysqldriver/mysqldriver.go" />
+        <option value="$PROJECT_DIR$/hello1/hello1.go" />
+        <option value="$PROJECT_DIR$/slq_test/slq_test.go" />
+        <option value="$PROJECT_DIR$/sqltest/sqltest.go" />
       </list>
     </option>
   </component>
@@ -279,11 +299,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1311" />
-    <option name="height" value="1004" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="374" />
+    <option name="y" value="42" />
+    <option name="width" value="1431" />
+    <option name="height" value="989" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -325,6 +345,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -335,25 +357,32 @@
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="robot_d" type="462c0819:PsiDirectoryNode" />
+              <item name="lj" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="robot_d" type="462c0819:PsiDirectoryNode" />
-              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="lj" type="462c0819:PsiDirectoryNode" />
+              <item name="mysqldriver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sqltest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="goland.project.structure" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="debugger.stepping" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bin" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
@@ -379,65 +408,67 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build robot_d.go (1)">
-    <configuration name="go build datagroove.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+  <component name="RunManager" selected="Go Build.sqltest">
+    <configuration name="go build hello1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="src" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/gotest/common/datagroove/datagroove.go" />
+      <filePath value="$PROJECT_DIR$/hello1/hello1.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go build gotest.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+    <configuration name="go build hello.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="src" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/gotest/gotest.go" />
+      <filePath value="$PROJECT_DIR$/lj/hello/hello.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go build logfile.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+    <configuration name="go build mysqldriver.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="src" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/robot_d/common/logfile/logfile.go" />
+      <filePath value="$PROJECT_DIR$/lj/mysqldriver/mysqldriver.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+    <configuration name="go build slqtest.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="src" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/xcbbrobot/test/main.go" />
+      <filePath value="$PROJECT_DIR$/slqtest/slqtest.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go build robot_d.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+    <configuration name="sqltest" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="src" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
+      <parameters value="tvkoooo:dk2012@tcp(127.0.0.1:3306)/db_mm_cherry?charset=utf8 &quot;select `id`,`name` from db_mm_cherry.t_user_basic&quot;" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/robot_d/robot_d.go" />
+      <filePath value="$PROJECT_DIR$/sqltest/sqltest.go" />
       <directory value="$PROJECT_DIR$/" />
+      <output_directory value="F:\GOPATH\bin" />
     </configuration>
     <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
       <node-interpreter value="project" />
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Go Build.go build robot_d.go (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Go Build.go build logfile.go" />
-      <item index="3" class="java.lang.String" itemvalue="Go Build.go build gotest.go" />
-      <item index="4" class="java.lang.String" itemvalue="Go Build.go build datagroove.go" />
+      <item index="0" class="java.lang.String" itemvalue="Go Build.go build mysqldriver.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Build.go build hello.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Build.go build hello1.go" />
+      <item index="3" class="java.lang.String" itemvalue="Go Build.go build slqtest.go" />
+      <item index="4" class="java.lang.String" itemvalue="Go Build.sqltest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Build.go build robot_d.go (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Go Build.go build gotest.go" />
-        <item index="2" class="java.lang.String" itemvalue="Go Build.go build datagroove.go" />
-        <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Go Build.go build logfile.go" />
+        <item index="0" class="java.lang.String" itemvalue="Go Build.sqltest" />
+        <item index="1" class="java.lang.String" itemvalue="Go Build.go build slqtest.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Build.go build hello1.go" />
+        <item index="3" class="java.lang.String" itemvalue="Go Build.go build mysqldriver.go" />
+        <item index="4" class="java.lang.String" itemvalue="Go Build.go build hello.go" />
       </list>
     </recent_temporary>
   </component>
@@ -453,19 +484,19 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1035" extended-state="7" />
+    <frame x="374" y="42" width="1431" height="989" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12864584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1745583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.50208336" order="0" side_tool="false" content_ui="tabs" x="1115" y="724" width="353" height="233" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2204126" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2536974" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09166667" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0130293155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3686007" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -505,12 +536,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/lj/hello/hello.go</url>
-          <line>11</line>
+          <line>12</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/lj/fuwuqiceshi/fuwuqiceshi.go</url>
-          <line>29</line>
+          <line>30</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
@@ -550,7 +581,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/ljnew/readfile/readfile.go</url>
-          <line>11</line>
+          <line>10</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
@@ -560,17 +591,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/ljnew/chantest/chantest.go</url>
-          <line>37</line>
+          <line>36</line>
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/ljnew/chantest/chantest.go</url>
-          <line>53</line>
+          <line>50</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/ljnew/chantest/chantest.go</url>
-          <line>77</line>
+          <line>74</line>
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
@@ -595,7 +626,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/xcbbrobot/robotlife/robotlife.go</url>
-          <line>95</line>
+          <line>96</line>
           <option name="timeStamp" value="163" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
@@ -623,85 +654,20 @@
           <line>22</line>
           <option name="timeStamp" value="230" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/lj/mysqldriver/mysqldriver.go</url>
+          <line>2</line>
+          <option name="timeStamp" value="255" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="254" />
+      <option name="time" value="265" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/robot_d.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="84" column="4" lean-forward="true" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tools/Go/src/time/format.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="484" column="7" lean-forward="false" selection-start-line="484" selection-start-column="4" selection-end-line="484" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tools/Go/src/os/file.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="256" column="42" lean-forward="false" selection-start-line="256" selection-start-column="37" selection-end-line="256" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_d/common/callback/callback.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_d/common/datastream/datastream.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-907">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_d/common/logfile/logfiletest/logfiletest.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tools/Go/src/fmt/print.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="943" column="18" lean-forward="true" selection-start-line="943" selection-start-column="18" selection-end-line="943" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_d/common/logfile/logfile.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="121" column="23" lean-forward="true" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xcbbrobot/test/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="64" column="44" lean-forward="true" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_d/common/maths/rand.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robot_d/common/fileopr/fileopr.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -858,83 +824,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/tools/Go/src/context/context.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="205" column="5" lean-forward="false" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tools/Go/src/net/tcpsock_posix.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-329">
-          <caret line="61" column="52" lean-forward="false" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tools/Go/src/net/tcpsock.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="214" column="19" lean-forward="false" selection-start-line="214" selection-start-column="19" selection-end-line="214" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tools/Go/src/internal/poll/fd_windows.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-302">
-          <caret line="261" column="1" lean-forward="true" selection-start-line="261" selection-start-column="1" selection-end-line="261" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tools/Go/src/internal/poll/fd_poll_runtime.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/tools/Go/src/net/net.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5279">
-          <caret line="366" column="17" lean-forward="true" selection-start-line="366" selection-start-column="17" selection-end-line="366" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/tools/Go/src/context/context.go" />
+    <entry file="file://D:/tools/Go/src/net/tcpsock_posix.go" />
+    <entry file="file://D:/tools/Go/src/net/tcpsock.go" />
+    <entry file="file://D:/tools/Go/src/internal/poll/fd_windows.go" />
+    <entry file="file://D:/tools/Go/src/internal/poll/fd_poll_runtime.go" />
+    <entry file="file://D:/tools/Go/src/net/net.go" />
     <entry file="file://$PROJECT_DIR$/robot_d/handle/handle.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
           <caret line="61" column="50" lean-forward="false" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
-          <folding>
-            <element signature="e#16#153#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_d/config/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="52" column="44" lean-forward="false" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="44" />
-          <folding>
-            <element signature="e#16#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/work_git/C/xcbb_project.git/server.kr.2/server/gp/src/BuriedPointSvr/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/work_git/C/xcbb_project.git/server.kr.2/server/gp/src/BuriedPointSvr/main.go" />
     <entry file="file://$PROJECT_DIR$/robot_d/robotapp/robotapp.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1843">
-          <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
-          <folding>
-            <element signature="e#18#211#0" expanded="true" />
-          </folding>
+          <caret line="108" column="40" lean-forward="false" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -942,22 +849,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="912">
           <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/tools/Go/src/encoding/binary/binary.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="87" column="24" lean-forward="true" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/tools/Go/src/encoding/binary/binary.go" />
     <entry file="file://$PROJECT_DIR$/robot_d/common/datagroove/datagroove.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3914">
           <caret line="212" column="1" lean-forward="false" selection-start-line="212" selection-start-column="1" selection-end-line="212" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -965,36 +864,127 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/robot_d/robotvector/robotvector.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#21#126#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1007">
+          <caret line="61" column="30" lean-forward="false" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/robot_d/robotctrl/robotctrl.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="255" column="45" lean-forward="true" selection-start-line="255" selection-start-column="45" selection-end-line="255" selection-end-column="45" />
-          <folding>
-            <element signature="e#19#243#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="817">
+          <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_d/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="47" column="108" lean-forward="false" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="108" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/robot_d/robot_d.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-494">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="239">
+          <caret line="63" column="42" lean-forward="true" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lj/hello/hello.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
-            <element signature="e#14#141#0" expanded="true" />
+            <element signature="e#45#80#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lj/testlj/learnlj.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hello1/hello1.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slq_test/slq_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slqtest/slqtest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Go/src/fmt/print.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="188" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Go/src/runtime/proc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Go/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="538" column="0" lean-forward="false" selection-start-line="538" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lj/mysqldriver/mysqldriver.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="63" selection-end-column="17" />
+          <folding>
+            <marker date="1582012676040" expanded="true" signature="383:411" ph="select id,na... mysq" />
+            <marker date="1582012676040" expanded="true" signature="596:619" ph="select * fro... mysq" />
+            <marker date="1582012676040" expanded="true" signature="1228:1269" ph="select id,na... mysq" />
+            <marker date="1582012676040" expanded="true" signature="1355:1402" ph="insert into test.mysq... " />
+            <marker date="1582012676040" expanded="true" signature="1709:1749" ph="update test.mysq... " />
+            <marker date="1582012676040" expanded="true" signature="1855:1889" ph="delete from test.mysq... " />
+            <marker date="1582012676040" expanded="true" signature="1999:2040" ph="select id,na... mysq" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqltest/sqltest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="36" column="48" lean-forward="true" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+          <folding>
+            <element signature="e#14#89#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -66,6 +66,7 @@ func Debugln(logFile *LogFileName, a ...interface{}) {
 		(*logFile).debug.Println(a)
 	}
 }
+
 //DEBUG log like Printf
 func Debugf(logFile *LogFileName, format string, v ...interface{}) {
 	if (*logFile).logLevel >= L_DEBUG {
@@ -73,13 +74,13 @@ func Debugf(logFile *LogFileName, format string, v ...interface{}) {
 	}
 }
 
-
 //INFO log like Println
 func Infoln(logFile *LogFileName, a ...interface{}) {
 	if (*logFile).logLevel >= L_INFO {
 		(*logFile).info.Println(a)
 	}
 }
+
 //INFO log like like Printf
 func Infof(logFile *LogFileName, format string, v ...interface{}) {
 	if (*logFile).logLevel >= L_INFO {
@@ -87,13 +88,13 @@ func Infof(logFile *LogFileName, format string, v ...interface{}) {
 	}
 }
 
-
 //WARN log like Println
 func Warnln(logFile *LogFileName, a ...interface{}) {
 	if (*logFile).logLevel >= L_WARN {
 		(*logFile).warn.Println(a)
 	}
 }
+
 //WARN log like like Printf
 func Warnf(logFile *LogFileName, format string, v ...interface{}) {
 	if (*logFile).logLevel >= L_WARN {
@@ -107,6 +108,7 @@ func Errorln(logFile *LogFileName, a ...interface{}) {
 		(*logFile).error.Println(a)
 	}
 }
+
 //ERROR log like like Printf
 func Errof(logFile *LogFileName, format string, v ...interface{}) {
 	if (*logFile).logLevel >= L_ERROR {
@@ -120,19 +122,10 @@ func Fatalln(logFile *LogFileName, a ...interface{}) {
 		(*logFile).fatal.Println(a)
 	}
 }
+
 //FATAL log like like Printf
 func Fatalf(logFile *LogFileName, format string, v ...interface{}) {
 	if (*logFile).logLevel >= L_FATAL {
 		(*logFile).info.Printf(format, v)
 	}
 }
-
-
-
-
-
-
-
-
-
-

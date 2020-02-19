@@ -7,7 +7,7 @@ import (
 )
 
 // Tcplink
-func Tcplink()(conn net.Conn){
+func Tcplink() (conn net.Conn) {
 	//server := "127.0.0.1:9090"
 	server := "59.110.125.134:30301"
 	tcpAddr, err := net.ResolveTCPAddr("tcp4", server)
@@ -23,8 +23,9 @@ func Tcplink()(conn net.Conn){
 	//fmt.Println("connect success:",server)
 	return conn
 }
+
 //
-func Tcplisten()(conn net.Conn){
+func Tcplisten() (conn net.Conn) {
 
 	//建立socket，监听端口
 	netListen, err := net.Listen("tcp", "localhost:9090")

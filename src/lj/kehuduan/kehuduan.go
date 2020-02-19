@@ -3,10 +3,9 @@ package main
 import (
 	//"encoding/json"
 	"fmt"
+	"lj/messagehead"
 	"net"
 	"os"
-	"lj/messagehead"
-
 )
 
 //type sendword struct {
@@ -30,7 +29,7 @@ func sender(conn net.Conn) {
 	speakto := "hello,fuck you!"
 	sendbyte := []byte(speakto)
 	len_send := uint32(len(sendbyte))
-	sendmessage,send_unm = messagehead.Encodemessh(messh,sendbyte,len_send)
+	sendmessage, send_unm = messagehead.Encodemessh(messh, sendbyte, len_send)
 	fmt.Print(messh)
 	fmt.Print(speakto)
 	fmt.Print(sendbyte)
@@ -41,11 +40,11 @@ func sender(conn net.Conn) {
 	var messh1 messagehead.Messagehead
 	var send_unm1 uint32
 	var sendmessage1 []byte
-	messh1,sendmessage1,send_unm1 = messagehead.Decodemessh(sendmessage,send_unm)
+	messh1, sendmessage1, send_unm1 = messagehead.Decodemessh(sendmessage, send_unm)
 	fmt.Print(messh1)
 	fmt.Print(sendmessage1[0:send_unm1])
 	fmt.Print(send_unm1)
-	str2 :=string(sendmessage1[0:send_unm1])
+	str2 := string(sendmessage1[0:send_unm1])
 	fmt.Print(str2)
 	//datasendj, err := json.Marshal(datasends)
 	//if err != nil {

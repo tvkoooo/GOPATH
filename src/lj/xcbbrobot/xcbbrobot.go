@@ -79,7 +79,7 @@ func main() {
 	}
 
 }
-func recvdata(conn net.Conn)  {
+func recvdata(conn net.Conn) {
 	recevdata := make([]uint8, 4096)
 	for {
 		count, err := conn.Read(recevdata)

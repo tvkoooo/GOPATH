@@ -1,0 +1,138 @@
+[SYSTEM]2018/09/06 16:37:55 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/06 16:38:02 D:/GOPATH/src/robot_d/config/config.go:47: 参数不够，举个例子: 
+ ./rc_robot_d ../src/robot_d/log/vnc/vnc_robot_1 6 1 1 59.110.125.134-30302
+[SYSTEM]2018/09/06 16:42:53 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/06 16:42:56 D:/GOPATH/src/robot_d/config/config.go:47: 参数不够，举个例子: 
+ ./rc_robot_d ../src/robot_d/log/vnc/vnc_robot_1 6 1 1 59.110.125.134-30302
+[SYSTEM]2018/09/06 16:43:40 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/06 16:43:51 D:/GOPATH/src/robot_d/config/config.go:47: 参数不够，举个例子: 
+ ./rc_robot_d ../src/robot_d/log/vnc/vnc_robot_1 6 1 1 59.110.125.134-30302
+[SYSTEM]2018/09/06 16:45:08 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/06 16:45:12 D:/GOPATH/src/robot_d/config/config.go:47: 参数不够，举个例子: 
+ ./rc_robot_d ../src/robot_d/log/vnc/vnc_robot_1 6 1 1 59.110.125.134-30302
+[SYSTEM]2018/09/06 16:46:47 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/06 16:46:51 D:/GOPATH/src/robot_d/config/config.go:47: 参数不够，举个例子: 
+ ./rc_robot_d ../src/robot_d/log/vnc/vnc_robot_1 6 1 1 59.110.125.134-30302
+[info]2018/09/06 16:47:11 
+ Set log path: ../src/robot_d/log/vnc/vnc_robot_1 
+ Set log level: 7 
+ Set Case number: 1 
+ Set ServiceNum: 1 
+ Set Connect remote address: 59.110.125.134-30302
+[SYSTEM]2018/09/06 16:48:32 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/06 16:48:35 D:/GOPATH/src/robot_d/config/config.go:47: 参数不够，举个例子: 
+ ./rc_robot_d ../src/robot_d/log/vnc/vnc_robot_1 6 1 1 59.110.125.134-30302
+[SYSTEM]2018/09/06 16:55:13 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/06 16:55:18 D:/GOPATH/src/robot_d/config/config.go:47: 参数不够，举个例子: 
+ ./rc_robot_d ../src/robot_d/log/vnc/vnc_robot_1 6 1 1 59.110.125.134-30302
+[SYSTEM]2018/09/06 16:57:03 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/06 16:57:06 D:/GOPATH/src/robot_d/config/config.go:47: 参数不够，举个例子: 
+ ./rc_robot_d ../src/robot_d/log/vnc/vnc_robot_1 6 1 1 59.110.125.134-30302
+[SYSTEM]2018/09/07 14:18:02 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/07 14:18:02 D:/GOPATH/src/robot_d/config/config.go:47: GetParameter::There are not enough parameters. For example: 
+ ./rc_robot_d /data/vnc_log/vnc/vnc_robot_2 6 2 3 172.16.39.170-30302
+[info]2018/09/07 14:18:02 GetParameter:
+ Set log path: /home/longjia/go/log/vnc_robot_1 
+ Set log level: 7 
+ Set Case number: 1 
+ Set ServiceNum: 1 
+ Set Connect remote address: 172.16.39.170:30301
+[robot_d.go_1_info]2018/09/07 14:18:02 confInit::Function log path: /home/longjia/go/log/vnc_robot_1
+[robot_d.go_1_FAIL]2018/09/07 14:18:02 D:/GOPATH/src/robot_d/common/fileopr/fileopr.go:22: CreateDir::mkdir failed![mkdir /home/longjia/go/log/vnc_robot_1: The system cannot find the path specified.]
+[SYSTEM]2018/09/07 15:38:50 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/07 15:38:50 D:/GOPATH/src/robot_d/config/config.go:47: GetParameter::There are not enough parameters. For example: 
+ ./rc_robot_d /data/vnc_log/vnc/vnc_robot_2 6 2 3 172.16.39.170-30302
+[info]2018/09/07 15:38:50 GetParameter:
+ Set log path: /home/longjia/go/log/vnc_robot_1 
+ Set log level: 7 
+ Set Case number: 1 
+ Set ServiceNum: 1 
+ Set Connect remote address: 172.16.39.170:30301
+[robot_d.go_1_info]2018/09/07 15:38:50 confInit::Function log path: /home/longjia/go/log/vnc_robot_1
+[SYSTEM]2018/09/07 17:00:13 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/07 17:00:13 D:/GOPATH/src/robot_d/config/config.go:47: GetParameter::There are not enough parameters. For example: 
+ ./rc_robot_d /data/vnc_log/vnc/vnc_robot_2 6 2 3 172.16.39.170-30302
+[info]2018/09/07 17:00:13 GetParameter:
+ Set log path: /home/longjia/go/log/vnc_robot_1 
+ Set log level: 7 
+ Set Case number: 1 
+ Set ServiceNum: 1 
+ Set Connect remote address: 172.16.39.170:30301
+[robot_d.go_1_info]2018/09/07 17:00:13 confInit::Function log path: /home/longjia/go/log/vnc_robot_1
+[SYSTEM]2018/09/27 18:00:57 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/27 18:00:57 D:/GOPATH/src/robot_d/config/config.go:47: GetParameter::There are not enough parameters. For example: 
+ ./rc_robot_d /data/vnc_log/vnc/vnc_robot_2 6 2 3 172.16.39.170-30302
+[info]2018/09/27 18:00:57 GetParameter:
+ Set log path: /home/longjia/go/log/vnc_robot_1 
+ Set log level: 7 
+ Set Case number: 1 
+ Set ServiceNum: 1 
+ Set Connect remote address: 172.16.39.170:30301
+[robot_d.go_1_info]2018/09/27 18:00:57 confInit::Function log path: /home/longjia/go/log/vnc_robot_1
+[SYSTEM]2018/09/28 09:59:35 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/28 09:59:35 D:/GOPATH/src/robot_d/config/config.go:47: GetParameter::There are not enough parameters. For example: 
+ ./rc_robot_d /data/vnc_log/vnc/vnc_robot_2 6 2 3 172.16.39.170-30302
+[info]2018/09/28 09:59:35 GetParameter:
+ Set log path: /home/longjia/go/log/vnc_robot_1 
+ Set log level: 7 
+ Set Case number: 1 
+ Set ServiceNum: 1 
+ Set Connect remote address: 172.16.39.170:30301
+[robot_d.go_1_info]2018/09/28 09:59:35 confInit::Function log path: /home/longjia/go/log/vnc_robot_1
+[SYSTEM]2018/09/28 10:00:58 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/28 10:00:58 D:/GOPATH/src/robot_d/config/config.go:47: GetParameter::There are not enough parameters. For example: 
+ ./rc_robot_d /data/vnc_log/vnc/vnc_robot_2 6 2 3 172.16.39.170-30302
+[info]2018/09/28 10:00:58 GetParameter:
+ Set log path: D:/work_git/C/xcbb_project.git/server.kr.2/server/feature_new_robot/log/vnc_robot_1 
+ Set log level: 7 
+ Set Case number: 1 
+ Set ServiceNum: 1 
+ Set Connect remote address: 172.16.39.170:30301
+[robot_d.go_1_info]2018/09/28 10:00:58 confInit::Function log path: D:/work_git/C/xcbb_project.git/server.kr.2/server/feature_new_robot/log/vnc_robot_1
+[robot_d.go_1_info]2018/09/28 10:00:58 RobotCtrlInit::Loading robot list files Path: D:/work_git/C/xcbb_project.git/server.kr.2/server/feature_new_robot/robot_config/1/robot_1.list
+[SYSTEM]2018/09/28 10:07:44 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/28 10:07:44 GetParameter:
+ Set log path: ./robot_d 
+ Set log level: 0 
+ Set Case number: 6 
+ Set ServiceNum: 1 
+ Set Connect remote address: 1
+[robot_d.go_6_info]2018/09/28 10:07:44 confInit::Function log path: ./robot_d
+[robot_d.go_6_info]2018/09/28 10:07:44 RobotCtrlInit::Loading robot list files Path: D:/work_git/C/xcbb_project.git/server.kr.2/server/feature_new_robot/robot_config/1/robot_6.list
+[SYSTEM]2018/09/28 10:07:54 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/28 10:07:54 GetParameter:
+ Set log path: ./robot_d 
+ Set log level: 0 
+ Set Case number: 6 
+ Set ServiceNum: 1 
+ Set Connect remote address: 1
+[robot_d.go_6_info]2018/09/28 10:07:54 confInit::Function log path: ./robot_d
+[robot_d.go_6_info]2018/09/28 10:07:54 RobotCtrlInit::Loading robot list files Path: D:/work_git/C/xcbb_project.git/server.kr.2/server/feature_new_robot/robot_config/1/robot_6.list
+[SYSTEM]2018/09/28 10:09:17 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/28 10:09:17 GetParameter:
+ Set log path: /home/longjia/go/log/vnc_robot_1 
+ Set log level: 6 
+ Set Case number: 1 
+ Set ServiceNum: 1 
+ Set Connect remote address: 59.110.125.134:30301
+[robot_d.go_1_info]2018/09/28 10:09:17 confInit::Function log path: /home/longjia/go/log/vnc_robot_1
+[SYSTEM]2018/09/28 10:10:03 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/28 10:10:03 GetParameter:
+ Set log path: D:/work_git/C/xcbb_project.git/server.kr.2/server/feature_new_robot/log/vnc_robot_1 
+ Set log level: 6 
+ Set Case number: 1 
+ Set ServiceNum: 1 
+ Set Connect remote address: 59.110.125.134:30301
+[robot_d.go_1_info]2018/09/28 10:10:03 confInit::Function log path: D:/work_git/C/xcbb_project.git/server.kr.2/server/feature_new_robot/log/vnc_robot_1
+[robot_d.go_1_info]2018/09/28 10:10:03 RobotCtrlInit::Loading robot list files Path: D:/work_git/C/xcbb_project.git/server.kr.2/server/feature_new_robot/robot_config/1/robot_1.list
+[robot_d.go_1_SYSTEM]2018/09/28 10:11:02 D:/GOPATH/src/robot_d/robot_d.go:44: Program exit<<==: D:/GOPATH/src/robot_d/robot_d.go Got signal: interrupt
+[SYSTEM]2018/09/28 10:11:15 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[info]2018/09/28 10:11:15 GetParameter:
+ Set log path: D:/work_git/C/xcbb_project.git/server.kr.2/server/feature_new_robot/log/vnc_robot_1 
+ Set log level: 6 
+ Set Case number: 1 
+ Set ServiceNum: 1 
+ Set Connect remote address: 59.110.125.134:30302
+[robot_d.go_1_info]2018/09/28 10:11:15 confInit::Function log path: D:/work_git/C/xcbb_project.git/server.kr.2/server/feature_new_robot/log/vnc_robot_1
+[robot_d.go_1_info]2018/09/28 10:11:15 RobotCtrlInit::Loading robot list files Path: D:/work_git/C/xcbb_project.git/server.kr.2/server/feature_new_robot/robot_config/1/robot_1.list
+[robot_d.go_1_SYSTEM]2018/09/28 10:11:37 D:/GOPATH/src/robot_d/robot_d.go:44: Program exit<<==: D:/GOPATH/src/robot_d/robot_d.go Got signal: interrupt

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"xcbbrobot/config"
 	"fmt"
+	"xcbbrobot/config"
 )
 
 func main() {

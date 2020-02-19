@@ -1,0 +1,347 @@
+[INFO]2018/09/05 15:48:59 注册次数: 0 连接conn: 0xc0420cc060  AppRobotConn success. LocalAddr:  192.168.111.72:31952 LocalAddr:  59.110.125.134:30301 发送数据: 23
+[INFO]2018/09/05 15:49:25 收到uri:  33538 消息: {26 33538 4 200 0}
+[INFO]2018/09/05 15:49:25 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 15:49:25 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 15:49:25 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 15:49:25 PollOrder::机器人 robotId: 10000344 连接conn: 0xc0420d0020 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 15:49:26 PollOrder::机器人 robotId: 10000726 连接conn: 0xc0420d0040 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 15:49:27 PollOrder::机器人 robotId: 10000414 连接conn: 0xc042042550 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 15:49:29 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:49:35 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:49:41 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:49:47 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:49:53 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:49:59 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:50:05 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:50:11 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:50:17 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:50:23 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:50:29 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:50:35 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:50:41 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[WARN]2018/09/05 15:50:42 D:/GOPATH/src/xcbbrobot/robotapp/robotapp.go:195: ReceiveMessage conn: 0xc0420cc060 Close() ! Because recNum = 0 err: EOF
+[INFO]2018/09/05 15:50:42 RoomDel::房间 sid: 102692 机器人 RobotId: 10000344 关闭连接 conn: 0xc0420d0020
+[INFO]2018/09/05 15:50:42 RoomDel::房间 sid: 102692 机器人 RobotId: 10000726 关闭连接 conn: 0xc0420d0040
+[INFO]2018/09/05 15:50:42 RoomDel::房间 sid: 102692 机器人 RobotId: 10000414 关闭连接 conn: 0xc042042550
+[INFO]2018/09/05 15:50:42 RoomDel::移除房间 sid: 102692
+[INFO]2018/09/05 15:50:42 RoomClean:: 清理所有房间
+[INFO]2018/09/05 15:50:42 注册次数: 1 连接conn: 0xc0420cc060  AppRobotConn success. LocalAddr:  192.168.111.72:31957 LocalAddr:  59.110.125.134:30301 发送数据: 23
+[INFO]2018/09/05 15:50:49 收到uri:  33538 消息: {26 33538 5 200 0}
+[INFO]2018/09/05 15:50:49 消息包内容: {Cmd:0 Sid:131696 Param1:0 Param2:0} 
+[INFO]2018/09/05 15:50:49 Decode_PRobotServerCmd::房间:  131696 START
+[INFO]2018/09/05 15:50:49 RoomCreate::创建新房间 sid: 131696
+[INFO]2018/09/05 15:50:49 PollOrder::机器人 robotId: 10000606 连接conn: 0xc0420d0070 send RobotJoinLen message 当前房间sid: 131696 机器人总数 1
+[INFO]2018/09/05 15:50:49 收到uri:  33538 消息: {26 33538 9 200 0}
+[INFO]2018/09/05 15:50:49 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 15:50:49 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 15:50:49 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 15:50:49 PollOrder::机器人 robotId: 10000363 连接conn: 0xc0420d00a0 send RobotJoinLen message 当前房间sid: 102692 机器人总数 -1
+[INFO]2018/09/05 15:50:49 PollOrder::机器人 robotId: 10001266 连接conn: 0xc042034010 send RobotJoinLen message 当前房间sid: 131696 机器人总数 0
+[INFO]2018/09/05 15:50:50 PollOrder::机器人 robotId: 10001545 连接conn: 0xc042034030 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 15:50:50 PollOrder::机器人 robotId: 10000346 连接conn: 0xc0420d00c0 send RobotJoinLen message 当前房间sid: 131696 机器人总数 2
+[INFO]2018/09/05 15:50:50 PollOrder::机器人 robotId: 10000574 连接conn: 0xc0420d00e0 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 15:50:51 收到uri:  33538 消息: {26 33538 15 200 0}
+[INFO]2018/09/05 15:50:51 消息包内容: {Cmd:3 Sid:131696 Param1:5 Param2:0} 
+[INFO]2018/09/05 15:50:51 用户进场 ADD_ROBOT
+[INFO]2018/09/05 15:50:52 PollOrder::机器人 robotId: 10000652 连接conn: 0xc0420d0100 send RobotJoinLen message 当前房间sid: 131696 机器人总数 4
+[INFO]2018/09/05 15:50:53 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:50:53 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:50:59 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:50:59 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:51:05 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:51:05 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:51:11 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:51:11 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:51:17 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:51:17 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:51:23 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:51:23 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:51:29 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:51:29 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:51:35 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:51:35 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:51:41 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:51:41 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:51:47 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:51:47 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:51:53 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:51:53 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:51:59 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:51:59 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:52:05 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:52:05 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:52:11 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:52:11 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:52:17 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:52:17 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:52:23 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:52:23 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:52:29 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:52:29 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:52:35 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:52:35 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:52:41 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:52:41 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:52:47 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:52:47 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:52:53 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:52:53 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:52:59 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:52:59 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:53:05 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:53:05 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:53:11 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:53:11 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:53:17 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:53:17 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:53:23 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:53:23 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:53:29 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:53:29 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:53:35 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:53:35 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:53:40 收到uri:  33538 消息: {26 33538 18 200 0}
+[INFO]2018/09/05 15:53:40 消息包内容: {Cmd:1 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 15:53:40 102692 房间机器人数:  3  关闭房间: 102692
+[INFO]2018/09/05 15:53:40 RoomDel::房间 sid: 102692 机器人 RobotId: 10000363 关闭连接 conn: 0xc0420d00a0
+[INFO]2018/09/05 15:53:40 RoomDel::房间 sid: 102692 机器人 RobotId: 10001545 关闭连接 conn: 0xc042034030
+[INFO]2018/09/05 15:53:40 RoomDel::房间 sid: 102692 机器人 RobotId: 10000574 关闭连接 conn: 0xc0420d00e0
+[INFO]2018/09/05 15:53:40 RoomDel::移除房间 sid: 102692
+[INFO]2018/09/05 15:53:41 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:53:47 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:53:51 收到uri:  33538 消息: {26 33538 24 200 0}
+[INFO]2018/09/05 15:53:51 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 15:53:51 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 15:53:51 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 15:53:52 PollOrder::机器人 robotId: 10001308 连接conn: 0xc042034060 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 15:53:52 PollOrder::机器人 robotId: 10001955 连接conn: 0xc042034080 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 15:53:53 PollOrder::机器人 robotId: 10000488 连接conn: 0xc0420d0120 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 15:53:53 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:53:53 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:53:59 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:53:59 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:54:05 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:54:05 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:54:11 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:54:11 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:54:17 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:54:17 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:54:23 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:54:23 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 15:54:29 PollOrder::房间sid: 131696  当前机器人人数 Num: 4
+[INFO]2018/09/05 15:54:29 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 17:25:17 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 17:25:17 注册次数: 0 连接conn: 0xc0420ce060  AppRobotConn success. LocalAddr:  192.168.111.72:17816 LocalAddr:  59.110.125.134:30301 发送数据: 23
+[INFO]2018/09/05 17:26:01 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 17:26:01 注册次数: 0 连接conn: 0xc0420ce060  AppRobotConn success. LocalAddr:  192.168.111.72:17822 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/05 17:26:51 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 17:26:51 注册次数: 0 连接conn: 0xc0420b4060  AppRobotConn success. LocalAddr:  192.168.111.72:17836 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/05 17:27:38 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 17:27:38 注册次数: 0 连接conn: 0xc0420b4060  AppRobotConn success. LocalAddr:  192.168.111.72:17861 LocalAddr:  59.110.125.134:30301 发送数据: 23
+[INFO]2018/09/05 17:27:43 收到uri:  33538 消息: {26 33538 4 200 0}
+[INFO]2018/09/05 17:27:43 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 17:27:43 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 17:27:43 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 17:27:43 PollOrder::机器人 robotId: 10000469 连接conn: 0xc0420f4010 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 17:27:44 PollOrder::机器人 robotId: 10000560 连接conn: 0xc0420b8010 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 17:27:44 PollOrder::房间sid: 102692  当前机器人人数 Num: 2
+[INFO]2018/09/05 17:27:45 PollOrder::机器人 robotId: 10000694 连接conn: 0xc0420b8030 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 17:27:50 收到uri:  33538 消息: {26 33538 8 200 0}
+[INFO]2018/09/05 17:27:50 消息包内容: {Cmd:1 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 17:27:50 102692 房间机器人数:  3  关闭房间: 102692
+[INFO]2018/09/05 17:27:50 RoomDel::房间 sid: 102692 机器人 RobotId: 10000469 关闭连接 conn: 0xc0420f4010
+[INFO]2018/09/05 17:27:50 RoomDel::房间 sid: 102692 机器人 RobotId: 10000560 关闭连接 conn: 0xc0420b8010
+[INFO]2018/09/05 17:27:50 RoomDel::房间 sid: 102692 机器人 RobotId: 10000694 关闭连接 conn: 0xc0420b8030
+[INFO]2018/09/05 17:27:50 RoomDel::移除房间 sid: 102692
+[INFO]2018/09/05 17:28:40 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 17:28:40 注册次数: 0 连接conn: 0xc0420ce060  AppRobotConn success. LocalAddr:  192.168.111.72:17867 LocalAddr:  59.110.125.134:30301 发送数据: 23
+[INFO]2018/09/05 17:28:50 收到uri:  33538 消息: {26 33538 4 200 0}
+[INFO]2018/09/05 17:28:50 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 17:28:50 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 17:28:50 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 17:28:50 PollOrder::机器人 robotId: 10000897 连接conn: 0xc042032020 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 17:28:51 PollOrder::机器人 robotId: 10001342 连接conn: 0xc0420d2010 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 17:28:52 PollOrder::房间sid: 102692  当前机器人人数 Num: 2
+[INFO]2018/09/05 17:28:52 PollOrder::机器人 robotId: 10001008 连接conn: 0xc042032040 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 17:28:58 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 17:29:04 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 17:29:32 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 17:29:32 注册次数: 0 连接conn: 0xc0420ce060  AppRobotConn success. LocalAddr:  192.168.111.72:17885 LocalAddr:  59.110.125.134:30301 发送数据: 23
+[INFO]2018/09/05 17:30:24 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 17:30:24 注册次数: 0 连接conn: 0xc0420ce060  AppRobotConn success. LocalAddr:  192.168.111.72:17901 LocalAddr:  59.110.125.134:30301 发送数据: 23
+[INFO]2018/09/05 17:30:29 收到uri:  33538 消息: {26 33538 3 200 0}
+[INFO]2018/09/05 17:30:29 消息包内容: {Cmd:1 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 17:30:29 SidRobotLen:: 房间 sid: 102692  不存在
+[INFO]2018/09/05 17:30:29 102692 房间机器人数:  0  关闭房间: 102692
+[INFO]2018/09/05 17:30:29 RoomDel::房间 sid: 102692  不存在
+[INFO]2018/09/05 17:30:36 收到uri:  33538 消息: {26 33538 6 200 0}
+[INFO]2018/09/05 17:30:36 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 17:30:36 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 17:30:36 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 17:30:36 PollOrder::机器人 robotId: 10002041 连接conn: 0xc042040580 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 17:30:36 PollOrder::房间sid: 102692  当前机器人人数 Num: 1
+[INFO]2018/09/05 17:30:36 PollOrder::机器人 robotId: 10001299 连接conn: 0xc042032010 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 17:30:37 PollOrder::机器人 robotId: 10000759 连接conn: 0xc0420405a0 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 17:30:42 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 17:30:48 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 17:30:54 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 17:31:57 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 17:31:57 注册次数: 0 连接conn: 0xc0420ce060  AppRobotConn success. LocalAddr:  192.168.111.72:17920 LocalAddr:  59.110.125.134:30301 发送数据: 23
+[INFO]2018/09/05 17:32:03 收到uri:  33538 消息: {26 33538 4 200 0}
+[INFO]2018/09/05 17:32:03 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 17:32:03 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 17:32:03 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 17:34:23 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 17:34:23 注册次数: 0 连接conn: 0xc0420ce060  AppRobotConn success. LocalAddr:  192.168.111.72:25686 LocalAddr:  59.110.125.134:30301 发送数据: 23
+[INFO]2018/09/05 17:34:27 收到uri:  33538 消息: {26 33538 3 200 0}
+[INFO]2018/09/05 17:34:27 消息包内容: {Cmd:1 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 17:34:27 SidRobotLen:: 房间 sid: 102692  不存在
+[INFO]2018/09/05 17:34:27 102692 房间机器人数:  0  关闭房间: 102692
+[INFO]2018/09/05 17:34:27 RoomDel::房间 sid: 102692  不存在
+[INFO]2018/09/05 17:34:31 收到uri:  33538 消息: {26 33538 6 200 0}
+[INFO]2018/09/05 17:34:31 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 17:34:31 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 17:34:31 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 18:04:31 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 18:04:31 注册次数: 0 连接conn: 0xc0420b4060  AppRobotConn success. LocalAddr:  192.168.111.72:25809 LocalAddr:  59.110.125.134:30301 发送数据: 23
+[INFO]2018/09/05 18:04:42 收到uri:  33538 消息: {26 33538 4 200 0}
+[INFO]2018/09/05 18:04:42 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:04:42 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 18:04:42 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 18:04:42 PollOrder::房间sid: 102692  当前机器人人数 Num: 0
+[INFO]2018/09/05 18:04:42 PollOrder::机器人 robotId: 10002053 连接conn: 0xc042032590 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 18:04:43 PollOrder::机器人 robotId: 10000476 连接conn: 0xc042102000 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 18:04:43 PollOrder::机器人 robotId: 10001233 连接conn: 0xc0420325b0 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 18:04:49 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:04:49 收到uri:  33538 消息: {26 33538 8 200 0}
+[INFO]2018/09/05 18:04:49 消息包内容: {Cmd:1 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:04:49 102692 房间机器人数:  3  关闭房间: 102692
+[INFO]2018/09/05 18:04:49 RoomDel::房间 sid: 102692 机器人 RobotId: 10002053 关闭连接 conn: 0xc042032590
+[INFO]2018/09/05 18:04:49 RoomDel::房间 sid: 102692 机器人 RobotId: 10000476 关闭连接 conn: 0xc042102000
+[INFO]2018/09/05 18:04:49 RoomDel::房间 sid: 102692 机器人 RobotId: 10001233 关闭连接 conn: 0xc0420325b0
+[INFO]2018/09/05 18:04:49 RoomDel::移除房间 sid: 102692
+[INFO]2018/09/05 18:05:09 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 18:05:09 注册次数: 0 连接conn: 0xc0420ae060  AppRobotConn success. LocalAddr:  192.168.111.72:25814 LocalAddr:  59.110.125.134:30301 发送数据: 23
+[INFO]2018/09/05 18:05:47 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 18:05:47 注册次数: 0 连接conn: 0xc0420b4060  AppRobotConn success. LocalAddr:  192.168.111.72:25816 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/05 18:05:52 收到uri:  33538 消息: {26 33538 4 200 0}
+[INFO]2018/09/05 18:05:52 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:05:52 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 18:05:52 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 18:05:52 PollOrder::机器人 robotId: 10001341 连接conn: 0xc042102010 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 18:05:52 PollOrder::机器人 robotId: 10000392 连接conn: 0xc042032590 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 18:05:53 PollOrder::机器人 robotId: 10001675 连接conn: 0xc0420325b0 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 18:05:53 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:05:59 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:06:05 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:06:11 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:07:03 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 18:07:03 注册次数: 0 连接conn: 0xc0420ce060  AppRobotConn success. LocalAddr:  192.168.111.72:25829 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/05 18:07:07 收到uri:  33538 消息: {26 33538 3 200 0}
+[INFO]2018/09/05 18:07:07 消息包内容: {Cmd:1 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:07:07 SidRobotLen:: 房间 sid: 102692  不存在
+[INFO]2018/09/05 18:07:07 102692 房间机器人数:  0  关闭房间: 102692
+[INFO]2018/09/05 18:07:07 RoomDel::房间 sid: 102692  不存在
+[INFO]2018/09/05 18:07:11 收到uri:  33538 消息: {26 33538 6 200 0}
+[INFO]2018/09/05 18:07:11 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:07:11 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 18:07:11 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 18:07:12 PollOrder::机器人 robotId: 10001080 连接conn: 0xc042032020 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 18:07:12 PollOrder::机器人 robotId: 10000230 连接conn: 0xc042032040 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 18:07:13 PollOrder::机器人 robotId: 10000162 连接conn: 0xc042040580 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 18:07:15 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:07:21 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:07:27 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:07:33 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:07:39 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:08:06 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 18:08:06 注册次数: 0 连接conn: 0xc0420b4060  AppRobotConn success. LocalAddr:  192.168.111.72:25834 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/05 18:08:19 收到uri:  33538 消息: {26 33538 3 200 0}
+[INFO]2018/09/05 18:08:19 消息包内容: {Cmd:1 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:08:19 SidRobotLen:: 房间 sid: 102692  不存在
+[INFO]2018/09/05 18:08:19 102692 房间机器人数:  0  关闭房间: 102692
+[INFO]2018/09/05 18:08:19 RoomDel::房间 sid: 102692  不存在
+[INFO]2018/09/05 18:08:24 收到uri:  33538 消息: {26 33538 6 200 0}
+[INFO]2018/09/05 18:08:24 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:08:24 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 18:08:24 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 18:08:24 PollOrder::机器人 robotId: 10000366 连接conn: 0xc042112010 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 18:08:25 PollOrder::机器人 robotId: 10001565 连接conn: 0xc042032590 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 18:08:25 PollOrder::机器人 robotId: 10000390 连接conn: 0xc042112030 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 18:08:30 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:08:36 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:08:42 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:08:48 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:08:54 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:09:23 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 18:09:23 注册次数: 0 连接conn: 0xc0420ce060  AppRobotConn success. LocalAddr:  192.168.111.72:25842 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/05 18:09:27 收到uri:  33538 消息: {26 33538 3 200 0}
+[INFO]2018/09/05 18:09:27 消息包内容: {Cmd:1 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:09:27 SidRobotLen:: 房间 sid: 102692  不存在
+[INFO]2018/09/05 18:09:27 102692 房间机器人数:  0  关闭房间: 102692
+[INFO]2018/09/05 18:09:27 RoomDel::房间 sid: 102692  不存在
+[INFO]2018/09/05 18:09:32 收到uri:  33538 消息: {26 33538 6 200 0}
+[INFO]2018/09/05 18:09:32 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:09:32 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 18:09:32 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 18:09:32 PollOrder::机器人 robotId: 10001516 连接conn: 0xc0420d2020 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 18:09:33 PollOrder::机器人 robotId: 10000091 连接conn: 0xc042032010 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 18:09:33 PollOrder::机器人 robotId: 10000319 连接conn: 0xc0420d2040 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 18:09:34 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:09:40 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:09:47 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:09:53 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:09:59 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:12:52 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 18:12:52 注册次数: 0 连接conn: 0xc0420b4060  AppRobotConn success. LocalAddr:  192.168.111.72:25864 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/05 18:13:06 收到uri:  33538 消息: {26 33538 4 200 0}
+[INFO]2018/09/05 18:13:06 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:13:06 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 18:13:06 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 18:13:07 PollOrder::机器人 robotId: 10000302 连接conn: 0xc042106010 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 18:13:07 PollOrder::机器人 robotId: 10000954 连接conn: 0xc0420b8010 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 18:13:08 PollOrder::机器人 robotId: 10000403 连接conn: 0xc0420b8030 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 18:13:10 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:13:16 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:13:22 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:13:28 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:13:34 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:13:40 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:13:46 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:13:52 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:14:35 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 18:14:35 注册次数: 0 连接conn: 0xc0420b4060  AppRobotConn success. LocalAddr:  192.168.111.72:25876 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/05 18:14:37 收到uri:  33538 消息: {26 33538 3 200 0}
+[INFO]2018/09/05 18:14:37 消息包内容: {Cmd:1 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:14:37 SidRobotLen:: 房间 sid: 102692  不存在
+[INFO]2018/09/05 18:14:37 102692 房间机器人数:  0  关闭房间: 102692
+[INFO]2018/09/05 18:14:37 RoomDel::房间 sid: 102692  不存在
+[INFO]2018/09/05 18:14:43 收到uri:  33538 消息: {26 33538 6 200 0}
+[INFO]2018/09/05 18:14:43 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:14:43 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 18:14:43 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 18:14:43 PollOrder::机器人 robotId: 10000508 连接conn: 0xc0420b8020 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 18:14:44 PollOrder::机器人 robotId: 10000425 连接conn: 0xc04211e000 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 18:14:44 PollOrder::机器人 robotId: 10000879 连接conn: 0xc0420b8040 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 18:14:47 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:14:53 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:14:59 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:15:05 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:15:11 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:15:35 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/05 18:15:35 注册次数: 0 连接conn: 0xc0420b4060  AppRobotConn success. LocalAddr:  192.168.111.72:25882 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/05 18:15:40 收到uri:  33538 消息: {26 33538 3 200 0}
+[INFO]2018/09/05 18:15:40 消息包内容: {Cmd:1 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:15:40 SidRobotLen:: 房间 sid: 102692  不存在
+[INFO]2018/09/05 18:15:40 102692 房间机器人数:  0  关闭房间: 102692
+[INFO]2018/09/05 18:15:40 RoomDel::房间 sid: 102692  不存在
+[INFO]2018/09/05 18:15:45 收到uri:  33538 消息: {26 33538 6 200 0}
+[INFO]2018/09/05 18:15:45 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/05 18:15:45 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/05 18:15:45 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/05 18:15:45 PollOrder::机器人 robotId: 10000694 连接conn: 0xc042032580 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/05 18:15:46 PollOrder::机器人 robotId: 10000473 连接conn: 0xc04210e010 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/05 18:15:47 PollOrder::房间sid: 102692  当前机器人人数 Num: 2
+[INFO]2018/09/05 18:15:47 PollOrder::机器人 robotId: 10000428 连接conn: 0xc0420b8010 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/05 18:15:53 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/05 18:15:59 PollOrder::房间sid: 102692  当前机器人人数 Num: 3

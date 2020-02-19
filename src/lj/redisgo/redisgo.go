@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"time"
-	"github.com/garyburd/redigo/redis"
 	"encoding/json"
+	"fmt"
+	"github.com/garyburd/redigo/redis"
+	"time"
 )
 
 func main() {

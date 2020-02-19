@@ -1,12 +1,11 @@
 package readfile
 
 import (
-	"os"
 	"bufio"
 	"io"
+	"os"
 	"strings"
 )
-
 
 func ReadLine(fileName string, handler func(string)) error {
 	f, err := os.Open(fileName)
@@ -28,7 +27,6 @@ func ReadLine(fileName string, handler func(string)) error {
 	return nil
 }
 
-
 func ReadLine2Map(fileName string, handler func(string)) error {
 	f, err := os.Open(fileName)
 	if err != nil {
@@ -48,12 +46,3 @@ func ReadLine2Map(fileName string, handler func(string)) error {
 	}
 	return nil
 }
-
-
-
-
-
-
-
-
-

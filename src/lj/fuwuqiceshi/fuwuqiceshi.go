@@ -1,11 +1,11 @@
 package main
+
 import (
 	"fmt"
-	"net"
 	"log"
+	"net"
 	"os"
 )
-
 
 func main() {
 
@@ -24,6 +24,7 @@ func main() {
 		handleConnection(conn)
 	}
 }
+
 //处理连接
 func handleConnection(conn net.Conn) {
 
@@ -36,13 +37,12 @@ func handleConnection(conn net.Conn) {
 			return
 		}
 		bufferout := buffer[:n]
-		var nei string =  string(bufferout[:])
-		fmt.Println(n,bufferout,nei)
-		sendword :="yes suc666weji"
+		var nei string = string(bufferout[:])
+		fmt.Println(n, bufferout, nei)
+		sendword := "yes suc666weji"
 		conn.Write([]byte(sendword))
 		fmt.Println(sendword)
 	}
-
 
 }
 func Log(v ...interface{}) {

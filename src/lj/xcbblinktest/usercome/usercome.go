@@ -3,9 +3,9 @@
 package usercome
 
 import (
+	"encoding/json"
 	"fmt"
 	"lj/xcbblinktest/datastream"
-	"encoding/json"
 )
 
 //Peakhead pack head
@@ -18,13 +18,14 @@ type Peakhead struct {
 
 //PRealJoinChannel RQ DATA  (32 << 8) | 2
 type PRealJoinChannelRQ struct {
-	Uid uint32
+	Uid      uint32
 	Sha1Pass string
-	Sid uint32
-	Ssid uint32
-	SsPass string
-	Version uint32
+	Sid      uint32
+	Ssid     uint32
+	SsPass   string
+	Version  uint32
 }
+
 //PRealJoinChannelRS RQ DATA
 type PRealJoinChannelRS struct {
 	Code uint32
@@ -32,8 +33,9 @@ type PRealJoinChannelRS struct {
 	Sid  uint32
 	Uid  uint32
 }
+
 //PRealJoinChannel RQ add peak uri head
-func Addpeakhead(uri uint32 ,inbyte []byte) (outbyte []byte) {
+func Addpeakhead(uri uint32, inbyte []byte) (outbyte []byte) {
 	var ph Peakhead
 	ph.Uri = uri
 	ph.Sid = 0
@@ -48,14 +50,12 @@ func Addpeakhead(uri uint32 ,inbyte []byte) (outbyte []byte) {
 	return outbyte
 }
 
-
-
 //PRealJoinChannel RQ add user body struct to datastream
-func ADDsenderbody(uri uint32 ,rq PRealJoinChannelRQ) (outbyte []byte) {
+func ADDsenderbody(uri uint32, rq PRealJoinChannelRQ) (outbyte []byte) {
 	sendstream := make([]byte, 0)
-	length := uint32(13+4+2+4+4+2+4)
+	length := uint32(13 + 4 + 2 + 4 + 4 + 2 + 4)
 	outbyte = datastream.AddUint32(length, sendstream)
-	outbyte = Addpeakhead(uri,outbyte)
+	outbyte = Addpeakhead(uri, outbyte)
 	outbyte = datastream.AddUint32(rq.Uid, outbyte)
 	outbyte = datastream.AddString16(rq.Sha1Pass, outbyte)
 	outbyte = datastream.AddUint32(rq.Sid, outbyte)
@@ -63,18 +63,19 @@ func ADDsenderbody(uri uint32 ,rq PRealJoinChannelRQ) (outbyte []byte) {
 	outbyte = datastream.AddString16(rq.SsPass, outbyte)
 	outbyte = datastream.AddUint32(rq.Version, outbyte)
 
-	jsonrq,_ := json.Marshal(rq)
-	fmt.Println("Send body \n length:", length,"uri:",uri,"rq = ", string(jsonrq))
+	jsonrq, _ := json.Marshal(rq)
+	fmt.Println("Send body \n length:", length, "uri:", uri, "rq = ", string(jsonrq))
 	fmt.Println(outbyte)
 	return outbyte
 }
+
 //PRealJoinChannel get user body struct from datastream
-func Getreceivebody(inbyte []byte) () {
+func Getreceivebody(inbyte []byte) {
 	var length uint32
 	var rechead Peakhead
 	var outbyte []byte
-	length , outbyte = datastream.GetUint32(inbyte)
-	rechead.Uri , outbyte = datastream.GetUint32(outbyte)
-	fmt.Println("Receive body  length :",length ,"Receive body  Uri :",rechead.Uri )
+	length, outbyte = datastream.GetUint32(inbyte)
+	rechead.Uri, outbyte = datastream.GetUint32(outbyte)
+	fmt.Println("Receive body  length :", length, "Receive body  Uri :", rechead.Uri)
 	//fmt.Println("Receive body \n :",inbyte )
 }

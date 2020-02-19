@@ -1,0 +1,10 @@
+[SYSTEM]2018/09/27 18:00:05 D:/GOPATH/src/robot_d/robot_d.go:17: Program startup==>>: D:/GOPATH/src/robot_d/robot_d.go
+[WARN]2018/09/27 18:00:05 D:/GOPATH/src/robot_d/config/config.go:47: GetParameter::There are not enough parameters. For example: 
+ ./rc_robot_d /data/vnc_log/vnc/vnc_robot_2 6 2 3 172.16.39.170-30302
+[info]2018/09/27 18:00:05 GetParameter:
+ Set log path: /home/longjia/go/log/vnc_robot_1 
+ Set log level: 7 
+ Set Case number: 1 
+ Set ServiceNum: 1 
+ Set Connect remote address: 172.16.39.170:30301
+[robot_d.go_1_info]2018/09/27 18:00:05 confInit::Function log path: /home/longjia/go/log/vnc_robot_1

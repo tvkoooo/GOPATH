@@ -1,12 +1,14 @@
 package main
+
 import (
 	"fmt"
-	"net"
 	"log"
+	"net"
 	"os"
 	//"encoding/json"
 	"lj/messagehead"
 )
+
 type sendword struct {
 	Pid       uint64
 	Mid       uint64
@@ -31,6 +33,7 @@ func main() {
 		handleConnection(conn)
 	}
 }
+
 //处理连接
 func handleConnection(conn net.Conn) {
 
@@ -45,7 +48,7 @@ func handleConnection(conn net.Conn) {
 		}
 		fmt.Print(n)
 		fmt.Println(buffer[:n])
-		g_data,ndata :=messagehead.Get_data(buffer,uint32(n))
+		g_data, ndata := messagehead.Get_data(buffer, uint32(n))
 		g_str_data := string(g_data[:ndata])
 		fmt.Println(g_data[:ndata])
 		fmt.Println(ndata)
@@ -75,10 +78,10 @@ func handleConnection(conn net.Conn) {
 		fsendbyte := []byte(f_send)
 		flen_send := uint32(len(fsendbyte))
 		fbuffer_send := buffer[:n]
-		new_data,new_length :=messagehead.Change_data(fbuffer_send,fsendbyte,flen_send)
+		new_data, new_length := messagehead.Change_data(fbuffer_send, fsendbyte, flen_send)
 		fmt.Println(new_data)
 		fmt.Println(new_length)
-		f_say,f_say_l := messagehead.Get_data(new_data,new_length)
+		f_say, f_say_l := messagehead.Get_data(new_data, new_length)
 		fmt.Println(f_say)
 		fmt.Println(f_say_l)
 		fconn.Write([]byte(fbuffer_send))

@@ -5,7 +5,7 @@ import (
 	"xcbbrobot/common/typechange"
 )
 
-func main()  {
+func main() {
 	uid := 10005129
 	fmt.Println(uid)
 	struid := string(uid)
@@ -14,12 +14,10 @@ func main()  {
 	strsid = "nimeide"
 	fmt.Println(strsid)
 
-
 	var stringUid string
 	uidInt := int(uid)
-	typechange.Int2String(&uidInt,&stringUid)
+	typechange.Int2String(&uidInt, &stringUid)
 	fmt.Println(stringUid)
-
 
 	fmt.Println(typechange.Int2StringRe(uidInt))
 

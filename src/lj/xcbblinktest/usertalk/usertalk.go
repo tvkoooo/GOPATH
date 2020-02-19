@@ -3,9 +3,9 @@
 package usertalk
 
 import (
+	"encoding/json"
 	"fmt"
 	"lj/xcbblinktest/datastream"
-	"encoding/json"
 )
 
 //Peakhead pack head
@@ -18,16 +18,16 @@ type Peakhead struct {
 
 type PEnterChannel struct {
 	PIType uint32
-	Cmd string
+	Cmd    string
 }
 
 //PFeatureRequest RQ DATA
 type PFeatureRequestRQ struct {
-	Cmd string `json:"cmd"`
-	Uid uint32 `json:"uid"`
+	Cmd      string `json:"cmd"`
+	Uid      uint32 `json:"uid"`
 	Singerid uint32 `json:"singerid"`
-	Sid uint32 `json:"sid"`
-	Context string `json:"context"`
+	Sid      uint32 `json:"sid"`
+	Context  string `json:"context"`
 }
 
 //PFeatureRequest RS DATA
@@ -39,7 +39,7 @@ type PPlusRS struct {
 }
 
 //PPlus RQ add peak uri head
-func Addpeakhead(uri uint32 ,inbyte []byte) (outbyte []byte) {
+func Addpeakhead(uri uint32, inbyte []byte) (outbyte []byte) {
 	var ph Peakhead
 	ph.Uri = uri
 	ph.Sid = 0
@@ -54,25 +54,26 @@ func Addpeakhead(uri uint32 ,inbyte []byte) (outbyte []byte) {
 }
 
 //PEnterChannel RQ add user body struct to datastream
-func ADDsenderbody(uri uint32 ,rq PFeatureRequestRQ) (outbyte []byte) {
+func ADDsenderbody(uri uint32, rq PFeatureRequestRQ) (outbyte []byte) {
 	sendstream := make([]byte, 0)
-	jsonrq,_ := json.Marshal(rq)
+	jsonrq, _ := json.Marshal(rq)
 	//length := uint32(unsafe.Sizeof(rq))+13+4
-	length := uint32(len(jsonrq)+13+4+4)  //json长度 + （包头13） + （PIType 4） + （cmd长度 4）
+	length := uint32(len(jsonrq) + 13 + 4 + 4) //json长度 + （包头13） + （PIType 4） + （cmd长度 4）
 	outbyte = datastream.AddUint32(length, sendstream)
-	outbyte = Addpeakhead(uri,outbyte)
+	outbyte = Addpeakhead(uri, outbyte)
 
 	var datasend PEnterChannel
 	datasend.PIType = 6
 	datasend.Cmd = string(jsonrq)
 	outbyte = datastream.AddUint32(datasend.PIType, outbyte)
-	outbyte = datastream.AddString32(datasend.Cmd,outbyte)
+	outbyte = datastream.AddString32(datasend.Cmd, outbyte)
 
-	fmt.Println("Send body \n length:", length,"uri:",uri,"rq = ", string(jsonrq))
+	fmt.Println("Send body \n length:", length, "uri:", uri, "rq = ", string(jsonrq))
 	fmt.Println(outbyte)
 	return outbyte
 }
+
 //PPlusRS get user body struct from datastream
-func Getreceivebody(inbyte []byte) () {
-	fmt.Println("Receive body \n :",inbyte )
+func Getreceivebody(inbyte []byte) {
+	fmt.Println("Receive body \n :", inbyte)
 }

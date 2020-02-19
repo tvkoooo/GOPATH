@@ -1,10 +1,10 @@
 package main
 
 import (
-	"net"
 	"bufio"
-	"log"
 	"fmt"
+	"log"
+	"net"
 )
 
 func handleConnection(conn net.Conn) {
@@ -30,15 +30,3 @@ func main() {
 		go handleConnection(conn)
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-

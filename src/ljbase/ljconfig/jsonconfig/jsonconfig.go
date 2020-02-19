@@ -1,11 +1,10 @@
 package ljconfig
 
 import (
-	"os"
 	"encoding/json"
 	"fmt"
+	"os"
 )
-
 
 type ConfigJson struct {
 	Enabled bool
@@ -25,4 +24,3 @@ func (c *ConfigJson) InitConfig(path string) {
 		fmt.Println("Error:", err)
 	}
 }
-

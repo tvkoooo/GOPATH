@@ -1,0 +1,61 @@
+[INFO]2018/09/06 10:23:05 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 10:23:05 注册次数: 0 连接conn: 0xc0420ce060  AppRobotConn success. LocalAddr:  192.168.111.72:26519 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 10:23:08 收到uri:  33538 消息: {26 33538 4 200 0}
+[INFO]2018/09/06 10:23:08 消息包内容: {Cmd:3 Sid:131696 Param1:1 Param2:0} 
+[INFO]2018/09/06 10:23:08 用户进场 ADD_ROBOT
+[INFO]2018/09/06 10:23:18 收到uri:  33538 消息: {26 33538 7 200 0}
+[INFO]2018/09/06 10:23:18 消息包内容: {Cmd:3 Sid:131696 Param1:1 Param2:0} 
+[INFO]2018/09/06 10:23:18 用户进场 ADD_ROBOT
+[INFO]2018/09/06 10:23:25 收到uri:  33538 消息: {26 33538 10 200 0}
+[INFO]2018/09/06 10:23:25 消息包内容: {Cmd:0 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/06 10:23:25 Decode_PRobotServerCmd::房间:  102692 START
+[INFO]2018/09/06 10:23:25 RoomCreate::创建新房间 sid: 102692
+[INFO]2018/09/06 10:23:25 PollOrder::机器人 robotId: 10000830 连接conn: 0xc0420cc020 send RobotJoinLen message 当前房间sid: 102692 机器人总数 1
+[INFO]2018/09/06 10:23:26 PollOrder::机器人 robotId: 10000452 连接conn: 0xc0420cc040 send RobotJoinLen message 当前房间sid: 102692 机器人总数 2
+[INFO]2018/09/06 10:23:27 PollOrder::机器人 robotId: 10000804 连接conn: 0xc0420cc060 send RobotJoinLen message 当前房间sid: 102692 机器人总数 3
+[INFO]2018/09/06 10:23:29 PollOrder::房间sid: 102692  当前机器人人数 Num: 3
+[INFO]2018/09/06 10:23:29 收到uri:  33538 消息: {26 33538 14 200 0}
+[INFO]2018/09/06 10:23:29 消息包内容: {Cmd:1 Sid:102692 Param1:0 Param2:0} 
+[INFO]2018/09/06 10:23:29 102692 房间机器人数:  3  关闭房间: 102692
+[INFO]2018/09/06 10:23:29 RoomDel::房间 sid: 102692 机器人 RobotId: 10000830 关闭连接 conn: 0xc0420cc020
+[INFO]2018/09/06 10:23:29 RoomDel::房间 sid: 102692 机器人 RobotId: 10000452 关闭连接 conn: 0xc0420cc040
+[INFO]2018/09/06 10:23:29 RoomDel::房间 sid: 102692 机器人 RobotId: 10000804 关闭连接 conn: 0xc0420cc060
+[INFO]2018/09/06 10:23:29 RoomDel::移除房间 sid: 102692
+[INFO]2018/09/06 11:12:57 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 11:12:58 注册次数: 0 连接conn: 0xc0420cc060  AppRobotConn success. LocalAddr:  192.168.111.72:26928 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 11:18:57 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 11:18:57 注册次数: 0 连接conn: 0xc0420c4060  AppRobotConn success. LocalAddr:  192.168.111.72:26962 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 11:19:01 RoomClean:: 清理所有房间
+[INFO]2018/09/06 11:22:59 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 11:22:59 注册次数: 0 连接conn: 0xc0420aa060  AppRobotConn success. LocalAddr:  192.168.111.72:26970 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 11:23:06 RoomClean:: 清理所有房间
+[INFO]2018/09/06 11:25:57 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 11:25:57 注册次数: 0 连接conn: 0xc0420c6060  AppRobotConn success. LocalAddr:  192.168.111.72:26979 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 11:26:09 RoomClean:: 清理所有房间
+[INFO]2018/09/06 11:31:53 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 11:31:53 注册次数: 0 连接conn: 0xc0420aa060  AppRobotConn success. LocalAddr:  192.168.111.72:27180 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 11:31:57 RoomClean:: 清理所有房间
+[INFO]2018/09/06 11:34:17 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 11:34:17 注册次数: 0 连接conn: 0xc0420c6060  AppRobotConn success. LocalAddr:  192.168.111.72:27186 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 11:34:21 RoomClean:: 清理所有房间
+[INFO]2018/09/06 11:49:35 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 11:49:35 注册次数: 0 连接conn: 0xc0420ae060  AppRobotConn success. LocalAddr:  192.168.111.72:27679 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 11:49:48 RoomClean:: 清理所有房间
+[INFO]2018/09/06 11:51:15 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 11:51:15 注册次数: 0 连接conn: 0xc0420c6060  AppRobotConn success. LocalAddr:  192.168.111.72:27685 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 11:51:19 RoomClean:: 清理所有房间
+[INFO]2018/09/06 11:54:56 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 11:54:56 注册次数: 0 连接conn: 0xc0420ae060  AppRobotConn success. LocalAddr:  192.168.111.72:27701 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 11:55:01 RoomClean:: 清理所有房间
+[INFO]2018/09/06 11:55:47 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 11:55:47 注册次数: 0 连接conn: 0xc0420aa060  AppRobotConn success. LocalAddr:  192.168.111.72:27703 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 11:55:53 RoomClean:: 清理所有房间
+[INFO]2018/09/06 14:10:17 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 14:10:17 注册次数: 0 连接conn: 0xc0420c4060  AppRobotConn success. LocalAddr:  192.168.111.72:28093 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 14:10:27 RoomClean:: 清理所有房间
+[INFO]2018/09/06 14:11:40 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 14:11:40 注册次数: 0 连接conn: 0xc0420c4060  AppRobotConn success. LocalAddr:  192.168.111.72:28096 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 14:11:42 RoomClean:: 清理所有房间
+[INFO]2018/09/06 14:13:27 listPath: ../src/xcbbrobot/robotvector/robot_0.list
+[INFO]2018/09/06 14:13:27 注册次数: 0 连接conn: 0xc0420ae060  AppRobotConn success. LocalAddr:  192.168.111.72:28099 LocalAddr:  59.110.125.134:30302 发送数据: 23
+[INFO]2018/09/06 14:13:46 RoomClean:: 清理所有房间

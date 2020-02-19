@@ -1,8 +1,8 @@
 package main
 
 import (
-	"net"
 	"bufio"
+	"net"
 
 	"fmt"
 )
@@ -19,15 +19,3 @@ func main() {
 	}
 	fmt.Printf("%#v\n", data)
 }
-
-
-
-
-
-
-
-
-
-
-
-

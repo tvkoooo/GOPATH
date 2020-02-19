@@ -1,14 +1,14 @@
 package main
 
 import (
-	"os"
 	"bufio"
-	"io"
 	"fmt"
+	"io"
+	"os"
 	"time"
 )
 
-func main()  {
+func main() {
 	f, err := os.Open("D:/GOPATH/src/lj/readline/text.txt")
 	if err != nil {
 		panic(err)
@@ -21,8 +21,8 @@ func main()  {
 		if err != nil || io.EOF == err {
 			break
 		}
-		fmt.Println(line,time.Now())
-		if line=="over"{
+		fmt.Println(line, time.Now())
+		if line == "over" {
 			break
 		}
 	}
